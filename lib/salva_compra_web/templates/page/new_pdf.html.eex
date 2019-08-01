@@ -421,7 +421,7 @@
           R$ <%= produto.preco %>
         </div>
         <div id="ipi" class="infoText productBorder productRightText">
-          5
+          <%= produto.ipi %>
         </div>
         <div id="valorVenda" class="infoText productRightText productBorder">
           R$ <%= produto.total %>
