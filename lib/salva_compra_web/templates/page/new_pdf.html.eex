@@ -137,12 +137,6 @@
       }
       .productBorder {
       }
-      .productRightText {
-        justify-content: right;
-        padding-right: 3px;
-        align-items: right;
-        display: flex;
-      }
       .itemSpacing {
         padding-top: 4px;
         padding-bottom: 4px;
@@ -389,19 +383,19 @@
         <div id="produtoLabel" class="productLabelText">
           Produto
         </div>
-        <div id="quantidadeLabel" class="productRightText productLabelText">
+        <div id="quantidadeLabel" class="productLabelText" style="text-align: right">
           Quantidade
         </div>
-        <div id="valorSemIpiLabel" class="productRightText productLabelText">
+        <div id="valorSemIpiLabel" class="productLabelText" style="text-align: right">
           Valor sem IPI
         </div>
-        <div id="ipi" class="productRightText productLabelText">
+        <div id="ipi" class="productLabelText" style="text-align: right">
           IPI
         </div>
-        <div id="valorVendaLabel" class="productRightText productLabelText">
+        <div id="valorVendaLabel" class="productLabelText" style="text-align: right">
           Valor de Venda
         </div>
-        <div id="valorDescontoLabel" class="productRightText productLabelText">
+        <div id="valorDescontoLabel" class="productLabelText" style="text-align: right">
           Valor com Desconto
         </div>
       </div>
@@ -414,19 +408,19 @@
         >
           <%= produto.nome %> 1.00M x 25mts
         </div>
-        <div id="quantidade" class="productBorder productRightText infoText">
+        <div id="quantidade" class="productBorder infoText">
           <%= produto.qtd %>
         </div>
-        <div id="valorSemIpi" class="infoText productBorder productRightText">
+        <div id="valorSemIpi" class="productBorder infoText" style="text-align: right">
           R$ <%= produto.preco %>
         </div>
-        <div id="ipi" class="infoText productBorder productRightText">
+        <div id="ipi" class="productBorder infoText" style="text-align: right">
           <%= produto.ipi %>
         </div>
-        <div id="valorVenda" class="infoText productRightText productBorder">
+        <div id="valorVenda" class="productBorder infoText" style="text-align: right">
           R$ <%= produto.total %>
         </div>
-        <div id="valorDesconto" class="infoText productRightText">
+        <div id="valorDesconto" class="productBorder infoText" style="text-align: right">
           R$ <%= produto.total %>
         </div>
       </div>
@@ -464,25 +458,25 @@
         <div class="productLabelText produto2">
           Produto
         </div>
-        <div class="productRightText productLabelText descricao">
+        <div class="productLabelText descricao" style="text-align: right">
           Descrição
         </div>
-        <div class="productRightText productLabelText embalagem">
+        <div class="productLabelText embalagem" style="text-align: right">
           Embalagem Master
         </div>
-        <div class="productRightText productLabelText altura">
+        <div class="productLabelText altura" style="text-align: right">
           Altura (m)
         </div>
-        <div class="productRightText productLabelText largura">
+        <div class="productLabelText largura" style="text-align: right">
           Largura (m)
         </div>
-        <div class="productRightText productLabelText comprimento">
+        <div class="productLabelText comprimento" style="text-align: right">
           Comprimento (m)
         </div>
-        <div class="productRightText productLabelText ncm">
+        <div class="productLabelText ncm" style="text-align: right">
           NCM
         </div>
-        <div class="productRightText productLabelText peso">
+        <div class=productLabelText peso" style="text-align: right">
           Peso (KG)
         </div>
       </div>
@@ -494,25 +488,25 @@
         <div class="productBorder infoText produto2">
           Produto
         </div>
-        <div class="productRightText infoText descricao productBorder">
+        <div class="infoText descricao productBorder" style="text-align: right">
           Descrição
         </div>
-        <div class="productRightText infoText embalagem productBorder">
+        <div class="infoText embalagem productBorder" style="text-align: right">
           Embalagem Master
         </div>
-        <div class="productRightText infoText altura productBorder">
+        <div class="infoText altura productBorder" style="text-align: right">
           Altura (m)
         </div>
-        <div class="productRightText infoText largura productBorder">
+        <div class="infoText largura productBorder" style="text-align: right">
           Largura (m)
         </div>
-        <div class="productRightText infoText comprimento productBorder">
+        <div class="infoText comprimento productBorder" style="text-align: right">
           Comprimento (m)
         </div>
-        <div class="productRightText infoText ncm productBorder">
+        <div class="infoText ncm productBorder" style="text-align: right">
           NCM
         </div>
-        <div class="infoText  peso productRightText">
+        <div class="infoText  peso" style="text-align: right">
           Peso (KG)
         </div>
       </div>
