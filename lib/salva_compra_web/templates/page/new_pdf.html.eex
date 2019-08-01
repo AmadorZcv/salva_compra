@@ -125,7 +125,15 @@
         font-weight: normal;
         font-size: 15px;
         color: rgba(255, 255, 255, 1);
-        padding-left: 3px;
+        padding-left: 10px;
+      }
+      .productLabelTextRight {
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        color: rgba(255, 255, 255, 1);
+        padding-right: 10px;
       }
       .productText {
         font-family: Arial;
@@ -138,6 +146,7 @@
       .productBorder {
       }
       .itemSpacing {
+        padding-right: 10px;
         padding-top: 4px;
         padding-bottom: 4px;
         border-spacing: 0;
@@ -383,19 +392,19 @@
         <div id="produtoLabel" class="productLabelText">
           Produto
         </div>
-        <div id="quantidadeLabel" class="productLabelText" style="text-align: right">
+        <div id="quantidadeLabel" class="productLabelTextRight" style="text-align: right">
           Quantidade
         </div>
-        <div id="valorSemIpiLabel" class="productLabelText" style="text-align: right">
+        <div id="valorSemIpiLabel" class="productLabelTextRight" style="text-align: right">
           Valor sem IPI
         </div>
-        <div id="ipi" class="productLabelText" style="text-align: right">
+        <div id="ipi" class="productLabelTextRight" style="text-align: right">
           IPI
         </div>
-        <div id="valorVendaLabel" class="productLabelText" style="text-align: right">
+        <div id="valorVendaLabel" class="productLabelTextRight" style="text-align: right">
           Valor de Venda
         </div>
-        <div id="valorDescontoLabel" class="productLabelText" style="text-align: right">
+        <div id="valorDescontoLabel" class="productLabelTextRight" style="text-align: right">
           Valor com Desconto
         </div>
       </div>
@@ -458,25 +467,25 @@
         <div class="productLabelText produto2">
           Produto
         </div>
-        <div class="productLabelText descricao" style="text-align: right">
+        <div class="productLabelTextRight descricao" style="text-align: right">
           Descrição
         </div>
-        <div class="productLabelText embalagem" style="text-align: right">
+        <div class="productLabelTextRight embalagem" style="text-align: right">
           Embalagem Master
         </div>
-        <div class="productLabelText altura" style="text-align: right">
+        <div class="productLabelTextRight altura" style="text-align: right">
           Altura (m)
         </div>
-        <div class="productLabelText largura" style="text-align: right">
+        <div class="productLabelTextRight largura" style="text-align: right">
           Largura (m)
         </div>
-        <div class="productLabelText comprimento" style="text-align: right">
+        <div class="productLabelTextRight comprimento" style="text-align: right">
           Comprimento (m)
         </div>
-        <div class="productLabelText ncm" style="text-align: right">
+        <div class="productLabelTextRight ncm" style="text-align: right">
           NCM
         </div>
-        <div class="productLabelText peso" style="text-align: right">
+        <div class="productLabelTextRight peso" style="text-align: right">
           Peso (KG)
         </div>
       </div>
