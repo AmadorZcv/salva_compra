@@ -231,7 +231,7 @@
               Data de criação
             </div>
             <div class="infoText labelSpacing">
-              14/06/2019
+              <%= @criacao %>
             </div>
           </div>
           <div class="row">
@@ -239,7 +239,7 @@
               Data de Validade
             </div>
             <div class="infoText labelSpacing">
-              18/06/2019
+              <%= @validade %>
             </div>
           </div>
           <div class="row">
@@ -258,7 +258,7 @@
               Condição Pagamento
             </div>
             <div class="infoText labelSpacing">
-              21 dias
+              <%= @condicao %> dias
             </div>
           </div>
           <div class="row">
@@ -311,7 +311,7 @@
               Nome da Conta
             </div>
             <div class="infoText labelSpacing">
-              GUEDES & REZENDE ENGENHARIA LTDA
+              <%= @nome %>
             </div>
           </div>
           <div class="row">
@@ -319,7 +319,7 @@
               CPF/CNPJ
             </div>
             <div class="infoText labelSpacing">
-              08.731.715/001-26
+              <%= @cpf %>
             </div>
           </div>
           <div class="row">
@@ -327,7 +327,7 @@
               Ramo/Atividade
             </div>
             <div class="infoText labelSpacing">
-              Consultoria
+              <%= @ramo %>
             </div>
           </div>
           <div class="row">
@@ -335,7 +335,7 @@
               UF
             </div>
             <div class="infoText labelSpacing">
-              PA
+              <%= @uf %>
             </div>
           </div>
           <div class="row">
@@ -343,7 +343,7 @@
               Cidade
             </div>
             <div class="infoText labelSpacing">
-              BÉLEM
+              <%= @cidade %>
             </div>
           </div>
         </div>
@@ -353,7 +353,7 @@
               Nome completo
             </div>
             <div class="infoText labelSpacing">
-              Sérgio Paixão REPRESENTANTE
+              <%= @nome_completo %>
             </div>
           </div>
           <div class="row">
@@ -361,7 +361,7 @@
               Telefone
             </div>
             <div class="infoText labelSpacing">
-              (91) 3230-2650
+              <%= @telefone %>
             </div>
           </div>
           <div class="row">
@@ -369,7 +369,7 @@
               Email
             </div>
             <div class="infoText labelSpacing">
-              paixaosergio@oi.com.br
+              <%= @email %>
             </div>
           </div>
         </div>
@@ -404,78 +404,33 @@
           Valor com Desconto
         </div>
       </div>
+      <%= Enum.map(@produtos, fn produto ->  %>
       <div class="row itemSpacing">
         <div
           id="produto"
           class="productBorder infoText"
           style="padding-left: 6px;"
         >
-          Salva Piso 1.00M x 25mts
+          <%= produto.nome %> 1.00M x 25mts
         </div>
         <div id="quantidade" class="productBorder productRightText infoText">
-          20,00
+          <%= produto.qtd %>
         </div>
         <div id="valorSemIpi" class="infoText productBorder productRightText">
-          R$ 83,86
+          R$ <%= produto.preco %>
         </div>
         <div id="ipi" class="infoText productBorder productRightText">
           5
         </div>
         <div id="valorVenda" class="infoText productRightText productBorder">
-          R$ 88,05
+          R$ <%= produto.total %>
         </div>
         <div id="valorDesconto" class="infoText productRightText">
-          R$ 88,05
+          R$ <%= produto.total %>
         </div>
       </div>
-      <div class="row itemSpacing">
-        <div
-          id="produto"
-          class="productBorder infoText"
-          style="padding-left: 6px;"
-        >
-          Salva Piso 1.00M x 25mts
-        </div>
-        <div id="quantidade" class="productBorder productRightText infoText">
-          20,00
-        </div>
-        <div id="valorSemIpi" class="infoText productBorder productRightText">
-          R$ 83,86
-        </div>
-        <div id="ipi" class="infoText productBorder productRightText">
-          5
-        </div>
-        <div id="valorVenda" class="infoText productRightText productBorder">
-          R$ 88,05
-        </div>
-        <div id="valorDesconto" class="infoText productRightText">
-          R$ 88,05
-        </div>
-      </div>
-      <div class="row itemSpacing">
-        <div
-          id="produto"
-          class="productBorder infoText"
-          style="padding-left: 6px;"
-        >
-          Salva Piso 1.00M x 25mts
-        </div>
-        <div id="quantidade" class="productBorder productRightText infoText">
-          20,00
-        </div>
-        <div id="valorSemIpi" class="infoText productBorder productRightText">
-          R$ 83,86
-        </div>
-        <div id="ipi" class="infoText productBorder productRightText">
-          5
-        </div>
-        <div id="valorVenda" class="infoText productRightText productBorder">
-          R$ 88,05
-        </div>
-        <div id="valorDesconto" class="infoText productRightText">
-          R$ 88,05
-        </div>
-      </div>
+
+      <% end) %>
       <div class="row" style="margin-top: 44px;">
         <div
           class="column"
@@ -489,9 +444,9 @@
           class="column"
           style="flex: 40; align-items: flex-end; color: rgba(85,85,85,1); padding-right: 6px;"
         >
-          <div class="subTotalSpacing">R$ 1.761,00</div>
+          <div class="subTotalSpacing">R$ <%= @total %></div>
           <div class="subTotalSpacing">0,00%</div>
-          <div class="subTotalSpacing">R$ 1.761,00</div>
+          <div class="subTotalSpacing">R$ <%= @total %></div>
         </div>
       </div>
     </div>
