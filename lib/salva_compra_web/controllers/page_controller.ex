@@ -5,7 +5,17 @@ defmodule SalvaCompraWeb.PageController do
     render(conn, "index.html")
   end
 
-  def print(conn, _params) do
+  def pdf(conn, _params) do
+    render(conn, "new_pdf.html", %{
+      conn: conn,
+      ntp: Images64.logo_ntp(),
+      salva: Images64.logo_salva()
+    })
+  end
+
+  def print(conn, %{"usuario" => usuario_params}) do
+    IO.inspect(usuario_params)
+
     html =
       Phoenix.View.render_to_string(SalvaCompraWeb.PageView, "new_pdf.html", %{
         conn: conn,

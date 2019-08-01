@@ -17,11 +17,13 @@ defmodule SalvaCompraWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    get "/pdf", PageController, :print
+    get "/pdf", PageController, :pdf
+    get "/download", PageController, :print
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", SalvaCompraWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", SalvaCompraWeb do
+    pipe_through :api
+    post "/pdf", PageController, :print
+  end
 end
