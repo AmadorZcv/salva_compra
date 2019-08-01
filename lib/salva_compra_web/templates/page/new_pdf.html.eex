@@ -135,16 +135,10 @@
         text-align: left;
       }
       .productBorder {
-        border-width: 0;
-        border-right-width: 1px;
-        border-color: rgb(118, 118, 118);
-        border-style: ridge;
-        display: flex;
-        padding-right: 1px;
       }
       .productRightText {
         justify-content: right;
-        padding-right: 10px;
+        padding-right: 3px;
         align-items: right;
         display: flex;
       }
@@ -152,6 +146,10 @@
         padding-top: 4px;
         padding-bottom: 4px;
         border-spacing: 0;
+        border-width: 0;
+        border-bottom-width: 1px;
+        border-color: rgb(118, 118, 118);
+        border-style: ridge;
       }
       .subTotalSpacing {
         padding-bottom: 5px;
@@ -558,7 +556,7 @@
         <div class="productRightText infoText ncm productBorder">
           NCM
         </div>
-        <div class="productRightText infoText peso">
+        <div class="infoText  peso productRightText">
           Peso (KG)
         </div>
       </div>

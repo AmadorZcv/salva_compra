@@ -2,7 +2,7 @@ defmodule SalvaCompraWeb.PageController do
   use SalvaCompraWeb, :controller
 
   def index(conn, _params) do
-    render(conn, "new_pdf.html", %{ntp: Images64.logo_ntp(), salva: Images64.logo_salva()})
+    render(conn, "index.html")
   end
 
   def print(conn, _params) do
