@@ -5,23 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>PDF</title>
     <style id="applicationStylesheet" type="text/css">
-    html {
-  -webkit-print-color-adjust: exact;
-}
       body {
+        margin: 10px;
+        margin-left: 97px;
+        margin-right: 97px;
         padding: 0;
         display: flex;
         flex-direction: column;
         font-family: Arial;
         font-style: normal;
         font-weight: normal;
-        font-size: 10px;
+        font-size: 20px;
       }
       .labelText {
         font-family: Arial;
         font-style: normal;
         font-weight: normal;
-        font-size: 10px;
+        font-size: 20px;
         color: rgba(51, 51, 51, 1);
       }
       .infoText {
@@ -29,12 +29,12 @@
         font-family: Arial;
         font-style: normal;
         font-weight: normal;
-        font-size: 10px;
+        font-size: 20px;
         color: rgba(85, 85, 85, 1);
         display: flex;
       }
       #infoBox {
-        margin-bottom: 10px;
+        margin-bottom: 13px;
       }
       #barra_proposta {
         height: 42px;
@@ -52,9 +52,9 @@
         font-family: Arial;
         font-style: normal;
         font-weight: normal;
-        font-size: 15px;
+        font-size: 22px;
         color: rgba(51, 51, 51, 1);
-        padding-left: 3px;
+        padding-left: 6px;
       }
       #infoColumns {
         display: flex;
@@ -77,7 +77,7 @@
         width: 25%;
       }
       .labelSpacing {
-        margin-top: 7px;
+        margin-top: 15px;
       }
       #infoText {
         display: flex;
@@ -122,15 +122,15 @@
         font-family: Arial;
         font-style: normal;
         font-weight: normal;
-        font-size: 10px;
+        font-size: 20px;
         color: rgba(255, 255, 255, 1);
-        padding-left: 3px;
+        padding-left: 6px;
       }
       .productText {
         font-family: Arial;
         font-style: normal;
         font-weight: normal;
-        font-size: 10px;
+        font-size: 20px;
         color: rgba(85, 85, 85, 1);
         text-align: left;
       }
@@ -143,18 +143,17 @@
         padding-right: 1px;
       }
       .productRightText {
+        text-align: right;
         justify-content: right;
         padding-right: 10px;
-        align-items: right;
-        display: flex;
       }
       .itemSpacing {
-        padding-top: 4px;
-        padding-bottom: 4px;
+        padding-top: 8px;
+        padding-bottom: 8px;
         border-spacing: 0;
       }
       .subTotalSpacing {
-        padding-bottom: 5px;
+        padding-bottom: 13px;
       }
 
       .produto2 {
@@ -189,7 +188,7 @@
       <div
         style="flex: 1; justify-content: center; align-items: center; display: flex; flex-direction: column"
       >
-      <img src="<%=@ntp %>" alt="NTP Logo" />
+        <img src="../../../../assets/static/images/logo-ntp.png" />
         <div
           style="justify-content: center; align-items: flex-start; display: flex; flex-direction: column"
         >
@@ -204,8 +203,7 @@
       <div
         style="flex: 1; justify-content: center; align-items: center; display: flex; flex-direction: column"
       >
-      <img src="<%=@salva %>" alt="Salva Bras Logo" />
-        
+        <img src="../../../../assets/static/images/salvabras-slogan.png" />
         <div
           style="justify-content: center; align-items: flex-start; display: flex; flex-direction: column"
         >
