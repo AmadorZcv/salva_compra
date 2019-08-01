@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>PDF Produto</title>
+<style id="applicationStylesheet" type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	:root {
+		--web-view-ids: PDF_Produto;
+	}
+	#PDF_Produto * {
+		margin: 0;
+		padding: 0;
+	}
+	#PDF_Produto {
+		position: absolute;
+		box-sizing: border-box;
+		background: #E5E5E5;
+		width: 1331px;
+		height: 38px;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		--web-view-name: PDF Produto;
+		--web-view-id: PDF_Produto;
+		--web-enable-deep-linking: true;
+	}
+	#produto_pvenda {
+		position: absolute;
+		width: 1126px;
+		height: 38px;
+		left: 104px;
+		top: 0px;
+		overflow: visible;
+	}
+	#div_pvenda {
+		position: absolute;
+		width: 1126px;
+		height: 38px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#produtovalue_pvenda {
+		position: absolute;
+		left: 0px;
+		top: 10px;
+		overflow: visible;
+		width: 209px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+	}
+	#div1_pvenda {
+		fill: transparent;
+		stroke: rgb(118, 118, 118);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.div1_pvenda {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 311.5px;
+		width: 1px;
+		height: 38px;
+	}
+	#quantidadevalue_pvenda {
+		position: absolute;
+		left: 412px;
+		top: 10px;
+		overflow: visible;
+		width: 46px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+	}
+	#div2_pvenda {
+		fill: transparent;
+		stroke: rgb(118, 118, 118);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.div2_pvenda {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 462.5px;
+		width: 1px;
+		height: 38px;
+	}
+	#semipivalue_pvenda {
+		position: absolute;
+		left: 557px;
+		top: 10px;
+		overflow: visible;
+		width: 74px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+	}
+	#div3_pvenda {
+		fill: transparent;
+		stroke: rgb(118, 118, 118);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.div3_pvenda {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 635.5px;
+		width: 1px;
+		height: 38px;
+	}
+	#ipivalue_pvenda {
+		position: absolute;
+		left: 669px;
+		top: 10px;
+		overflow: visible;
+		width: 11px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+	}
+	#div4_pvenda {
+		fill: transparent;
+		stroke: rgb(118, 118, 118);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.div4_pvenda {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 685.5px;
+		width: 1px;
+		height: 38px;
+	}
+	#vendavalue_pvenda {
+		position: absolute;
+		left: 797px;
+		top: 10px;
+		overflow: visible;
+		width: 79px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+	}
+	#div5_pvenda {
+		fill: transparent;
+		stroke: rgb(118, 118, 118);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.div5_pvenda {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 881.5px;
+		width: 1px;
+		height: 38px;
+	}
+	#vdescontovalue_pvenda {
+		position: absolute;
+		left: 1048px;
+		top: 10px;
+		overflow: visible;
+		width: 79px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+	}
+</style>
+</head>
+<body>
+<div id="PDF_Produto">
+	<div style="position:absolute;width:1126px;height:38px;left:104px;top:0px;overflow:visible;" id="produto_pvenda">
+		<div style="position:absolute;width:1126px;height:38px;left:0px;top:0px;overflow:visible;" id="div_pvenda">
+			<div id="produtovalue_pvenda">
+				<span>Salva Piso 1,00m x 25mts</span>
+			</div>
+			<svg class="div1_pvenda">
+				<path id="div1_pvenda" d="M 0 38 L 0 0">
+				</path>
+			</svg>
+			<div id="quantidadevalue_pvenda">
+				<span>20,00</span>
+			</div>
+			<svg class="div2_pvenda">
+				<path id="div2_pvenda" d="M 0 38 L 0 0">
+				</path>
+			</svg>
+			<div id="semipivalue_pvenda">
+				<span>R$ 83,86</span>
+			</div>
+			<svg class="div3_pvenda">
+				<path id="div3_pvenda" d="M 0 38 L 0 0">
+				</path>
+			</svg>
+			<div id="ipivalue_pvenda">
+				<span>5</span>
+			</div>
+			<svg class="div4_pvenda">
+				<path id="div4_pvenda" d="M 0 38 L 0 0">
+				</path>
+			</svg>
+			<div id="vendavalue_pvenda">
+				<span> R$ 88,05</span>
+			</div>
+			<svg class="div5_pvenda">
+				<path id="div5_pvenda" d="M 0 38 L 0 0">
+				</path>
+			</svg>
+			<div id="vdescontovalue_pvenda">
+				<span> R$ 88,05</span>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

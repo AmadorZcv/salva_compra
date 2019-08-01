@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>PDF Middle</title>
+<style id="applicationStylesheet" type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	:root {
+		--web-view-ids: PDF_Middle;
+	}
+	#PDF_Middle * {
+		margin: 0;
+		padding: 0;
+	}
+	#PDF_Middle {
+		position: absolute;
+		box-sizing: border-box;
+		background: #E5E5E5;
+		width: 1331px;
+		height: 231px;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		--web-view-name: PDF Middle;
+		--web-view-id: PDF_Middle;
+		--web-enable-deep-linking: true;
+	}
+	#produto_spec {
+		position: absolute;
+		width: 1137px;
+		height: 42px;
+		left: 97.5px;
+		top: 147px;
+		overflow: visible;
+	}
+	#barra_spec {
+		position: absolute;
+		width: 1137px;
+		height: 42px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#rectbarra_spec {
+		fill: rgba(222,229,236,1);
+	}
+	.rectbarra_spec {
+		position: absolute;
+		overflow: visible;
+		width: 1137px;
+		height: 42px;
+		left: 0px;
+		top: 0px;
+	}
+	#titulo_spec {
+		position: absolute;
+		left: 6px;
+		top: 11px;
+		overflow: visible;
+		width: 236px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(51,51,51,1);
+	}
+	#produto_pspec {
+		position: absolute;
+		width: 1137px;
+		height: 42px;
+		left: 97.5px;
+		top: 189px;
+		overflow: visible;
+	}
+	#barra_pspec {
+		position: absolute;
+		width: 1137px;
+		height: 42px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#rectbarra_pspec {
+		fill: rgba(118,118,118,1);
+	}
+	.rectbarra_pspec {
+		position: absolute;
+		overflow: visible;
+		width: 1137px;
+		height: 42px;
+		left: 0px;
+		top: 0px;
+	}
+	#produtotext_pspec {
+		position: absolute;
+		left: 6px;
+		top: 13px;
+		overflow: visible;
+		width: 64px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(255,255,255,1);
+	}
+	#descricao_pspec {
+		position: absolute;
+		left: 287px;
+		top: 13px;
+		overflow: visible;
+		width: 81px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(255,255,255,1);
+	}
+	#embalagem_pspec {
+		position: absolute;
+		left: 383px;
+		top: 13px;
+		overflow: visible;
+		width: 157px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(255,255,255,1);
+	}
+	#altura_pspec {
+		position: absolute;
+		left: 557px;
+		top: 13px;
+		overflow: visible;
+		width: 80px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(255,255,255,1);
+	}
+	#largura_pspec {
+		position: absolute;
+		left: 652px;
+		top: 13px;
+		overflow: visible;
+		width: 95px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(255,255,255,1);
+	}
+	#comprimento_pspec {
+		position: absolute;
+		left: 766px;
+		top: 13px;
+		overflow: visible;
+		width: 141px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(255,255,255,1);
+	}
+	#ncm_pspec {
+		position: absolute;
+		left: 982px;
+		top: 13px;
+		overflow: visible;
+		width: 42px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(255,255,255,1);
+	}
+	#peso_pspec {
+		position: absolute;
+		left: 1049px;
+		top: 13px;
+		overflow: visible;
+		width: 85px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(255,255,255,1);
+	}
+	#direita_pvenda {
+		position: absolute;
+		width: 475.103px;
+		height: 86px;
+		left: 751px;
+		top: 14px;
+		overflow: visible;
+	}
+	#subtotal_pvenda {
+		position: absolute;
+		left: 17px;
+		top: 0px;
+		overflow: visible;
+		width: 67px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(51,51,51,1);
+	}
+	#subtotalvalue_pvenda {
+		position: absolute;
+		left: 377px;
+		top: 0px;
+		overflow: visible;
+		width: 99px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+	}
+	#desconto_pvenda {
+		position: absolute;
+		left: 7px;
+		top: 33px;
+		overflow: visible;
+		width: 77px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(51,51,51,1);
+	}
+	#descontovalue_pvenda {
+		position: absolute;
+		left: 424.103px;
+		top: 33px;
+		overflow: visible;
+		width: 52px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+	}
+	#total_pvenda {
+		position: absolute;
+		left: 0px;
+		top: 66px;
+		overflow: visible;
+		width: 84px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(51,51,51,1);
+	}
+	#totalvalue_pvenda {
+		position: absolute;
+		left: 377.039px;
+		top: 66px;
+		overflow: visible;
+		width: 99px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+	}
+</style>
+</head>
+<body>
+<div id="PDF_Middle">
+	<div id="produto_spec">
+		<div id="barra_spec">
+			<svg class="rectbarra_spec">
+				<rect id="rectbarra_spec" rx="0" ry="0" x="0" y="0" width="1137" height="42">
+				</rect>
+			</svg>
+			<div id="titulo_spec">
+				<span>Especificações de produto</span>
+			</div>
+		</div>
+	</div>
+	<div id="produto_pspec">
+		<div id="barra_pspec">
+			<svg class="rectbarra_pspec">
+				<rect id="rectbarra_pspec" rx="0" ry="0" x="0" y="0" width="1137" height="42">
+				</rect>
+			</svg>
+			<div id="produtotext_pspec">
+				<span>Produto</span>
+			</div>
+			<div id="descricao_pspec">
+				<span>Descrição</span>
+			</div>
+			<div id="embalagem_pspec">
+				<span>Embalagem Master</span>
+			</div>
+			<div id="altura_pspec">
+				<span>Altura (m)</span>
+			</div>
+			<div id="largura_pspec">
+				<span>Largura (m)</span>
+			</div>
+			<div id="comprimento_pspec">
+				<span>Comprimento (m)</span>
+			</div>
+			<div id="ncm_pspec">
+				<span>NCM</span>
+			</div>
+			<div id="peso_pspec">
+				<span>Peso (KG)</span>
+			</div>
+		</div>
+	</div>
+	<div id="direita_pvenda">
+		<div id="subtotal_pvenda">
+			<span>Subtotal</span>
+		</div>
+		<div id="subtotalvalue_pvenda">
+			<span>R$ 1.761,00</span>
+		</div>
+		<div id="desconto_pvenda">
+			<span>Desconto</span>
+		</div>
+		<div id="descontovalue_pvenda">
+			<span>0.00%</span>
+		</div>
+		<div id="total_pvenda">
+			<span>Valor Total</span>
+		</div>
+		<div id="totalvalue_pvenda">
+			<span>R$ 1.761,00</span>
+		</div>
+	</div>
+</div>
+</body>
+</html>

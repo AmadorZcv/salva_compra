@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>PDF</title>
+    <style id="applicationStylesheet" type="text/css">
+      body {
+        margin: 10px;
+        margin-left: 97px;
+        margin-right: 97px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        width: 1331px;
+        font-family: Arial;
+      }
+      .labelText {
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        color: rgba(51, 51, 51, 1);
+      }
+      .infoText {
+        text-align: left;
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        color: rgba(85, 85, 85, 1);
+        display: flex;
+      }
+      #infoBox {
+        margin-bottom: 13px;
+      }
+      #barra_proposta {
+        height: 42px;
+        background-color: rgba(222, 229, 236, 1);
+        width: 100%;
+        display: flex;
+        margin-bottom: 11px;
+      }
+      #titulo_proposta {
+        display: flex;
+        justify-content: center;
+        /* align-self: center;    <---- REMOVE */
+        align-items: center;
+        text-align: left;
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        color: rgba(51, 51, 51, 1);
+        padding-left: 6px;
+      }
+      #infoColumns {
+        display: flex;
+        flex-direction: row;
+      }
+      .column {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+        margin-top: 3px;
+        margin-bottom: 3px;
+      }
+      .labelBox {
+        display: flex;
+        width: 25%;
+      }
+      #infoText {
+        display: flex;
+      }
+      #produtoLabel {
+        width: 28%;
+      }
+      #quantidadeLabel {
+        width: 13.3%;
+      }
+      #valorSemIpiLabel {
+        width: 15.2%;
+      }
+      #ipiLabel {
+        width: 4.5%;
+      }
+      #valorVendaLabel {
+        width: 17.2%;
+      }
+      #valorDescontoLabel {
+        width: 21.8%;
+      }
+      #produto {
+        width: 28%;
+      }
+      #quantidade {
+        width: 13.3%;
+      }
+      #valorSemIpi {
+        width: 15.2%;
+      }
+      #ipi {
+        width: 4.5%;
+      }
+      #valorVenda {
+        width: 17.2%;
+      }
+      #valorDesconto {
+        width: 21.8%;
+      }
+      .productLabelText {
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 1);
+        padding-left: 6px;
+      }
+      .productText {
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        color: rgba(85, 85, 85, 1);
+        text-align: left;
+      }
+      .productBorder {
+        border-width: 0;
+        border-right-width: 1px;
+        border-color: rgb(118, 118, 118);
+        border-style: ridge;
+        display: flex;
+        padding-right: 1px;
+      }
+      .productRightText {
+        text-align: right;
+        justify-content: right;
+        padding-right: 10px;
+      }
+      .itemSpacing {
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="infoBox">
+      <div id="barra_proposta">
+        <div id="titulo_proposta">
+          Informações da Proposta
+        </div>
+      </div>
+      <div id="infoColumns">
+        <div class="column">
+          <div class="row">
+            <div class="labelBox labelText">
+              Data de criação
+            </div>
+            <div class="infoText">
+              14/06/2019
+            </div>
+          </div>
+          <div class="row">
+            <div class="labelBox labelText">
+              Data de Validade
+            </div>
+            <div class="infoText">
+              18/06/2019
+            </div>
+          </div>
+          <div class="row">
+            <div class="labelBox labelText">
+              Tipo de frete
+            </div>
+            <div class="infoText">
+              FOB
+            </div>
+          </div>
+          <div class="row">
+            <div class="labelBox labelText" style="word-spacing: 9999rem;">
+              Condição Pagamento
+            </div>
+            <div class="infoText">
+              21 dias
+            </div>
+          </div>
+          <div class="row">
+            <div class="labelBox labelText">
+              ICMS
+            </div>
+            <div class="infoText">
+              18%
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="row">
+            <div class="labelBox labelText">
+              Preparado por
+            </div>
+            <div class="infoText">
+              Beatriz Salente
+            </div>
+          </div>
+          <div class="row">
+            <div class="labelBox labelText">
+              Telefone
+            </div>
+            <div class="infoText">
+              (11) 3288-2899
+            </div>
+          </div>
+          <div class="row">
+            <div class="labelBox labelText">
+              Email
+            </div>
+            <div class="infoText">
+              comercial@salvabras.com.br
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="infoBox">
+      <div id="barra_proposta">
+        <div id="titulo_proposta">
+          Empresa e Contato
+        </div>
+      </div>
+      <div id="infoColumns">
+        <div class="column">
+          <div class="row">
+            <div class="labelBox labelText">
+              Nome da Conta
+            </div>
+            <div class="infoText">
+              GUEDES & REZENDE ENGENHARIA LTDA
+            </div>
+          </div>
+          <div class="row">
+            <div class="labelBox labelText">
+              CPF/CNPJ
+            </div>
+            <div class="infoText">
+              08.731.715/001-26
+            </div>
+          </div>
+          <div class="row">
+            <div class="labelBox labelText">
+              Ramo/Atividade
+            </div>
+            <div class="infoText">
+              Consultoria
+            </div>
+          </div>
+          <div class="row">
+            <div class="labelBox labelText">
+              UF
+            </div>
+            <div class="infoText">
+              PA
+            </div>
+          </div>
+          <div class="row">
+            <div class="labelBox labelText">
+              Cidade
+            </div>
+            <div class="infoText">
+              BÉLEM
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="row">
+            <div class="labelBox labelText">
+              Nome completo
+            </div>
+            <div class="infoText">
+              Sérgio Paixão REPRESENTANTE
+            </div>
+          </div>
+          <div class="row">
+            <div class="labelBox labelText">
+              Telefone
+            </div>
+            <div class="infoText">
+              (91) 3230-2650
+            </div>
+          </div>
+          <div class="row">
+            <div class="labelBox labelText">
+              Email
+            </div>
+            <div class="infoText">
+              paixaosergio@oi.com.br
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="infoBox">
+      <div id="barra_proposta" style="margin-bottom: 0px">
+        <div id="titulo_proposta">
+          Informações de venda
+        </div>
+      </div>
+      <div
+        class="row"
+        style="background-color: rgba(118,118,118,1); height: 42px; align-items: center; margin: 0;"
+      >
+        <div id="produtoLabel" class="productLabelText">
+          Produto
+        </div>
+        <div id="quantidadeLabel" class="productRightText productLabelText">
+          Quantidade
+        </div>
+        <div id="valorSemIpiLabel" class="productRightText productLabelText">
+          Valor sem IPI
+        </div>
+        <div id="ipi" class="productRightText productLabelText">
+          IPI
+        </div>
+        <div id="valorVendaLabel" class="productRightText productLabelText">
+          Valor de Venda
+        </div>
+        <div id="valorDescontoLabel" class="productRightText productLabelText">
+          Valor com Desconto
+        </div>
+      </div>
+      <div class="row itemSpacing">
+        <div
+          id="produto"
+          class="productBorder infoText"
+          style="padding-left: 6px;"
+        >
+          Salva Piso 1.00M x 25mts
+        </div>
+        <div id="quantidade" class="productBorder productRightText infoText">
+          20,00
+        </div>
+        <div id="valorSemIpi" class="infoText productBorder productRightText">
+          R$ 83,86
+        </div>
+        <div id="ipi" class="infoText productBorder productRightText">
+          5
+        </div>
+        <div id="valorVenda" class="infoText productRightText productBorder">
+          R$ 88,05
+        </div>
+        <div id="valorDesconto" class="infoText productRightText">
+          R$ 88,05
+        </div>
+      </div>
+      <div class="row itemSpacing">
+        <div
+          id="produto"
+          class="productBorder infoText"
+          style="padding-left: 6px;"
+        >
+          Salva Piso 1.00M x 25mts
+        </div>
+        <div id="quantidade" class="productBorder productRightText infoText">
+          20,00
+        </div>
+        <div id="valorSemIpi" class="infoText productBorder productRightText">
+          R$ 83,86
+        </div>
+        <div id="ipi" class="infoText productBorder productRightText">
+          5
+        </div>
+        <div id="valorVenda" class="infoText productRightText productBorder">
+          R$ 88,05
+        </div>
+        <div id="valorDesconto" class="infoText productRightText">
+          R$ 88,05
+        </div>
+      </div>
+      <div class="row itemSpacing">
+        <div
+          id="produto"
+          class="productBorder infoText"
+          style="padding-left: 6px;"
+        >
+          Salva Piso 1.00M x 25mts
+        </div>
+        <div id="quantidade" class="productBorder productRightText infoText">
+          20,00
+        </div>
+        <div id="valorSemIpi" class="infoText productBorder productRightText">
+          R$ 83,86
+        </div>
+        <div id="ipi" class="infoText productBorder productRightText">
+          5
+        </div>
+        <div id="valorVenda" class="infoText productRightText productBorder">
+          R$ 88,05
+        </div>
+        <div id="valorDesconto" class="infoText productRightText">
+          R$ 88,05
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div>Subtotal</div>
+          <div>Desconto</div>
+          <div>Valor Total</div>
+        </div>
+        <div class="column">
+          <div>R$ 1.761,00</div>
+          <div>0,00%</div>
+          <div>R$ 1.761,00</div>
+        </div>
+      </div>
+      <ul>
+        <li>
+          Qualquer tratativa referente a proposta deverá ser formalizada por
+          e-mail.
+        </li>
+        <li>
+          Atenção as produtos que são enviados por caixa, as especificações
+          ALTURA, LARGURA e COMPRIMENTO são da caixa.
+        </li>
+        <li>
+          O desconto quando aplicado é calculado sobe do valor total e não do
+          produto que foi considerado o desconto.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

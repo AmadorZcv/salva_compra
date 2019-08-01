@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>PDF Spec</title>
+<style id="applicationStylesheet" type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	:root {
+		--web-view-ids: PDF_Spec;
+	}
+	#PDF_Spec * {
+		margin: 0;
+		padding: 0;
+	}
+	#PDF_Spec {
+		position: absolute;
+		box-sizing: border-box;
+		background: #E5E5E5;
+		width: 1331px;
+		height: 38px;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		--web-view-name: PDF Spec;
+		--web-view-id: PDF_Spec;
+		--web-enable-deep-linking: true;
+	}
+	#produto_pspec {
+		position: absolute;
+		width: 1126px;
+		height: 38px;
+		left: 104px;
+		top: 0px;
+		overflow: visible;
+	}
+	#div_pspec {
+		position: absolute;
+		width: 1126px;
+		height: 38px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#produtovalue_pspec {
+		position: absolute;
+		left: 0px;
+		top: 10px;
+		overflow: visible;
+		width: 209px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+	}
+	#div1_pspec {
+		fill: transparent;
+		stroke: rgb(118, 118, 118);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.div1_pspec {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 218.5px;
+		width: 1px;
+		height: 38px;
+	}
+	#descricaovalue_pspec {
+		position: absolute;
+		left: 234px;
+		top: 10px;
+		overflow: visible;
+		width: 128px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+	}
+	#div2_pspec {
+		fill: transparent;
+		stroke: rgb(118, 118, 118);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.div2_pspec {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 366.5px;
+		width: 1px;
+		height: 38px;
+	}
+	#embalagemvalue_pspec {
+		position: absolute;
+		left: 473px;
+		top: 10px;
+		overflow: visible;
+		width: 63px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+	}
+	#div3_pspec {
+		fill: transparent;
+		stroke: rgb(118, 118, 118);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.div3_pspec {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 540.5px;
+		width: 1px;
+		height: 38px;
+	}
+	#alturavalue_pspec {
+		position: absolute;
+		left: 594px;
+		top: 10px;
+		overflow: visible;
+		width: 36px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+	}
+	#div4_pspec {
+		fill: transparent;
+		stroke: rgb(118, 118, 118);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.div4_pspec {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 635.5px;
+		width: 1px;
+		height: 38px;
+	}
+	#larguravalue_pspec {
+		position: absolute;
+		left: 704px;
+		top: 10px;
+		overflow: visible;
+		width: 36px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+	}
+	#div5_pspec {
+		fill: transparent;
+		stroke: rgb(118, 118, 118);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.div5_pspec {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 745.5px;
+		width: 1px;
+		height: 38px;
+	}
+	#comprimentovalue_pspec {
+		position: absolute;
+		left: 864px;
+		top: 10px;
+		overflow: visible;
+		width: 36px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+	}
+	#div6_pspec {
+		fill: transparent;
+		stroke: rgb(118, 118, 118);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.div6_pspec {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 905.5px;
+		width: 1px;
+		height: 38px;
+	}
+	#ncmvalue_pspec {
+		position: absolute;
+		left: 927px;
+		top: 10px;
+		overflow: visible;
+		width: 90px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+	}
+	#div7_pspec {
+		fill: transparent;
+		stroke: rgb(118, 118, 118);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.div7_pspec {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 1022.5px;
+		width: 1px;
+		height: 38px;
+	}
+	#pesovalue_pspec {
+		position: absolute;
+		left: 1091px;
+		top: 10px;
+		overflow: visible;
+		width: 36px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+	}
+</style>
+</head>
+<body>
+<div id="PDF_Spec">
+	<div id="produto_pspec">
+		<div id="div_pspec">
+			<div id="produtovalue_pspec">
+				<span>Salva Piso 1,00m x 25mts</span>
+			</div>
+			<svg class="div1_pspec">
+				<path id="div1_pspec" d="M 0 38 L 0 0">
+				</path>
+			</svg>
+			<div id="descricaovalue_pspec">
+				<span>Protetor de piso</span>
+			</div>
+			<svg class="div2_pspec">
+				<path id="div2_pspec" d="M 0 38 L 0 0">
+				</path>
+			</svg>
+			<div id="embalagemvalue_pspec">
+				<span>Unitário</span>
+			</div>
+			<svg class="div3_pspec">
+				<path id="div3_pspec" d="M 0 38 L 0 0">
+				</path>
+			</svg>
+			<div id="alturavalue_pspec">
+				<span>1,00</span>
+			</div>
+			<svg class="div4_pspec">
+				<path id="div4_pspec" d="M 0 38 L 0 0">
+				</path>
+			</svg>
+			<div id="larguravalue_pspec">
+				<span>0,33</span>
+			</div>
+			<svg class="div5_pspec">
+				<path id="div5_pspec" d="M 0 38 L 0 0">
+				</path>
+			</svg>
+			<div id="comprimentovalue_pspec">
+				<span>0,33</span>
+			</div>
+			<svg class="div6_pspec">
+				<path id="div6_pspec" d="M 0 38 L 0 0">
+				</path>
+			</svg>
+			<div id="ncmvalue_pspec">
+				<span>48.115.129</span>
+			</div>
+			<svg class="div7_pspec">
+				<path id="div7_pspec" d="M 0 38 L 0 0">
+				</path>
+			</svg>
+			<div id="pesovalue_pspec">
+				<span>4,25</span>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

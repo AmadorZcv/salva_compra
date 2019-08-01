@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>PDF Bot</title>
+<style id="applicationStylesheet" type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	:root {
+		--web-view-ids: PDF_Bot;
+	}
+	#PDF_Bot * {
+		margin: 0;
+		padding: 0;
+	}
+	#PDF_Bot {
+		position: absolute;
+		box-sizing: border-box;
+		background: #E5E5E5;
+		width: 1331px;
+		height: 406px;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		--web-view-name: PDF Bot;
+		--web-view-id: PDF_Bot;
+		--web-enable-deep-linking: true;
+	}
+	#footer {
+		position: absolute;
+		width: 994px;
+		height: 76px;
+		left: 169px;
+		top: 10px;
+		overflow: visible;
+	}
+	#dot1_footer {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		overflow: hidden;
+		width: 13px;
+		height: 26px;
+		line-height: 34px;
+		margin-top: -2.5px;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 29px;
+		color: rgba(85,85,85,1);
+		letter-spacing: -0.09px;
+	}
+	#text1_footer {
+		position: absolute;
+		left: 17px;
+		top: 14px;
+		overflow: visible;
+		width: 583px;
+		white-space: nowrap;
+		line-height: 21px;
+		margin-top: -1.5px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+		letter-spacing: -0.05px;
+	}
+	#dot2_footer {
+		position: absolute;
+		left: 0px;
+		top: 21px;
+		overflow: hidden;
+		width: 13px;
+		height: 26px;
+		line-height: 34px;
+		margin-top: -2.5px;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 29px;
+		color: rgba(85,85,85,1);
+		letter-spacing: -0.09px;
+	}
+	#text2_footer {
+		position: absolute;
+		left: 17px;
+		top: 35px;
+		overflow: visible;
+		width: 978px;
+		white-space: nowrap;
+		line-height: 21px;
+		margin-top: -1.5px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+		letter-spacing: -0.05px;
+	}
+	#dot3_footer {
+		position: absolute;
+		left: 0px;
+		top: 42px;
+		overflow: hidden;
+		width: 13px;
+		height: 26px;
+		line-height: 34px;
+		margin-top: -2.5px;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 29px;
+		color: rgba(85,85,85,1);
+		letter-spacing: -0.09px;
+	}
+	#text3_footer {
+		position: absolute;
+		left: 17px;
+		top: 56px;
+		overflow: visible;
+		width: 870px;
+		white-space: nowrap;
+		line-height: 21px;
+		margin-top: -1.5px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(85,85,85,1);
+		letter-spacing: -0.05px;
+	}
+	#qr {
+		position: absolute;
+		width: 200px;
+		height: 200px;
+		left: 566px;
+		top: 156px;
+		overflow: visible;
+	}
+	#qr_code {
+		fill: rgba(0,0,0,1);
+	}
+	.qr_code {
+		position: absolute;
+		overflow: visible;
+		width: 200px;
+		height: 200px;
+		left: 0px;
+		top: 0px;
+	}
+</style>
+</head>
+<body>
+<div id="PDF_Bot">
+	<div id="footer">
+		<div id="dot1_footer">
+			<span>•</span>
+		</div>
+		<div id="text1_footer">
+			<span>Qualquer tratativa referente a proposta deverá ser formalizada por e-mail.</span>
+		</div>
+		<div id="dot2_footer">
+			<span>•</span>
+		</div>
+		<div id="text2_footer">
+			<span>Atenção as produtos que são enviados por caixa, as especificações </span><span style="font-style:normal;font-weight:bold;">ALTURA</span><span>, </span><span style="font-style:normal;font-weight:bold;">LARGURA</span><span> e </span><span style="font-style:normal;font-weight:bold;">COMPRIMENTO</span><span> são da caixa.</span>
+		</div>
+		<div id="dot3_footer">
+			<span>•</span>
+		</div>
+		<div id="text3_footer">
+			<span>O desconto quando aplicado é calculado sobe do valor total e não do produto que foi considerado o desconto.</span>
+		</div>
+	</div>
+    <div id="qr">
+		<img class="qr_code" src="https://api.qrserver.com/v1/create-qr-code/?data=test&amp;size=200x200" title="test" />
+	</div>
+</div>
+</body>
+</html>
