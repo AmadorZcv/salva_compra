@@ -408,19 +408,19 @@
         >
           <%= produto.nome %> 1.00M x 25mts
         </div>
-        <div id="quantidade" class="productBorder infoText">
+        <div id="quantidade" class="productBorder" style="text-align: right">
           <%= produto.qtd %>
         </div>
-        <div id="valorSemIpi" class="productBorder infoText" style="text-align: right">
+        <div id="valorSemIpi" class="productBorder" style="text-align: right">
           R$ <%= produto.preco %>
         </div>
-        <div id="ipi" class="productBorder infoText" style="text-align: right">
+        <div id="ipi" class="productBorder" style="text-align: right">
           <%= produto.ipi %>
         </div>
-        <div id="valorVenda" class="productBorder infoText" style="text-align: right">
+        <div id="valorVenda" class="productBorder" style="text-align: right">
           R$ <%= produto.total %>
         </div>
-        <div id="valorDesconto" class="productBorder infoText" style="text-align: right">
+        <div id="valorDesconto" class="productBorder" style="text-align: right">
           R$ <%= produto.total %>
         </div>
       </div>
@@ -476,7 +476,7 @@
         <div class="productLabelText ncm" style="text-align: right">
           NCM
         </div>
-        <div class=productLabelText peso" style="text-align: right">
+        <div class="productLabelText peso" style="text-align: right">
           Peso (KG)
         </div>
       </div>
@@ -488,25 +488,25 @@
         <div class="productBorder infoText produto2">
           Produto
         </div>
-        <div class="infoText descricao productBorder" style="text-align: right">
+        <div class="descricao productBorder" style="text-align: right">
           Descrição
         </div>
-        <div class="infoText embalagem productBorder" style="text-align: right">
+        <div class="embalagem productBorder" style="text-align: right">
           Embalagem Master
         </div>
-        <div class="infoText altura productBorder" style="text-align: right">
+        <div class="altura productBorder" style="text-align: right">
           Altura (m)
         </div>
-        <div class="infoText largura productBorder" style="text-align: right">
+        <div class="largura productBorder" style="text-align: right">
           Largura (m)
         </div>
-        <div class="infoText comprimento productBorder" style="text-align: right">
+        <div class="comprimento productBorder" style="text-align: right">
           Comprimento (m)
         </div>
-        <div class="infoText ncm productBorder" style="text-align: right">
+        <div class= ncm productBorder" style="text-align: right">
           NCM
         </div>
-        <div class="infoText  peso" style="text-align: right">
+        <div class="peso" style="text-align: right">
           Peso (KG)
         </div>
       </div>

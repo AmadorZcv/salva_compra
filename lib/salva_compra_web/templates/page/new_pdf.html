@@ -5,23 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>PDF</title>
     <style id="applicationStylesheet" type="text/css">
+    html {
+  -webkit-print-color-adjust: exact;
+}
       body {
-        margin: 10px;
-        margin-left: 97px;
-        margin-right: 97px;
+        zoom: 50%;
         padding: 0;
         display: flex;
         flex-direction: column;
         font-family: Arial;
         font-style: normal;
         font-weight: normal;
-        font-size: 20px;
+        font-size: 15px;
       }
       .labelText {
         font-family: Arial;
         font-style: normal;
         font-weight: normal;
-        font-size: 20px;
+        font-size: 15px;
         color: rgba(51, 51, 51, 1);
       }
       .infoText {
@@ -29,12 +30,12 @@
         font-family: Arial;
         font-style: normal;
         font-weight: normal;
-        font-size: 20px;
+        font-size: 15px;
         color: rgba(85, 85, 85, 1);
         display: flex;
       }
       #infoBox {
-        margin-bottom: 13px;
+        margin-bottom: 10px;
       }
       #barra_proposta {
         height: 42px;
@@ -54,7 +55,7 @@
         font-weight: normal;
         font-size: 22px;
         color: rgba(51, 51, 51, 1);
-        padding-left: 6px;
+        padding-left: 3px;
       }
       #infoColumns {
         display: flex;
@@ -77,7 +78,7 @@
         width: 25%;
       }
       .labelSpacing {
-        margin-top: 15px;
+        margin-top: 7px;
       }
       #infoText {
         display: flex;
@@ -122,38 +123,31 @@
         font-family: Arial;
         font-style: normal;
         font-weight: normal;
-        font-size: 20px;
+        font-size: 15px;
         color: rgba(255, 255, 255, 1);
-        padding-left: 6px;
+        padding-left: 3px;
       }
       .productText {
         font-family: Arial;
         font-style: normal;
         font-weight: normal;
-        font-size: 20px;
+        font-size: 15px;
         color: rgba(85, 85, 85, 1);
         text-align: left;
       }
       .productBorder {
-        border-width: 0;
-        border-right-width: 1px;
-        border-color: rgb(118, 118, 118);
-        border-style: ridge;
-        display: flex;
-        padding-right: 1px;
-      }
-      .productRightText {
-        text-align: right;
-        justify-content: right;
-        padding-right: 10px;
       }
       .itemSpacing {
-        padding-top: 8px;
-        padding-bottom: 8px;
+        padding-top: 4px;
+        padding-bottom: 4px;
         border-spacing: 0;
+        border-width: 0;
+        border-bottom-width: 1px;
+        border-color: rgb(118, 118, 118);
+        border-style: ridge;
       }
       .subTotalSpacing {
-        padding-bottom: 13px;
+        padding-bottom: 5px;
       }
 
       .produto2 {
@@ -188,7 +182,7 @@
       <div
         style="flex: 1; justify-content: center; align-items: center; display: flex; flex-direction: column"
       >
-        <img src="../../../../assets/static/images/logo-ntp.png" />
+      <img src="<%=@ntp %>" alt="NTP Logo" />
         <div
           style="justify-content: center; align-items: flex-start; display: flex; flex-direction: column"
         >
@@ -203,7 +197,8 @@
       <div
         style="flex: 1; justify-content: center; align-items: center; display: flex; flex-direction: column"
       >
-        <img src="../../../../assets/static/images/salvabras-slogan.png" />
+      <img src="<%=@salva %>" alt="Salva Bras Logo" />
+        
         <div
           style="justify-content: center; align-items: flex-start; display: flex; flex-direction: column"
         >
@@ -231,7 +226,7 @@
               Data de criação
             </div>
             <div class="infoText labelSpacing">
-              14/06/2019
+              <%= @criacao %>
             </div>
           </div>
           <div class="row">
@@ -239,7 +234,7 @@
               Data de Validade
             </div>
             <div class="infoText labelSpacing">
-              18/06/2019
+              <%= @validade %>
             </div>
           </div>
           <div class="row">
@@ -258,7 +253,7 @@
               Condição Pagamento
             </div>
             <div class="infoText labelSpacing">
-              21 dias
+              <%= @condicao %> dias
             </div>
           </div>
           <div class="row">
@@ -311,7 +306,7 @@
               Nome da Conta
             </div>
             <div class="infoText labelSpacing">
-              GUEDES & REZENDE ENGENHARIA LTDA
+              <%= @nome %>
             </div>
           </div>
           <div class="row">
@@ -319,7 +314,7 @@
               CPF/CNPJ
             </div>
             <div class="infoText labelSpacing">
-              08.731.715/001-26
+              <%= @cpf %>
             </div>
           </div>
           <div class="row">
@@ -327,7 +322,7 @@
               Ramo/Atividade
             </div>
             <div class="infoText labelSpacing">
-              Consultoria
+              <%= @ramo %>
             </div>
           </div>
           <div class="row">
@@ -335,7 +330,7 @@
               UF
             </div>
             <div class="infoText labelSpacing">
-              PA
+              <%= @uf %>
             </div>
           </div>
           <div class="row">
@@ -343,7 +338,7 @@
               Cidade
             </div>
             <div class="infoText labelSpacing">
-              BÉLEM
+              <%= @cidade %>
             </div>
           </div>
         </div>
@@ -353,7 +348,7 @@
               Nome completo
             </div>
             <div class="infoText labelSpacing">
-              Sérgio Paixão REPRESENTANTE
+              <%= @nome_completo %>
             </div>
           </div>
           <div class="row">
@@ -361,7 +356,7 @@
               Telefone
             </div>
             <div class="infoText labelSpacing">
-              (91) 3230-2650
+              <%= @telefone %>
             </div>
           </div>
           <div class="row">
@@ -369,7 +364,7 @@
               Email
             </div>
             <div class="infoText labelSpacing">
-              paixaosergio@oi.com.br
+              <%= @email %>
             </div>
           </div>
         </div>
@@ -388,94 +383,49 @@
         <div id="produtoLabel" class="productLabelText">
           Produto
         </div>
-        <div id="quantidadeLabel" class="productRightText productLabelText">
+        <div id="quantidadeLabel" class="productLabelText" style="text-align: right">
           Quantidade
         </div>
-        <div id="valorSemIpiLabel" class="productRightText productLabelText">
+        <div id="valorSemIpiLabel" class="productLabelText" style="text-align: right">
           Valor sem IPI
         </div>
-        <div id="ipi" class="productRightText productLabelText">
+        <div id="ipi" class="productLabelText" style="text-align: right">
           IPI
         </div>
-        <div id="valorVendaLabel" class="productRightText productLabelText">
+        <div id="valorVendaLabel" class="productLabelText" style="text-align: right">
           Valor de Venda
         </div>
-        <div id="valorDescontoLabel" class="productRightText productLabelText">
+        <div id="valorDescontoLabel" class="productLabelText" style="text-align: right">
           Valor com Desconto
         </div>
       </div>
+      <%= Enum.map(@produtos, fn produto ->  %>
       <div class="row itemSpacing">
         <div
           id="produto"
           class="productBorder infoText"
           style="padding-left: 6px;"
         >
-          Salva Piso 1.00M x 25mts
+          <%= produto.nome %> 1.00M x 25mts
         </div>
-        <div id="quantidade" class="productBorder productRightText infoText">
-          20,00
+        <div id="quantidade" class="productBorder" style="text-align: right">
+          <%= produto.qtd %>
         </div>
-        <div id="valorSemIpi" class="infoText productBorder productRightText">
-          R$ 83,86
+        <div id="valorSemIpi" class="productBorder" style="text-align: right">
+          R$ <%= produto.preco %>
         </div>
-        <div id="ipi" class="infoText productBorder productRightText">
-          5
+        <div id="ipi" class="productBorder" style="text-align: right">
+          <%= produto.ipi %>
         </div>
-        <div id="valorVenda" class="infoText productRightText productBorder">
-          R$ 88,05
+        <div id="valorVenda" class="productBorder" style="text-align: right">
+          R$ <%= produto.total %>
         </div>
-        <div id="valorDesconto" class="infoText productRightText">
-          R$ 88,05
-        </div>
-      </div>
-      <div class="row itemSpacing">
-        <div
-          id="produto"
-          class="productBorder infoText"
-          style="padding-left: 6px;"
-        >
-          Salva Piso 1.00M x 25mts
-        </div>
-        <div id="quantidade" class="productBorder productRightText infoText">
-          20,00
-        </div>
-        <div id="valorSemIpi" class="infoText productBorder productRightText">
-          R$ 83,86
-        </div>
-        <div id="ipi" class="infoText productBorder productRightText">
-          5
-        </div>
-        <div id="valorVenda" class="infoText productRightText productBorder">
-          R$ 88,05
-        </div>
-        <div id="valorDesconto" class="infoText productRightText">
-          R$ 88,05
+        <div id="valorDesconto" class="productBorder" style="text-align: right">
+          R$ <%= produto.total %>
         </div>
       </div>
-      <div class="row itemSpacing">
-        <div
-          id="produto"
-          class="productBorder infoText"
-          style="padding-left: 6px;"
-        >
-          Salva Piso 1.00M x 25mts
-        </div>
-        <div id="quantidade" class="productBorder productRightText infoText">
-          20,00
-        </div>
-        <div id="valorSemIpi" class="infoText productBorder productRightText">
-          R$ 83,86
-        </div>
-        <div id="ipi" class="infoText productBorder productRightText">
-          5
-        </div>
-        <div id="valorVenda" class="infoText productRightText productBorder">
-          R$ 88,05
-        </div>
-        <div id="valorDesconto" class="infoText productRightText">
-          R$ 88,05
-        </div>
-      </div>
+
+      <% end) %>
       <div class="row" style="margin-top: 44px;">
         <div
           class="column"
@@ -489,9 +439,9 @@
           class="column"
           style="flex: 40; align-items: flex-end; color: rgba(85,85,85,1); padding-right: 6px;"
         >
-          <div class="subTotalSpacing">R$ 1.761,00</div>
+          <div class="subTotalSpacing">R$ <%= @total %></div>
           <div class="subTotalSpacing">0,00%</div>
-          <div class="subTotalSpacing">R$ 1.761,00</div>
+          <div class="subTotalSpacing">R$ <%= @total %></div>
         </div>
       </div>
     </div>
@@ -508,25 +458,25 @@
         <div class="productLabelText produto2">
           Produto
         </div>
-        <div class="productRightText productLabelText descricao">
+        <div class="productLabelText descricao" style="text-align: right">
           Descrição
         </div>
-        <div class="productRightText productLabelText embalagem">
+        <div class="productLabelText embalagem" style="text-align: right">
           Embalagem Master
         </div>
-        <div class="productRightText productLabelText altura">
+        <div class="productLabelText altura" style="text-align: right">
           Altura (m)
         </div>
-        <div class="productRightText productLabelText largura">
+        <div class="productLabelText largura" style="text-align: right">
           Largura (m)
         </div>
-        <div class="productRightText productLabelText comprimento">
+        <div class="productLabelText comprimento" style="text-align: right">
           Comprimento (m)
         </div>
-        <div class="productRightText productLabelText ncm">
+        <div class="productLabelText ncm" style="text-align: right">
           NCM
         </div>
-        <div class="productRightText productLabelText peso">
+        <div class="productLabelText peso" style="text-align: right">
           Peso (KG)
         </div>
       </div>
@@ -538,25 +488,25 @@
         <div class="productBorder infoText produto2">
           Produto
         </div>
-        <div class="productRightText infoText descricao productBorder">
+        <div class="descricao productBorder" style="text-align: right">
           Descrição
         </div>
-        <div class="productRightText infoText embalagem productBorder">
+        <div class="embalagem productBorder" style="text-align: right">
           Embalagem Master
         </div>
-        <div class="productRightText infoText altura productBorder">
+        <div class="altura productBorder" style="text-align: right">
           Altura (m)
         </div>
-        <div class="productRightText infoText largura productBorder">
+        <div class="largura productBorder" style="text-align: right">
           Largura (m)
         </div>
-        <div class="productRightText infoText comprimento productBorder">
+        <div class="comprimento productBorder" style="text-align: right">
           Comprimento (m)
         </div>
-        <div class="productRightText infoText ncm productBorder">
+        <div class= ncm productBorder" style="text-align: right">
           NCM
         </div>
-        <div class="productRightText infoText peso">
+        <div class="peso" style="text-align: right">
           Peso (KG)
         </div>
       </div>
