@@ -12,7 +12,6 @@
         padding: 0;
         display: flex;
         flex-direction: column;
-        width: 1337px;
         font-family: Arial;
         font-style: normal;
         font-weight: normal;

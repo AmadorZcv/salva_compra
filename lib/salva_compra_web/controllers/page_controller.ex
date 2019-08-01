@@ -6,8 +6,11 @@ defmodule SalvaCompraWeb.PageController do
   end
 
   def print(conn, _params) do
-    html = Phoenix.View.render_to_string(SalvaCompraWeb.PageView, "pdf.html", %{})
+    html = Phoenix.View.render_to_string(SalvaCompraWeb.PageView, "new_pdf.html", %{})
+
     {:ok, filename} = PdfGenerator.generate(html)
+    # {:ok, filename} =
+    # PdfGenerator.generate(html, generator: :chrome, prefer_system_executable: true)
 
     conn
     |> put_resp_content_type("application/octet-stream", nil)
