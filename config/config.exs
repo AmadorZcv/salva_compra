@@ -29,7 +29,7 @@ config :pdf_generator,
   raise_on_missing_wkhtmltopdf_binary: false,
   # <-- make sure you installed node/puppeteer
   use_chrome: true,
-  prefer_system_executable: true
+  chrome_path: "../assets/node_modules/chrome-headless-render-pdf"
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

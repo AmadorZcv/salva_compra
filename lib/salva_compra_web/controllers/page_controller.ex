@@ -71,7 +71,11 @@ defmodule SalvaCompraWeb.PageController do
     {:ok, filename} =
       PdfGenerator.generate(html,
         generator: :chrome,
-        prefer_system_executable: true
+        prefer_system_executable: true,
+        shell_params: [
+          "--chrome-binary",
+          "assets/node_modules/puppeteer/.local-chromium/linux-674921/chrome-linux/chrome"
+        ]
       )
 
     conn
