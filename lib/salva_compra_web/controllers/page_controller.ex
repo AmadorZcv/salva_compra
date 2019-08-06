@@ -74,7 +74,7 @@ defmodule SalvaCompraWeb.PageController do
         prefer_system_executable: true,
         shell_params: [
           "--chrome-binary",
-          "assets/node_modules/puppeteer/.local-chromium/linux-674921/chrome-linux/chrome"
+          "node_modules/puppeteer/.local-chromium/linux-674921/chrome-linux/chrome"
         ]
       )
 
