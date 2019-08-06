@@ -2,5 +2,9 @@
   "dependencies": {
     "chrome-headless-render-pdf": "^1.8.2",
     "puppeteer": "^1.19.0"
+  },
+  "scripts": {
+    "deploy": "cd assets & yarn install & webpack --mode production",
+    "watch": "webpack --mode development --watch"
   }
 }
