@@ -82,9 +82,9 @@ defmodule SalvaCompraWeb.PageController do
         |> put_resp_header("content-disposition", ~s[attachment; filename="mypdf.pdf"])
         |> send_file(200, filename)
 
-      {:error, message} ->
+      {:error, reason} ->
         conn
-        |> send_resp(300, message)
+        |> send_resp(200, reason)
     end
 
     # {:ok, filename} = PdfGenerator.generate(html)
