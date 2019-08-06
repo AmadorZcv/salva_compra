@@ -2,7 +2,7 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
-    "deploy": "yarn install & webpack --mode production",
+    "deploy": "yarn install",
     "watch": "webpack --mode development --watch"
   },
   "dependencies": {
