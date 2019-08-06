@@ -67,21 +67,26 @@ defmodule SalvaCompraWeb.PageController do
         total: total
       })
 
-    # {:ok, filename} = PdfGenerator.generate(html)
-    {:ok, filename} =
-      PdfGenerator.generate(html,
-        generator: :chrome,
-        prefer_system_executable: true,
-        shell_params: [
-          "--chrome-binary",
-          "node_modules/puppeteer/.local-chromium/linux-674921/chrome-linux/chrome"
-        ]
-      )
+    case PdfGenerator.generate(html,
+           generator: :chrome,
+           prefer_system_executable: true,
+           shell_params: [
+             "--chrome-binary",
+             "node_modules/puppeteer/.local-chromium/linux-674921/chrome-linux/chrome"
+           ]
+         ) do
+      {:ok, filename} ->
+        conn
+        |> put_resp_content_type("application/octet-stream", nil)
+        |> put_resp_header("content-transfer-encoding", "binary")
+        |> put_resp_header("content-disposition", ~s[attachment; filename="mypdf.pdf"])
+        |> send_file(200, filename)
 
-    conn
-    |> put_resp_content_type("application/octet-stream", nil)
-    |> put_resp_header("content-transfer-encoding", "binary")
-    |> put_resp_header("content-disposition", ~s[attachment; filename="mypdf.pdf"])
-    |> send_file(200, filename)
+      {:error, message} ->
+        conn
+        |> send_resp(300, message)
+    end
+
+    # {:ok, filename} = PdfGenerator.generate(html)
   end
 end
