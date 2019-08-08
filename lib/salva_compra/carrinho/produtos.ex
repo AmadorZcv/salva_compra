@@ -655,7 +655,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "19004" => %{
     id: 19004,
     nome: "MATERIAL BASICO",
-    produto: "Papelão Ondulado 1,20m x 15mts"
+    produto: "Papelão Ondulado 1,20m x 15mts",
     descricao: "Papelão ondulado tipo B",
     largura: "1,20m",
     comprimento: "15mts",
