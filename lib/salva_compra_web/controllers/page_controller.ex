@@ -57,7 +57,12 @@ defmodule SalvaCompraWeb.PageController do
 
         %{
           nome: item.nome,
-          preco: item.preco,
+          preco:
+            number_to_currency(item.preco,
+              unit: "R$",
+              delimiter: " ",
+              separator: ","
+            ),
           qtd: produto["qtd"],
           total: item.total,
           ipi: item.ipi,
