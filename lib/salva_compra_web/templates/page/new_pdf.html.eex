@@ -264,6 +264,7 @@
             </div>
             <div class="infoText labelSpacing">
               <%= @condicao %> Dias
+              <%= @dias %> 
             </div>
           </div>
           <div class="row">

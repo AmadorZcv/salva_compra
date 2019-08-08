@@ -27,10 +27,28 @@ defmodule SalvaCompraWeb.PageController do
           "cpf" => cpf,
           "email" => email,
           "ramo" => ramo,
-          "carrinho" => carrinho
+          "carrinho" => carrinho,
+          "parcela" => parcela
         }
       }) do
     data = SalvaCompra.Carrinho.Produtos.produtos()
+
+    dias =
+      case parcela do
+        "1" ->
+          "À VISTA"
+
+        parcela ->
+          divisor = String.to_integer(parcela)
+          dividendo = String.to_integer(condicao)
+          resto = Integer.mod(dividendo, divisor)
+          resultado = Integer.floor_div(dividendo, divisor)
+
+          Enum.map(1..divisor, fn n -> n * resultado end)
+          |> Enum.to_list()
+          |> List.update_at(-1, &(&1 + resto))
+          |> Enum.join("/")
+      end
 
     produtos =
       Enum.with_index(carrinho, 1)
@@ -94,7 +112,8 @@ defmodule SalvaCompraWeb.PageController do
         ramo: ramo,
         carrinho: carrinho,
         produtos: produtos,
-        total: total
+        total: total,
+        dias: dias
       })
 
     conn
