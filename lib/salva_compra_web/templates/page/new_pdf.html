@@ -85,40 +85,40 @@
         display: flex;
       }
       #produtoLabel {
-        width: 28%;
+        width: 38.5%;
       }
       #quantidadeLabel {
-        width: 13.3%;
+        width: 11.5%;
       }
       #valorSemIpiLabel {
-        width: 15.2%;
+        width: 13.05%;
       }
       #ipiLabel {
-        width: 4.5%;
+        width: 3.75%;
       }
       #valorVendaLabel {
-        width: 17.2%;
+        width: 14.80%;
       }
       #valorDescontoLabel {
-        width: 21.8%;
+        width: 18.12%;
       }
       #produto {
-        width: 28%;
+        width: 44.5%;
       }
       #quantidade {
-        width: 13.3%;
+        width: 11.5%;
       }
       #valorSemIpi {
-        width: 15.2%;
+        width: 13.05%;
       }
       #ipi {
-        width: 4.5%;
+        width: 3.75%;
       }
       #valorVenda {
-        width: 17.2%;
+        width: 8.80%;
       }
       #valorDesconto {
-        width: 21.8%;
+        width: 9.12%;
       }
       .productLabelText {
         font-family: Arial;
@@ -399,7 +399,7 @@
         <div id="valorSemIpiLabel" class="productLabelTextRight" style="text-align: right">
           Valor sem IPI
         </div>
-        <div id="ipi" class="productLabelTextRight" style="text-align: right">
+        <div id="ipiLabel" class="productLabelTextRight" style="text-align: right">
           IPI
         </div>
         <div id="valorVendaLabel" class="productLabelTextRight" style="text-align: right">
@@ -416,7 +416,7 @@
           class="productBorder infoText"
           style="padding-left: 6px;"
         >
-          <%= produto.nome %> 1.00M x 25mts
+          <%= produto.produto %> <%= produto.largura %> x <%= produto.comprimento %>
         </div>
         <div id="quantidade" class="productBorder infoText" style="text-align: right">
           <%= produto.qtd %>
@@ -490,36 +490,38 @@
           Peso (KG)
         </div>
       </div>
+      <%= Enum.map(@produtos, fn produto ->  %>
       <div
         id="row"
         class="productBorder infoText itemSpacing"
         style="padding-left: 6px;"
       >
         <div class="productBorder infoText produto2">
-          Produto
+          <%= produto.produto %> <%= produto.largura %> x <%= produto.comprimento %> 
         </div>
         <div class="descricao productBorder" style="text-align: right">
-          Descrição
+          <%= produto.descricao %>
         </div>
         <div class="embalagem productBorder" style="text-align: right">
-          Embalagem Master
+          <%= produto.embalagem %>
         </div>
         <div class="altura productBorder" style="text-align: right">
-          Altura (m)
+          <%= produto.e_altura %>
         </div>
         <div class="largura productBorder" style="text-align: right">
-          Largura (m)
+          <%= produto.e_largura %>
         </div>
         <div class="comprimento productBorder" style="text-align: right">
-          Comprimento (m)
+          <%= produto.e_comprimento %>
         </div>
         <div class= "ncm productBorder" style="text-align: right">
-          NCM
+          <%= produto.ncm %>
         </div>
         <div class="peso" style="text-align: right">
-          Peso (KG)
+          <%= produto.peso %>
         </div>
       </div>
+      <% end) %>
     </div>
     <div style="justify-content: center; align-items: flex-end; display: flex;">
       <ul style="margin-top: 70px;  flex-direction: column" class="infoText">
