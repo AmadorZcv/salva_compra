@@ -103,7 +103,7 @@
         width: 18.12%;
       }
       #produto {
-        width: 44.5%;
+        width: 38.5%;
       }
       #quantidade {
         width: 11.5%;
@@ -115,10 +115,10 @@
         width: 3.75%;
       }
       #valorVenda {
-        width: 8.80%;
+        width: 14.80%;
       }
       #valorDesconto {
-        width: 9.12%;
+        width: 18.12%;
       }
       .productLabelText {
         font-family: Arial;
