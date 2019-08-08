@@ -416,7 +416,7 @@
           class="productBorder infoText"
           style="padding-left: 6px;"
         >
-          <%= produto.produto %> <%= produto.largura %> x <%= produto.comprimento %>
+          <%= produto.nome %> <%= produto.largura %> x <%= produto.comprimento %>
         </div>
         <div id="quantidade" class="productBorder infoText" style="text-align: right">
           <%= produto.qtd %>
@@ -490,7 +490,7 @@
           Peso (KG)
         </div>
       </div>
-      <%= Enum.map(@produtos, fn produto ->  %>
+  <%= Enum.map(@produtos, fn produto ->  %>
       <div
         id="row"
         class="productBorder infoText itemSpacing"

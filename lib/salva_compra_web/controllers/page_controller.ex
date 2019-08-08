@@ -40,7 +40,9 @@ defmodule SalvaCompraWeb.PageController do
           preco: item.preco,
           qtd: produto["qtd"],
           total: item.total,
-          ipi: item.ipi
+          ipi: item.ipi,
+          largura: item.largura,
+          comprimento: item.comprimento
         }
       end)
 
