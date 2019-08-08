@@ -3,7 +3,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
     "10000" => %{
     id: 10000,
     nome: "SALVA PISO",
-    produto: "Salva Piso Tradicional",
+    produto: "Salva Piso Tradicional 1,00m x 25mts",
     descricao: "Protetor de piso",
     largura: "1,00m",
     comprimento: "25mts",
@@ -22,7 +22,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "10001" => %{
     id: 10001,
     nome: "SALVA PISO",
-    produto: "Salva Piso Tradicional",
+    produto: "Salva Piso Tradicional 0,50m x 25mts",
     descricao: "Protetor de piso",
     largura: "0,50m",
     comprimento: "25mts",
@@ -41,7 +41,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "10002" => %{
     id: 10002,
     nome: "SALVA PISO",
-    produto: "Salva Piso Tradicional",
+    produto: "Salva Piso Tradicional 1,00m x 15mts",
     descricao: "Protetor de piso",
     largura: "1,00m",
     comprimento: "15mts",
@@ -60,7 +60,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "10003" => %{
     id: 10003,
     nome: "SALVA PISO",
-    produto: "Salva Piso Tradicional",
+    produto: "Salva Piso Tradicional 0,50m x 15mts",
     descricao: "Protetor de piso",
     largura: "0,50m",
     comprimento: "15mts",
@@ -79,7 +79,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "10004" => %{
     id: 10004,
     nome: "SALVA PISO",
-    produto: "Salva Piso Tradicional",
+    produto: "Salva Piso Tradicional 1,00m x 10mts",
     descricao: "Protetor de piso",
     largura: "1,00m",
     comprimento: "10mts",
@@ -98,7 +98,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "10005" => %{
     id: 10005,
     nome: "SALVA PISO",
-    produto: "Salva Piso Tradicional",
+    produto: "Salva Piso Tradicional 0,50m x 10mts",
     descricao: "Protetor de piso",
     largura: "0,50m",
     comprimento: "10mts",
@@ -117,7 +117,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "10100" => %{
     id: 10100,
     nome: "SALVA PISO",
-    produto: "Salva Piso Tradicional Com Fita",
+    produto: "Salva Piso Tradicional 1,00m x 25mts Com Fita",
     descricao: "Protetor de piso",
     largura: "1,00m",
     comprimento: "25mts",
@@ -136,7 +136,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "10101" => %{
     id: 10101,
     nome: "SALVA PISO",
-    produto: "Salva Piso Tradicional Com Fita",
+    produto: "Salva Piso Tradicional 1,00m x 15mts Com Fita",
     descricao: "Protetor de piso",
     largura: "1,00m",
     comprimento: "15mts",
@@ -155,7 +155,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "10102" => %{
     id: 10102,
     nome: "SALVA PISO",
-    produto: "Salva Piso Tradicional Com Fita",
+    produto: "Salva Piso Tradicional 1,00m x 10mts Com Fita",
     descricao: "Protetor de piso",
     largura: "1,00m",
     comprimento: "10mts",
@@ -174,7 +174,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "11000" => %{
     id: 11000,
     nome: "SALVA PISO PISOS ESPECIAIS",
-    produto: "Salva Piso Pisos Especiais",
+    produto: "Salva Piso Pisos Especiais 1,00m x 25mts",
     descricao: "Protetor de pisos de madeira",
     largura: "1,00m",
     comprimento: "25mts",
@@ -193,7 +193,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "11001" => %{
     id: 11001,
     nome: "SALVA PISO PISOS ESPECIAIS",
-    produto: "Salva Piso Pisos Especiais",
+    produto: "Salva Piso Pisos Especiais 1,00m x 15mts ",
     descricao: "Protetor de pisos de madeira",
     largura: "1,00m",
     comprimento: "15mts",
@@ -212,7 +212,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "11100" => %{
     id: 11100,
     nome: "SALVA PISO PISOS ESPECIAIS",
-    produto: "Salva Piso Fora do Padrão",
+    produto: "Salva Piso Fora do Padrão 1,00m x 25mts",
     descricao: "Protetor de piso",
     largura: "1,00m",
     comprimento: "25mts",
@@ -231,7 +231,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "11200" => %{
     id: 11200,
     nome: "SALVA PISO PISOS ESPECIAIS",
-    produto: "Salva Piso Personalizado",
+    produto: "Salva Piso Personalizado 1,00m x 25mts",
     descricao: "Protetor de piso",
     largura: "1,00m",
     comprimento: "25mts",
@@ -250,7 +250,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "12000" => %{
     id: 12000,
     nome: "SALVA PISO EXTRA RESISTENTE",
-    produto: "Salva Piso Extra Resistente",
+    produto: "Salva Piso Extra Resistente 1,20m x 25mts",
     descricao: "Manta protetora de piso extra resistente",
     largura: "1,20m",
     comprimento: "25mts",
@@ -269,10 +269,10 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "13000" => %{
     id: 13000,
     nome: "SALVA LIMPEZA",
-    produto: "Salva Limpeza Pós Obra",
+    produto: "Salva Limpeza Pós Obra 1L",
     descricao: "Produto químico para limpeza",
     unidade: "Caixa c/ 6 unidades",
-    largura: "1L",
+    usidade: "1L",
     diluicao: "10",
     rendimento: "25m²",
     embalagem: "Caixa",
@@ -289,10 +289,10 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "13100" => %{
     id: 13100,
     nome: "SALVA LIMPEZA",
-    produto: "Salva Limpeza Porcelanato",
+    produto: "Salva Limpeza Porcelanato 1L",
     descricao: "Produto químico para limpeza",
     unidade: "Caixa c/ 6 unidades",
-    largura: "1L",
+    usidade: "1L",
     diluicao: "10",
     rendimento: "25m²",
     embalagem: "Caixa",
@@ -309,10 +309,10 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "13200" => %{
     id: 13200,
     nome: "SALVA LIMPEZA",
-    produto: "Salva Limpeza Limpa Pedras",
+    produto: "Salva Limpeza Limpa Pedras 1L",
     descricao: "Produto químico para limpeza",
     unidade: "Caixa c/ 6 unidades",
-    largura: "1L",
+    usidade: "1L",
     diluicao: "10",
     rendimento: "25m²",
     embalagem: "Caixa",
@@ -329,7 +329,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "13300" => %{
     id: 13300,
     nome: "SALVA LIMPEZA",
-    produto: "Salva Limpeza Limpa Rejunte",
+    produto: "Salva Limpeza Limpa Rejunte 0,5L",
     descricao: "Produto químico para limpeza",
     unidade: "Caixa c/ 12 unidades",
     usidade: "0,5L",
@@ -349,7 +349,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "14000" => %{
     id: 14000,
     nome: "SALVA PINTURA",
-    produto: "Salva Pintura",
+    produto: "Salva Pintura 20m x 0,45mts ",
     descricao: "Mascaramento para pintura",
     altura: "0,45mts",
     comprimento: "20m",
@@ -368,7 +368,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "14001" => %{
     id: 14001,
     nome: "SALVA PINTURA",
-    produto: "Salva Pintura",
+    produto: "Salva Pintura 20m x 0,90mts ",
     descricao: "Mascaramento para pintura",
     altura: "0,9mts",
     comprimento: "20m",
@@ -387,7 +387,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "14002" => %{
     id: 14002,
     nome: "SALVA PINTURA",
-    produto: "Salva Pintura",
+    produto: "Salva Pintura 20m x 1,50mts ",
     descricao: "Mascaramento para pintura",
     altura: "1,5mts",
     comprimento: "20m",
@@ -406,7 +406,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "14003" => %{
     id: 14003,
     nome: "SALVA PINTURA",
-    produto: "Salva Pintura",
+    produto: "Salva Pintura 20m x 2,40mts ",
     descricao: "Mascaramento para pintura",
     altura: "2,4mts",
     comprimento: "20m",
@@ -425,7 +425,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "15000" => %{
     id: 15000,
     nome: "SALVA QUINA",
-    produto: "Salva Quina",
+    produto: "Salva Quina 0,05m x 0,05m x 1,8m",
     descricao: "Proteção para quinas e batentes",
     unidade: "Pacote c/ 6 unidades",
     altura: "1,8m",
@@ -445,7 +445,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "16000" => %{
     id: 16000,
     nome: "SALVA METAL",
-    produto: "Salva Metal",
+    produto: "Salva Metal 0,10m x 75mts",
     descricao: "Proteção para metais e maçanetas",
     largura: "0,10m",
     unidade: "Caixa c/ 6 unidades",
@@ -465,7 +465,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "17000" => %{
     id: 17000,
     nome: "SALVA BANCADA",
-    produto: "Salva Bancada",
+    produto: "Salva Bancada 0,40m x 25mts",
     descricao: "Proteção para louça sanitária",
     altura: "0,40m",
     comprimento: "25mts",
@@ -484,7 +484,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "17001" => %{
     id: 17001,
     nome: "SALVA BANCADA",
-    produto: "Salva Bancada",
+    produto: "Salva Bancada 0,60m x 25mts",
     descricao: "Proteção para bancadas",
     altura: "0,60m",
     comprimento: "25mts",
@@ -503,7 +503,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "17002" => %{
     id: 17002,
     nome: "SALVA BANCADA",
-    produto: "Salva Bancada",
+    produto: "Salva Bancada 0,40m x 50mts",
     descricao: "Proteção para louça sanitária",
     altura: "0,40m",
     comprimento: "50mts",
@@ -522,7 +522,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "17003" => %{
     id: 17003,
     nome: "SALVA BANCADA",
-    produto: "Salva Bancada",
+    produto: "Salva Bancada 0,60m x 50mts",
     descricao: "Proteção para bancadas",
     altura: "0,60m",
     comprimento: "50mts",
@@ -541,7 +541,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "18000" => %{
     id: 18000,
     nome: "SALVA RALO",
-    produto: "Salva Ralo",
+    produto: "Salva Ralo 0,10m Ø",
     descricao: "Tampão para ralos",
     unidade: "Caixa c/ 6 unidades",
     largura: "0,10m",
@@ -560,7 +560,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "18001" => %{
     id: 18001,
     nome: "SALVA RALO",
-    produto: "Salva Ralo",
+    produto: "Salva Ralo 0,15m Ø",
     descricao: "Tampão para ralos",
     unidade: "Caixa c/ 6 unidades",
     largura: "0,15m",
@@ -579,7 +579,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "19000" => %{
     id: 19000,
     nome: "MATERIAL BASICO",
-    produto: "Papelão Ondulado",
+    produto: "Papelão Ondulado 1,20m x 25mts",
     descricao: "Papelão ondulado tipo B",
     largura: "1,20m",
     comprimento: "25mts",
@@ -598,7 +598,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "19001" => %{
     id: 19001,
     nome: "MATERIAL BASICO",
-    produto: "Papelão Ondulado",
+    produto: "Papelão Ondulado 1,20m x 50mts",
     descricao: "Papelão ondulado tipo B",
     largura: "1,20m",
     comprimento: "50mts",
@@ -617,7 +617,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "19002" => %{
     id: 19002,
     nome: "MATERIAL BASICO",
-    produto: "Papelão Ondulado",
+    produto: "Papelão Ondulado 1,20m x 5mts",
     descricao: "Papelão ondulado tipo B",
     largura: "1,20m",
     comprimento: "5mts",
@@ -636,7 +636,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "19003" => %{
     id: 19003,
     nome: "MATERIAL BASICO",
-    produto: "Papelão Ondulado",
+    produto: "Papelão Ondulado 1,20m x 10mts",
     descricao: "Papelão ondulado tipo B",
     largura: "1,20m",
     comprimento: "10mts",
@@ -655,6 +655,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "19004" => %{
     id: 19004,
     nome: "MATERIAL BASICO",
+    produto: "Papelão Ondulado 1,20m x 15mts"
     descricao: "Papelão ondulado tipo B",
     largura: "1,20m",
     comprimento: "15mts",
@@ -673,7 +674,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "19100" => %{
     id: 19100,
     nome: "MATERIAL BASICO",
-    produto: "Lona Plástica Preta",
+    produto: "Lona Plástica Preta 6m x 5mts",
     descricao: "Lona plástica preta",
     largura: "6m",
     comprimento: "5mts",
@@ -692,7 +693,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "19101" => %{
     id: 19101,
     nome: "MATERIAL BASICO",
-    produto: "Lona Plástica Preta",
+    produto: "Lona Plástica Preta 5m x 4mts",
     descricao: "Lona plástica preta",
     largura: "5m",
     comprimento: "4mts",
@@ -711,7 +712,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "19102" => %{
     id: 19102,
     nome: "MATERIAL BASICO",
-    produto: "Lona Plástica Preta",
+    produto: "Lona Plástica Preta 4m x 4mts",
     descricao: "Lona plástica preta",
     largura: "4m",
     comprimento: "4mts",
@@ -730,7 +731,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "19103" => %{
     id: 19103,
     nome: "MATERIAL BASICO",
-    produto: "Lona Plástica Preta",
+    produto: "Lona Plástica Preta 4m x 3mts",
     descricao: "Lona plástica preta",
     largura: "4m",
     comprimento: "3mts",
@@ -749,7 +750,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "19104" => %{
     id: 19104,
     nome: "MATERIAL BASICO",
-    produto: "Lona Plástica Preta",
+    produto: "Lona Plástica Preta 3m x 3mts",
     descricao: "Lona plástica preta",
     largura: "3m",
     comprimento: "3mts",
@@ -768,7 +769,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "19105" => %{
     id: 19105,
     nome: "MATERIAL BASICO",
-    produto: "Lona Plástica Preta",
+    produto: "Lona Plástica Preta 3m x 2mts",
     descricao: "Lona plástica preta",
     largura: "3m",
     comprimento: "2mts",
@@ -787,7 +788,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "19200" => %{
     id: 19200,
     nome: "SALVA CREPE",
-    produto: "Fita Crepe",
+    produto: "Fita Crepe 1,8cm x 50mts",
     descricao: "Fita crepe",
     unidade: "Pacote c/ 4 unidades",
     altura: "1,8cm",
@@ -807,7 +808,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "19201" => %{
     id: 19201,
     nome: "SALVA CREPE",
-    produto: "Fita Crepe",
+    produto: "Fita Crepe 4,8cm x 50mts",
     descricao: "Fita crepe",
     unidade: "Pacote c/ 2 unidades",
     altura: "4,8cm",
@@ -827,7 +828,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "19300" => %{
     id: 19300,
     nome: "SALVA CREPE",
-    produto: "Fita Crepe Premium",
+    produto: "Fita Crepe Premium 4,8cm x 50mts",
     descricao: "Fita crepe premium para construção civil",
     unidade: "Pacote c/ 2 unidades",
     altura: "4,8cm",
@@ -847,7 +848,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "19400" => %{
     id: 19400,
     nome: "MATERIAL BASICO",
-    produto: "Lona Bolha",
+    produto: "Lona Bolha 1,20m x 25mts",
     descricao: "Plástico lona bolha preto",
     altura: "1,20m",
     comprimento: "25mts",
@@ -866,7 +867,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "19401" => %{
     id: 19401,
     nome: "MATERIAL BASICO",
-    produto: "Lona Bolha",
+    produto: "Lona Bolha 1,20m x 10mts",
     descricao: "Plástico lona bolha preto",
     altura: "1,20m",
     comprimento: "10mts",
@@ -885,7 +886,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "19402" => %{
     id: 19402,
     nome: "MATERIAL BASICO",
-    produto: "Lona Bolha",
+    produto: "Lona Bolha 0,60m x 25mts",
     descricao: "Plástico lona bolha preto",
     altura: "0,60m",
     comprimento: "25mts",
@@ -904,7 +905,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "19403" => %{
     id: 19403,
     nome: "MATERIAL BASICO",
-    produto: "Lona Bolha",
+    produto: "Lona Bolha 0,60m x 10mts",
     descricao: "Plástico lona bolha preto",
     altura: "0,60m",
     comprimento: "10mts",
@@ -923,7 +924,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "20000" => %{
     id: 20000,
     nome: "KRAFT",
-    produto: "Kraft",
+    produto: "Kraft 1,00m x 25 mts (2,5kg)",
     descricao: "Papel kraft pardo",
     altura: "1,00m",
     comprimento: "25mts",
@@ -942,7 +943,7 @@ defmodule SalvaCompra.Carrinho.Produtos do
   "20001" => %{
     id: 20001,
     nome: "KRAFT",
-    produto: "Kraft",
+    produto: "Kraft 1,00m x 50 mts (5kg)",
     descricao: "Papel Kraft Pardo",
     altura: "1,00m",
     comprimento: "50mts",
