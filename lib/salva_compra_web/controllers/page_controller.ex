@@ -1,5 +1,6 @@
 defmodule SalvaCompraWeb.PageController do
   use SalvaCompraWeb, :controller
+  import Number.Currency
 
   def index(conn, _params) do
     render(conn, "index.html")
@@ -32,7 +33,8 @@ defmodule SalvaCompraWeb.PageController do
     data = SalvaCompra.Carrinho.Produtos.produtos()
 
     produtos =
-      Enum.map(carrinho, fn produto ->
+      Enum.with_index(carrinho, 1)
+      |> Enum.map(fn {produto, index} ->
         item = data[produto["id"]]
 
         %{
@@ -41,12 +43,38 @@ defmodule SalvaCompraWeb.PageController do
           qtd: produto["qtd"],
           total: item.total,
           ipi: item.ipi,
-          largura: item.largura,
-          comprimento: item.comprimento
+          produto: item.produto,
+          descricao: item.descricao,
+          embalagem: item.embalagem,
+          e_altura: item.e_altura,
+          e_largura: item.e_largura,
+          e_comprimento: item.e_comprimento,
+          ncm: item.ncm,
+          peso: item.peso,
+          index: Integer.to_string(index) |> String.pad_leading(2, "0")
         }
       end)
 
-    total = Enum.reduce(produtos, 0, fn produto, acc -> produto.total + acc end)
+    total =
+      Enum.reduce(produtos, 0, fn produto, acc -> produto.total + acc end)
+      |> number_to_currency(
+        unit: "R$",
+        delimiter: " ",
+        separator: ","
+      )
+
+    produtos =
+      Enum.map(produtos, fn produto ->
+        Map.replace!(
+          produto,
+          :total,
+          number_to_currency(produto.total,
+            unit: "R$",
+            delimiter: " ",
+            separator: ","
+          )
+        )
+      end)
 
     html =
       Phoenix.View.render_to_string(SalvaCompraWeb.PageView, "new_pdf.html", %{

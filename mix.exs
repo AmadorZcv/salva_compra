@@ -43,7 +43,8 @@ defmodule SalvaCompra.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:pdf_generator, ">=0.5.5"}
+      {:pdf_generator, ">=0.5.5"},
+      {:number, "~> 1.0.0"}
     ]
   end
 
