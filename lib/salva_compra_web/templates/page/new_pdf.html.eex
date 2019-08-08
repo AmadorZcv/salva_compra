@@ -196,12 +196,12 @@
         <div
           style="justify-content: center; align-items: flex-start; display: flex; flex-direction: column"
         >
-          <div class="infoText">NTP Engenharia</div>
+          <div class="infoText"><b>NTP Engenharia</b></div>
           <div class="infoText">CNPJ 33.131.887/0001-06</div>
           <div class="infoText">
             Travessa Barão do Triunfo, 3540, Sala 410 - Marco - Belém/PA
           </div>
-          <div class="infoText">Tel (91) 3349-7335 ntpengenharia@gmail.com</div>
+          <div class="infoText">Tel <b>(91) 3349-7335 ntpengenharia@gmail.com</b></div>
         </div>
       </div>
       <div
@@ -213,13 +213,13 @@
           style="justify-content: center; align-items: flex-start; display: flex; flex-direction: column"
         >
           <div class="infoText">
-            Salvabras Soluções em Proteção LTDA
+            <b>Salvabras Soluções em Proteção LTDA</b>
           </div>
           <div class="infoText">CNPJ 16.557.984/0001-46</div>
           <div class="infoText">
             Rua Anhanguera, 425 - Piratininga - Osasco/SP
           </div>
-          <div class="infoText">Tel (11) 3288-2799 www.salvabras.com.br</div>
+          <div class="infoText">Tel <b>(11) 3288-2799 www.salvabras.com.br</b></div>
         </div>
       </div>
     </div>
@@ -529,11 +529,18 @@
         </li>
         <li>
           Atenção as produtos que são enviados por caixa, as especificações
-          ALTURA, LARGURA e COMPRIMENTO são da caixa.
+          <b>ALTURA</b>, <b>LARGURA</b> e <b>COMPRIMENTO</b> são da caixa.
         </li>
         <li>
           O desconto quando aplicado é calculado sobe do valor total e não do
           produto que foi considerado o desconto.
+        </li>
+        <li>
+          Todas as cobranças são emitidas por boleto.
+        </li>
+        <li>
+          <b>ATENÇÃO: Para pedidos personalizados poderá ocorrer perda ou ganho de até 10% das peças, ao confirmar a compra, você
+          estará aceitando está condição.</b>
         </li>
       </ul>
     </div>
