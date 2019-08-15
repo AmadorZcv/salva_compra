@@ -33,37 +33,6 @@ defmodule SalvaCompraWeb.PageController do
       }) do
     data = SalvaCompra.Carrinho.Produtos.produtos()
 
-    produtos_orcamento =
-      Enum.map(carrinho, fn item ->
-        produto = data[item["id"]]
-
-        %{
-          produto_id: produto.id,
-          preco: produto.preco,
-          qtd: item["qtd"],
-          total: produto.total,
-          ipi: produto.ipi,
-          ipic: produto.ipic
-        }
-      end)
-
-    SalvaCompra.Orcamentos.create_orcamento(%{
-      cidade: cidade,
-      condicao: condicao,
-      cpf: cpf,
-      criacao: criacao,
-      email: email,
-      nome: nome,
-      nome_completo: nome_completo,
-      parcela: String.to_integer(parcela),
-      ramo: ramo,
-      telefone: telefone,
-      uf: uf,
-      validade: validade,
-      produtos: produtos_orcamento
-    })
-    |> IO.inspect()
-
     dias =
       case parcela do
         "1" ->

@@ -5,7 +5,7 @@ defmodule SalvaCompra.Orcamentos do
 
   import Ecto.Query, warn: false
   alias SalvaCompra.Repo
-
+  import Number.Currency
   alias SalvaCompra.Orcamentos.Orcamento
 
   @doc """
@@ -35,7 +35,7 @@ defmodule SalvaCompra.Orcamentos do
       ** (Ecto.NoResultsError)
 
   """
-  def get_orcamento!(id), do: Repo.get!(Orcamento, id)
+  def get_orcamento!(id), do: Repo.get!(Orcamento, id) |> Repo.preload(:produtos)
 
   @doc """
   Creates a orcamento.
@@ -100,5 +100,96 @@ defmodule SalvaCompra.Orcamentos do
   """
   def change_orcamento(%Orcamento{} = orcamento) do
     Orcamento.changeset(orcamento, %{})
+  end
+
+  def orcamento_to_html(orcamento, conn) do
+    data = SalvaCompra.Carrinho.Produtos.produtos()
+
+    dias =
+      case orcamento.parcela do
+        1 ->
+          "À VISTA"
+
+        parcela ->
+          divisor = parcela
+          dividendo = String.to_integer(orcamento.condicao)
+          resto = Integer.mod(dividendo, divisor)
+          resultado = Integer.floor_div(dividendo, divisor)
+
+          Enum.map(1..divisor, fn n -> n * resultado end)
+          |> Enum.to_list()
+          |> List.update_at(-1, &(&1 + resto))
+          |> Enum.join("/")
+      end
+
+    produtos =
+      Enum.with_index(orcamento.produtos, 1)
+      |> Enum.map(fn {produto, index} ->
+        IO.puts(produto.produto_id)
+        item = data[Integer.to_string(produto.produto_id)]
+
+        %{
+          nome: item.nome,
+          preco:
+            number_to_currency(produto.preco,
+              unit: "R$",
+              delimiter: ".",
+              separator: ","
+            ),
+          qtd: produto.qtd,
+          total: produto.total,
+          ipi: produto.ipi,
+          produto: item.produto,
+          descricao: item.descricao,
+          embalagem: item.embalagem,
+          e_altura: item.e_altura,
+          e_largura: item.e_largura,
+          e_comprimento: item.e_comprimento,
+          ncm: item.ncm,
+          peso: item.peso,
+          index: Integer.to_string(index) |> String.pad_leading(2, "0")
+        }
+      end)
+
+    total =
+      Enum.reduce(produtos, 0, fn produto, acc -> produto.total + acc end)
+      |> number_to_currency(
+        unit: "R$",
+        delimiter: ".",
+        separator: ","
+      )
+
+    produtos =
+      Enum.map(produtos, fn produto ->
+        Map.replace!(
+          produto,
+          :total,
+          number_to_currency(produto.total,
+            unit: "R$",
+            delimiter: ".",
+            separator: ","
+          )
+        )
+      end)
+
+    Phoenix.View.render_to_string(SalvaCompraWeb.PageView, "new_pdf.html", %{
+      conn: conn,
+      ntp: Images64.logo_ntp(),
+      salva: Images64.logo_salva(),
+      criacao: orcamento.criacao,
+      validade: orcamento.validade,
+      condicao: orcamento.condicao,
+      telefone: orcamento.telefone,
+      cidade: orcamento.cidade,
+      nome: orcamento.nome,
+      nome_completo: orcamento.nome_completo,
+      uf: orcamento.uf,
+      cpf: orcamento.cpf,
+      email: orcamento.email,
+      ramo: orcamento.ramo,
+      produtos: produtos,
+      total: total,
+      dias: dias
+    })
   end
 end

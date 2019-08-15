@@ -6,12 +6,13 @@ defmodule SalvaCompraWeb.OrcamentoView do
     %{data: render_many(orcamentos, OrcamentoView, "orcamento.json")}
   end
 
-  def render("show.json", %{orcamento: orcamento}) do
-    %{data: render_one(orcamento, OrcamentoView, "orcamento.json")}
+  def render("show.json", %{orcamento: orcamento, html: html}) do
+    %{data: %{orcamento: render_one(orcamento, OrcamentoView, "orcamento.json"), html: html}}
   end
 
   def render("orcamento.json", %{orcamento: orcamento}) do
-    %{id: orcamento.id,
+    %{
+      id: orcamento.id,
       criacao: orcamento.criacao,
       validade: orcamento.validade,
       condicao: orcamento.condicao,
@@ -23,6 +24,7 @@ defmodule SalvaCompraWeb.OrcamentoView do
       cpf: orcamento.cpf,
       email: orcamento.email,
       ramo: orcamento.ramo,
-      parcela: orcamento.parcela}
+      parcela: orcamento.parcela
+    }
   end
 end
