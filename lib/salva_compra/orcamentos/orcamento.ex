@@ -35,8 +35,7 @@ defmodule SalvaCompra.Orcamentos.Orcamento do
       :cpf,
       :email,
       :ramo,
-      :parcela,
-      :produtos
+      :parcela
     ])
     |> validate_required([
       :criacao,
@@ -50,8 +49,8 @@ defmodule SalvaCompra.Orcamentos.Orcamento do
       :cpf,
       :email,
       :ramo,
-      :parcela,
-      :produtos
+      :parcela
     ])
+    |> cast_assoc(:produtos, required: true)
   end
 end
