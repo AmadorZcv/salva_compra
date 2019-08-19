@@ -264,6 +264,7 @@
             </div>
             <div class="infoText labelSpacing">
               <%= @condicao %> Dias
+              <%= @dias %> 
             </div>
           </div>
           <div class="row">
@@ -416,22 +417,22 @@
           class="productBorder infoText"
           style="padding-left: 6px;"
         >
-          <%= produto.produto %> <%= produto.largura %> x <%= produto.comprimento %>
+         <%= produto.index %> <%= produto.produto %> 
         </div>
         <div id="quantidade" class="productBorder infoText" style="text-align: right">
           <%= produto.qtd %>
         </div>
         <div id="valorSemIpi" class="productBorder infoText" style="text-align: right">
-          R$ <%= produto.preco %>
+         <%= produto.preco %>
         </div>
         <div id="ipi" class="productBorder infoText" style="text-align: right">
           <%= produto.ipi %>
         </div>
         <div id="valorVenda" class="productBorder infoText" style="text-align: right">
-          R$ <%= produto.total %>
+         <%= produto.total %>
         </div>
         <div id="valorDesconto" class="productBorder infoText" style="text-align: right">
-          R$ <%= produto.total %>
+          <%= produto.total %>
         </div>
       </div>
 
@@ -449,9 +450,9 @@
           class="column"
           style="flex: 35; align-items: flex-end; color: rgba(85,85,85,1); padding-right: 6px;"
         >
-          <div class="subTotalSpacing">R$ <%= @total %></div>
+          <div class="subTotalSpacing"> <%= @total %></div>
           <div class="subTotalSpacing">0,00%</div>
-          <div class="subTotalSpacing">R$ <%= @total %></div>
+          <div class="subTotalSpacing"><%= @total %></div>
         </div>
       </div>
     </div>
@@ -490,14 +491,14 @@
           Peso (KG)
         </div>
       </div>
-      <%= Enum.map(@produtos, fn produto ->  %>
+  <%= Enum.map(@produtos, fn produto ->  %>
       <div
         id="row"
         class="productBorder infoText itemSpacing"
         style="padding-left: 6px;"
       >
         <div class="productBorder infoText produto2">
-          <%= produto.produto %> <%= produto.largura %> x <%= produto.comprimento %> 
+         <%= produto.index %> <%= produto.produto %>
         </div>
         <div class="descricao productBorder" style="text-align: right">
           <%= produto.descricao %>
