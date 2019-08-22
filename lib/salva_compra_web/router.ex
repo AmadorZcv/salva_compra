@@ -1,6 +1,14 @@
 defmodule SalvaCompraWeb.Router do
   use SalvaCompraWeb, :router
 
+  pipeline :authenticate do
+    plug SalvaCompraWeb.Plugs.AuthenticatePlug
+  end
+
+  pipeline :admin do
+    plug SalvaCompraWeb.Plugs.AdminPlug
+  end
+
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
@@ -19,6 +27,14 @@ defmodule SalvaCompraWeb.Router do
     get "/", PageController, :index
     get "/pdf", PageController, :pdf
     get "/download", PageController, :print
+    get "/users", UserController, :index
+    get "/users/:id", UserController, :show
+    resources "/sessions", SessionController, only: [:new, :create, :delete]
+  end
+
+  scope "", SalvaCompraWeb do
+    pipe_through :browser
+    pipe_through [:authenticate, :admin]
     resources "/users", UserController
   end
 

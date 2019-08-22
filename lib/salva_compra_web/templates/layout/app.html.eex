@@ -11,9 +11,14 @@
     <header>
       <section class="container">
         <nav role="navigation">
-          <ul>
-            <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
-          </ul>
+           <%= if Plug.Conn.get_session(@conn, :token)!=nil do %>
+ 
+    <li><%= Plug.Conn.get_session(@conn, :login) %></li>
+        <%= link "Sair", to: Routes.session_path(@conn, :delete,1),
+                           method: "delete" %>
+  <% else %>
+    <li><%= link "Sign in", to: Routes.session_path(@conn, :new) %></li>
+  <% end %>
         </nav>
         <a href="http://phoenixframework.org/" class="phx-logo">
           <img src="<%= Routes.static_path(@conn, "/images/logo-ntp.png") %>" alt="Phoenix Framework Logo"/>
