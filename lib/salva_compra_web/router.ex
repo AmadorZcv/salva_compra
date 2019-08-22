@@ -32,7 +32,7 @@ defmodule SalvaCompraWeb.Router do
     resources "/sessions", SessionController, only: [:new, :create, :delete]
   end
 
-  scope "", SalvaCompraWeb do
+  scope "/", SalvaCompraWeb do
     pipe_through :browser
     pipe_through [:authenticate, :admin]
     resources "/users", UserController, only: [:new, :create, :delete, :edit, :update]

@@ -2,6 +2,7 @@ defmodule SalvaCompra.Accounts.User do
   use Ecto.Schema
   import Ecto.Changeset
   alias SalvaCompra.Accounts.AuthToken
+  alias SalvaCompra.Orcamentos.Orcamento
 
   schema "users" do
     field :email, :string
@@ -14,6 +15,7 @@ defmodule SalvaCompra.Accounts.User do
     field :telefone, :string
     field :role, :integer
     has_many :auth_tokens, AuthToken
+    has_many :orcamentos, Orcamento
     timestamps()
   end
 

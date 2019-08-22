@@ -2,6 +2,7 @@ defmodule SalvaCompra.Orcamentos.Orcamento do
   use Ecto.Schema
   import Ecto.Changeset
   alias SalvaCompra.Orcamentos.OrcamentoProduto
+  alias SalvaCompra.Accounts.User
 
   schema "orcamentos" do
     field :cidade, :string
@@ -16,6 +17,9 @@ defmodule SalvaCompra.Orcamentos.Orcamento do
     field :telefone, :string
     field :uf, :string
     field :validade, :string
+    field :day_id, :integer
+    field :title, :string
+    belongs_to :user, User
     has_many :produtos, OrcamentoProduto
     timestamps()
   end
@@ -35,7 +39,10 @@ defmodule SalvaCompra.Orcamentos.Orcamento do
       :cpf,
       :email,
       :ramo,
-      :parcela
+      :parcela,
+      :user_id,
+      :day_id,
+      :title
     ])
     |> validate_required([
       :criacao,
@@ -49,7 +56,9 @@ defmodule SalvaCompra.Orcamentos.Orcamento do
       :cpf,
       :email,
       :ramo,
-      :parcela
+      :parcela,
+      :day_id,
+      :title
     ])
     |> cast_assoc(:produtos, required: true)
   end
