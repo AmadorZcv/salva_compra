@@ -35,7 +35,7 @@ defmodule SalvaCompraWeb.Router do
   scope "", SalvaCompraWeb do
     pipe_through :browser
     pipe_through [:authenticate, :admin]
-    resources "/users", UserController
+    resources "/users", UserController, only: [:new, :create, :delete, :edit, :update]
   end
 
   # Other scopes may use custom stacks.
