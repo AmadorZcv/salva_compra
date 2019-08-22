@@ -1,6 +1,7 @@
 defmodule SalvaCompra.Accounts.User do
   use Ecto.Schema
   import Ecto.Changeset
+  alias SalvaCompra.Accounts.AuthToken
 
   schema "users" do
     field :email, :string
@@ -11,7 +12,7 @@ defmodule SalvaCompra.Accounts.User do
     field :password, :string, virtual: true
     field :password_hash, :string
     field :telefone, :string
-
+    has_many :auth_tokens, AuthToken
     timestamps()
   end
 
