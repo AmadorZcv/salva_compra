@@ -38,9 +38,18 @@ defmodule SalvaCompraWeb.Router do
     resources "/users", UserController, only: [:new, :create, :delete, :edit, :update]
   end
 
+  scope "/auth", SalvaCompraWeb do
+    pipe_through :api
+
+    post "/registrar", AuthController, :registrar
+    post "/sign_in", AuthController, :sign_in
+    delete "/sign_out", AuthController, :sign_out
+  end
+
   # Other scopes may use custom stacks.
   scope "/api", SalvaCompraWeb do
     pipe_through :api
+    pipe_through :authenticate
     post "/orcamento", OrcamentoController, :create
     post "/pdf", PageController, :print
     get "/orcamento/:id", OrcamentoController, :show

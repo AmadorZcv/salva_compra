@@ -2,11 +2,12 @@ defmodule SalvaCompra.Orcamentos do
   @moduledoc """
   The Orcamentos context.
   """
-
+  use Timex
   import Ecto.Query, warn: false
   alias SalvaCompra.Repo
   import Number.Currency
   alias SalvaCompra.Orcamentos.Orcamento
+  alias SalvaCompra.Accounts
 
   @doc """
   Returns the list of orcamentos.
@@ -49,10 +50,42 @@ defmodule SalvaCompra.Orcamentos do
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_orcamento(attrs \\ %{}) do
+  def create_orcamento(attrs) do
+    user = Accounts.get_user!(attrs.user_id)
+
+    day =
+      Timex.parse!(attrs.criacao, "{0D}/{0M}/{YYYY}")
+      |> Timex.format!("{YYYY}{0M}{0D}")
+
+    filial =
+      Integer.to_string(user.filial_id)
+      |> String.pad_leading(3, "0")
+
+    funcionario =
+      Integer.to_string(user.funcionario_id)
+      |> String.pad_leading(3, "0")
+
+    day_id = get_last_day_id(attrs) + 1
+
+    orcamento =
+      Map.put(attrs, :day_id, day_id)
+      |> Map.put(:title, "#{day}#{filial}#{funcionario}-#{day_id}")
+
+    IO.inspect(orcamento)
+
     %Orcamento{}
-    |> Orcamento.changeset(attrs)
+    |> Orcamento.changeset(orcamento)
     |> Repo.insert()
+  end
+
+  def get_last_day_id(orcamento) do
+    case Repo.get_by(Orcamento, user_id: orcamento.user_id, criacao: orcamento.criacao) do
+      nil ->
+        0
+
+      last_orcamento ->
+        last_orcamento.day_id
+    end
   end
 
   @doc """

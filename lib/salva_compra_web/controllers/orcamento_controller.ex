@@ -57,7 +57,8 @@ defmodule SalvaCompraWeb.OrcamentoController do
              telefone: telefone,
              uf: uf,
              validade: validade,
-             produtos: produtos_orcamento
+             produtos: produtos_orcamento,
+             user_id: conn.assigns[:user_id]
            }) do
       html = Orcamentos.orcamento_to_html(orcamento, conn)
 
