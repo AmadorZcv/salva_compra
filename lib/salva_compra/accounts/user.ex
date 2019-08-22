@@ -25,8 +25,7 @@ defmodule SalvaCompra.Accounts.User do
       :filial_id,
       :funcionario_id,
       :login,
-      :email,
-      :password
+      :email
     ])
     |> put_password_hash()
   end
