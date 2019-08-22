@@ -79,12 +79,18 @@ defmodule SalvaCompra.Orcamentos do
   end
 
   def get_last_day_id(orcamento) do
-    case Repo.get_by(Orcamento, user_id: orcamento.user_id, criacao: orcamento.criacao) do
-      nil ->
-        0
-
-      last_orcamento ->
+    case Repo.all(
+           from u in Orcamento,
+             where: u.user_id == ^orcamento.user_id,
+             where: u.criacao == ^orcamento.criacao,
+             limit: 1,
+             order_by: [desc: u.day_id]
+         ) do
+      [last_orcamento] ->
         last_orcamento.day_id
+
+      [] ->
+        0
     end
   end
 
@@ -224,7 +230,8 @@ defmodule SalvaCompra.Orcamentos do
       produtos: produtos,
       total: total,
       dias: dias,
-      user: user
+      user: user,
+      title: orcamento.title
     })
   end
 end
