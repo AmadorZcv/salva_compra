@@ -24,7 +24,8 @@ defmodule SalvaCompraWeb.OrcamentoView do
       cpf: orcamento.cpf,
       email: orcamento.email,
       ramo: orcamento.ramo,
-      parcela: orcamento.parcela
+      parcela: orcamento.parcela,
+      title: orcamento.title
     }
   end
 end

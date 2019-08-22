@@ -136,6 +136,7 @@ defmodule SalvaCompra.Orcamentos do
   end
 
   def orcamento_to_html(orcamento, conn) do
+    user = Accounts.get_user!(orcamento.user_id)
     data = SalvaCompra.Carrinho.Produtos.produtos()
 
     dias =
@@ -222,7 +223,8 @@ defmodule SalvaCompra.Orcamentos do
       ramo: orcamento.ramo,
       produtos: produtos,
       total: total,
-      dias: dias
+      dias: dias,
+      user: user
     })
   end
 end
