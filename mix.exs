@@ -20,7 +20,7 @@ defmodule SalvaCompra.MixProject do
   def application do
     [
       mod: {SalvaCompra.Application, []},
-      extra_applications: [:logger, :runtime_tools, :pdf_generator]
+      extra_applications: [:logger, :runtime_tools, :pdf_generator, :timex]
     ]
   end
 
@@ -45,7 +45,8 @@ defmodule SalvaCompra.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:pdf_generator, ">=0.5.5"},
       {:number, "~> 1.0.0"},
-      {:bcrypt_elixir, "~> 2.0"}
+      {:bcrypt_elixir, "~> 2.0"},
+      {:timex, "~> 3.0"}
     ]
   end
 
