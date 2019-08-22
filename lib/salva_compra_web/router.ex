@@ -28,14 +28,13 @@ defmodule SalvaCompraWeb.Router do
     get "/pdf", PageController, :pdf
     get "/download", PageController, :print
     get "/users", UserController, :index
-    get "/users/:id", UserController, :show
     resources "/sessions", SessionController, only: [:new, :create, :delete]
   end
 
   scope "/", SalvaCompraWeb do
     pipe_through :browser
     pipe_through [:authenticate, :admin]
-    resources "/users", UserController, only: [:new, :create, :delete, :edit, :update]
+    resources "/users", UserController, only: [:create, :delete, :edit, :update, :new, :show]
   end
 
   scope "/auth", SalvaCompraWeb do
