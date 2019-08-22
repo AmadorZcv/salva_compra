@@ -44,7 +44,8 @@ defmodule SalvaCompra.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:pdf_generator, ">=0.5.5"},
-      {:number, "~> 1.0.0"}
+      {:number, "~> 1.0.0"},
+      {:bcrypt_elixir, "~> 2.0"}
     ]
   end
 
