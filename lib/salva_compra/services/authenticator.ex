@@ -8,7 +8,7 @@ defmodule SalvaCompra.Services.Authenticator do
 
   def verify_token(token) do
     case Phoenix.Token.verify(@secret, @seed, token) do
-      # 0 - user, 1 - professor
+      # 0 - User, 1 - Admin
       {:ok, {id, type}} -> {:ok, token, id, type}
       error -> error
     end

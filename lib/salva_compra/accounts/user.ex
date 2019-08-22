@@ -12,6 +12,7 @@ defmodule SalvaCompra.Accounts.User do
     field :password, :string, virtual: true
     field :password_hash, :string
     field :telefone, :string
+    field :role, :integer
     has_many :auth_tokens, AuthToken
     timestamps()
   end
@@ -19,14 +20,24 @@ defmodule SalvaCompra.Accounts.User do
   @doc false
   def changeset(user, attrs) do
     user
-    |> cast(attrs, [:nome, :telefone, :filial_id, :funcionario_id, :password, :login, :email])
+    |> cast(attrs, [
+      :nome,
+      :telefone,
+      :filial_id,
+      :funcionario_id,
+      :password,
+      :login,
+      :email,
+      :role
+    ])
     |> validate_required([
       :nome,
       :telefone,
       :filial_id,
       :funcionario_id,
       :login,
-      :email
+      :email,
+      :role
     ])
     |> put_password_hash()
   end
