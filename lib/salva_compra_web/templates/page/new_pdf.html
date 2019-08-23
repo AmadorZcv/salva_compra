@@ -1,551 +1,557 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>PDF</title>
- <style id="applicationStylesheet" type="text/css">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title><%=@title %></title>
+  <style id="applicationStylesheet" type="text/css">
     html {
-  -webkit-print-color-adjust: exact;
-}
-      body {
-        zoom: 50%;
-        padding: 5;
-        display: flex;
-        flex-direction: column;
-        font-family: Arial;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 23px;
-        margin-left: 1.5%;
-        margin-right: 1.5%;
-      }
-      .labelText {
-        font-family: Arial;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 21.8px;
-        color: rgba(51, 51, 51, 1);
-      }
-      .infoText {
-        text-align: left;
-        font-family: Arial;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 21.8px;
-        color: rgba(85, 85, 85, 1);
-        display: flex;
-      }
-      #infoBox {
-        margin-bottom: 10px;
-      }
-      #barra_proposta {
-        height: 51px;
-        background-color: rgba(222, 229, 236, 1);
-        width: 100%;
-        display: flex;
-        margin-top: 21px;
-      }
-      #titulo_proposta {
-        display: flex;
-        justify-content: center;
-        /* align-self: center;    <---- REMOVE */
-        align-items: center;
-        text-align: left;
-        font-family: Arial;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 23px;
-        color: rgba(51, 51, 51, 1);
-        padding-left: 3px;
-      }
-      #infoColumns {
-        display: flex;
-        flex-direction: row;
-      }
-      .column {
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-      }
+      -webkit-print-color-adjust: exact;
+    }
 
-      .row {
-        display: flex;
-        flex-direction: row;
-      }
-      .labelBox {
-        display: flex;
-        width: 27%;
-      }
-      .labelSpacing {
-        margin-top: 13.73px;
-        margin-bottom: 5.5px;
-      }
-      #infoText {
-        display: flex;
-      }
-      #produtoLabel {
-        width: 38.5%;
-      }
-      #quantidadeLabel {
-        width: 11.5%;
-      }
-      #valorSemIpiLabel {
-        width: 13.05%;
-      }
-      #ipiLabel {
-        width: 3.75%;
-      }
-      #valorVendaLabel {
-        width: 14.80%;
-      }
-      #valorDescontoLabel {
-        width: 18.12%;
-      }
-      #produto {
-        width: 38.5%;
-      }
-      #quantidade {
-        width: 11.5%;
-      }
-      #valorSemIpi {
-        width: 13.05%;
-      }
-      #ipi {
-        width: 3.75%;
-      }
-      #valorVenda {
-        width: 14.80%;
-      }
-      #valorDesconto {
-        width: 18.12%;
-      }
-      .productLabelText {
-        font-family: Arial;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 21.8px;
-        color: rgba(255, 255, 255, 1);
-        padding-left: 10px;
-      }
-      .productLabelTextRight {
-        font-family: Arial;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 21.8px;
-        color: rgba(255, 255, 255, 1);
-        padding-right: 10px;
-      }
-      .productText {
-        font-family: Arial;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 23px;
-        color: rgba(85, 85, 85, 1);
-        text-align: left;
-      }
+    body {
+      zoom: 50%;
+      padding: 5;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 23px;
+      margin-left: 1.5%;
+      margin-right: 1.5%;
+    }
 
-      .itemSpacing {
-        padding-right: 10px;
-        padding-top: 4px;
-        padding-bottom: 4px;
-        border-spacing: 0;
-        border-width: 0;
-        border-bottom-width: 1px;
-        border-color: rgb(118, 118, 118);
-        border-style: ridge;
-      }
-      .subTotalSpacing {
-        padding-bottom: 18px;
-        font-size: 21.8px;
-      }
+    .labelText {
+      font-family: Arial;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 21.8px;
+      color: rgba(51, 51, 51, 1);
+    }
 
-      .produto2 {
-        width: 19.7%;
-      }
-      .descricao {
-        width: 13%;
-      }
-      .embalagem {
-        width: 15.3%;
-      }
-      .altura {
-        width: 8.3%;
-      }
-      .largura {
-        width: 9.6%;
-      }
-      .comprimento {
-        width: 14.1%;
-      }
-      .ncm {
-        width: 10.2%;
-      }
-      .peso {
-        width: 9.4%;
-      }
-    </style>
-  </head>
+    .infoText {
+      text-align: left;
+      font-family: Arial;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 21.8px;
+      color: rgba(85, 85, 85, 1);
+      display: flex;
+    }
 
-  <body>
-    <div class="row">
-      <div
-        style="flex: 1; justify-content: center; align-items: center; display: flex; flex-direction: column"
-      >
+    #infoBox {
+      margin-bottom: 10px;
+    }
+
+    #barra_proposta {
+      height: 51px;
+      background-color: rgba(222, 229, 236, 1);
+      width: 100%;
+      display: flex;
+      margin-top: 21px;
+    }
+
+    #titulo_proposta {
+      display: flex;
+      justify-content: center;
+      /* align-self: center;    <---- REMOVE */
+      align-items: center;
+      text-align: left;
+      font-family: Arial;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 23px;
+      color: rgba(51, 51, 51, 1);
+      padding-left: 3px;
+    }
+
+    #infoColumns {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .column {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .labelBox {
+      display: flex;
+      width: 27%;
+    }
+
+    .labelSpacing {
+      margin-top: 13.73px;
+      margin-bottom: 5.5px;
+    }
+
+    #infoText {
+      display: flex;
+    }
+
+    #produtoLabel {
+      width: 38.5%;
+    }
+
+    #quantidadeLabel {
+      width: 11.5%;
+    }
+
+    #valorSemIpiLabel {
+      width: 13.05%;
+    }
+
+    #ipiLabel {
+      width: 3.75%;
+    }
+
+    #valorVendaLabel {
+      width: 14.80%;
+    }
+
+    #valorDescontoLabel {
+      width: 18.12%;
+    }
+
+    #produto {
+      width: 38.5%;
+    }
+
+    #quantidade {
+      width: 11.5%;
+    }
+
+    #valorSemIpi {
+      width: 13.05%;
+    }
+
+    #ipi {
+      width: 3.75%;
+    }
+
+    #valorVenda {
+      width: 14.80%;
+    }
+
+    #valorDesconto {
+      width: 18.12%;
+    }
+
+    .productLabelText {
+      font-family: Arial;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 21.8px;
+      color: rgba(255, 255, 255, 1);
+      padding-left: 10px;
+    }
+
+    .productLabelTextRight {
+      font-family: Arial;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 21.8px;
+      color: rgba(255, 255, 255, 1);
+      padding-right: 10px;
+    }
+
+    .productText {
+      font-family: Arial;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 23px;
+      color: rgba(85, 85, 85, 1);
+      text-align: left;
+    }
+
+    .itemSpacing {
+      padding-right: 10px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      border-spacing: 0;
+      border-width: 0;
+      border-bottom-width: 1px;
+      border-color: rgb(118, 118, 118);
+      border-style: ridge;
+    }
+
+    .subTotalSpacing {
+      padding-bottom: 18px;
+      font-size: 21.8px;
+    }
+
+    .produto2 {
+      width: 19.7%;
+    }
+
+    .descricao {
+      width: 13%;
+    }
+
+    .embalagem {
+      width: 15.3%;
+    }
+
+    .altura {
+      width: 8.3%;
+    }
+
+    .largura {
+      width: 9.6%;
+    }
+
+    .comprimento {
+      width: 14.1%;
+    }
+
+    .ncm {
+      width: 10.2%;
+    }
+
+    .peso {
+      width: 9.4%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="row">
+    <div style="flex: 1; justify-content: center; align-items: center; display: flex; flex-direction: column">
       <img src="<%=@ntp %>" alt="NTP Logo" />
-        <div
-          style="justify-content: center; align-items: flex-start; display: flex; flex-direction: column"
-        >
-          <div class="infoText"><b>NTP Engenharia</b></div>
-          <div class="infoText">CNPJ 33.131.887/0001-06</div>
-          <div class="infoText">
-            Travessa Barão do Triunfo, 3540, Sala 410 - Marco - Belém/PA
-          </div>
-          <div class="infoText">Tel <b>(91) 3349-7335 ntpengenharia@gmail.com</b></div>
+      <div style="justify-content: center; align-items: flex-start; display: flex; flex-direction: column">
+        <div class="infoText"><b>NTP Engenharia</b></div>
+        <div class="infoText">CNPJ 33.131.887/0001-06</div>
+        <div class="infoText">
+          Travessa Barão do Triunfo, 3540, Sala 410 - Marco - Belém/PA
         </div>
+        <div class="infoText">Tel <b>(91) 3349-7335 ntpengenharia@gmail.com</b></div>
       </div>
-      <div
-        style="flex: 1; justify-content: center; align-items: center; display: flex; flex-direction: column"
-      >
+    </div>
+    <div style="flex: 1; justify-content: center; align-items: center; display: flex; flex-direction: column">
       <img src="<%=@salva %>" alt="Salva Bras Logo" />
-        
-        <div
-          style="justify-content: center; align-items: flex-start; display: flex; flex-direction: column"
-        >
-          <div class="infoText">
-            <b>Salvabras Soluções em Proteção LTDA</b>
-          </div>
-          <div class="infoText">CNPJ 16.557.984/0001-46</div>
-          <div class="infoText">
-            Rua Anhanguera, 425 - Piratininga - Osasco/SP
-          </div>
-          <div class="infoText">Tel <b>(11) 3288-2799 www.salvabras.com.br</b></div>
-        </div>
-      </div>
-    </div>
-    <div id="infoBox">
-      <div id="barra_proposta">
-        <div id="titulo_proposta">
-          Informações da Proposta
-        </div>
-      </div>
-      <div id="infoColumns">
-        <div class="column">
-          <div class="row">
-            <div class="labelBox labelText labelSpacing">
-              Data de Criação
-            </div>
-            <div class="infoText labelSpacing">
-              <%= @criacao %>
-            </div>
-          </div>
-          <div class="row">
-            <div class="labelBox labelText labelSpacing">
-              Data de Validade
-            </div>
-            <div class="infoText labelSpacing">
-              <%= @validade %>
-            </div>
-          </div>
-          <div class="row">
-            <div class="labelBox labelText labelSpacing">
-              Tipo de Frete
-            </div>
-            <div class="infoText labelSpacing">
-              FOB
-            </div>
-          </div>
-          <div class="row">
-            <div
-              class="labelBox labelText labelSpacing"
-              style="word-spacing: 9999rem;"
-            >
-              Condição Pagamento
-            </div>
-            <div class="infoText labelSpacing">
-              <%= @condicao %> Dias
-              <%= @dias %> 
-            </div>
-          </div>
-          <div class="row">
-            <div class="labelBox labelText labelSpacing">
-              ICMS
-            </div>
-            <div class="infoText labelSpacing">
-              18%
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="row">
-            <div class="labelBox labelText labelSpacing">
-              Preparado por
-            </div>
-            <div class="infoText labelSpacing">
-              Sérgio Paixão
-            </div>
-          </div>
-          <div class="row">
-            <div class="labelBox labelText labelSpacing">
-              Telefone
-            </div>
-            <div class="infoText labelSpacing">
-              (91) 3230-2650
-            </div>
-          </div>
-          <div class="row">
-            <div class="labelBox labelText labelSpacing">
-              Email
-            </div>
-            <div class="infoText labelSpacing">
-              paixaosergio@oi.com.br
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="infoBox">
-      <div id="barra_proposta">
-        <div id="titulo_proposta">
-          Empresa e Contato
-        </div>
-      </div>
-      <div id="infoColumns">
-        <div class="column">
-          <div class="row">
-            <div class="labelBox labelText labelSpacing">
-              Nome da Conta
-            </div>
-            <div class="infoText labelSpacing">
-              <%= @nome %>
-            </div>
-          </div>
-          <div class="row">
-            <div class="labelBox labelText labelSpacing">
-              CPF/CNPJ
-            </div>
-            <div class="infoText labelSpacing">
-              <%= @cpf %>
-            </div>
-          </div>
-          <div class="row">
-            <div class="labelBox labelText labelSpacing">
-              Ramo/Atividade
-            </div>
-            <div class="infoText labelSpacing">
-              <%= @ramo %>
-            </div>
-          </div>
-          <div class="row">
-            <div class="labelBox labelText labelSpacing">
-              UF
-            </div>
-            <div class="infoText labelSpacing">
-              <%= @uf %>
-            </div>
-          </div>
-          <div class="row">
-            <div class="labelBox labelText labelSpacing">
-              Cidade
-            </div>
-            <div class="infoText labelSpacing">
-              <%= @cidade %>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="row">
-            <div class="labelBox labelText labelSpacing">
-              Nome completo
-            </div>
-            <div class="infoText labelSpacing">
-              <%= @nome_completo %>
-            </div>
-          </div>
-          <div class="row">
-            <div class="labelBox labelText labelSpacing">
-              Telefone
-            </div>
-            <div class="infoText labelSpacing">
-              <%= @telefone %>
-            </div>
-          </div>
-          <div class="row">
-            <div class="labelBox labelText labelSpacing">
-              Email
-            </div>
-            <div class="infoText labelSpacing">
-              <%= @email %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="infoBox">
-      <div id="barra_proposta" style="margin-bottom: 0px">
-        <div id="titulo_proposta">
-          Informações de venda
-        </div>
-      </div>
-      <div
-        class="row"
-        style="background-color: rgba(118,118,118,1); height: 46px; align-items: center; margin: 0;"
-      >
-        <div id="produtoLabel" class="productLabelText">
-          Produto
-        </div>
-        <div id="quantidadeLabel" class="productLabelTextRight" style="text-align: right">
-          Quantidade
-        </div>
-        <div id="valorSemIpiLabel" class="productLabelTextRight" style="text-align: right">
-          Valor sem IPI
-        </div>
-        <div id="ipiLabel" class="productLabelTextRight" style="text-align: right">
-          IPI
-        </div>
-        <div id="valorVendaLabel" class="productLabelTextRight" style="text-align: right">
-          Valor de Venda
-        </div>
-        <div id="valorDescontoLabel" class="productLabelTextRight" style="text-align: right">
-          Valor com Desconto
-        </div>
-      </div>
-      <%= Enum.map(@produtos, fn produto ->  %>
-      <div class="row itemSpacing">
-        <div
-          id="produto"
-          class="productBorder infoText"
-          style="padding-left: 6px;"
-        >
-         <%= produto.index %> <%= produto.produto %> 
-        </div>
-        <div id="quantidade" class="productBorder infoText" style="text-align: right">
-          <%= produto.qtd %>
-        </div>
-        <div id="valorSemIpi" class="productBorder infoText" style="text-align: right">
-         <%= produto.preco %>
-        </div>
-        <div id="ipi" class="productBorder infoText" style="text-align: right">
-          <%= produto.ipi %>
-        </div>
-        <div id="valorVenda" class="productBorder infoText" style="text-align: right">
-         <%= produto.total %>
-        </div>
-        <div id="valorDesconto" class="productBorder infoText" style="text-align: right">
-          <%= produto.total %>
-        </div>
-      </div>
 
-      <% end) %>
-      <div class="row" style="margin-top: 44px;">
-        <div
-          class="column"
-          style="flex: 65; justify-content: center; align-items: flex-end; color: rgba(51,51,51,1); "
-        >
-          <div class="subTotalSpacing">Subtotal</div>
-          <div class="subTotalSpacing">Desconto</div>
-          <div class="subTotalSpacing">Valor Total</div>
+      <div style="justify-content: center; align-items: flex-start; display: flex; flex-direction: column">
+        <div class="infoText">
+          <b>Salvabras Soluções em Proteção LTDA</b>
         </div>
-        <div
-          class="column"
-          style="flex: 35; align-items: flex-end; color: rgba(85,85,85,1); padding-right: 6px;"
-        >
-          <div class="subTotalSpacing"> <%= @total %></div>
-          <div class="subTotalSpacing">0,00%</div>
-          <div class="subTotalSpacing"><%= @total %></div>
+        <div class="infoText">CNPJ 16.557.984/0001-46</div>
+        <div class="infoText">
+          Rua Anhanguera, 425 - Piratininga - Osasco/SP
+        </div>
+        <div class="infoText">Tel <b>(11) 3288-2799 www.salvabras.com.br</b></div>
+      </div>
+    </div>
+  </div>
+  <div id="infoBox">
+    <div id="barra_proposta">
+      <div id="titulo_proposta">
+        Informações da Proposta
+      </div>
+    </div>
+    <div id="infoColumns">
+      <div class="column">
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Data de Criação
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @criacao %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Data de Validade
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @validade %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Tipo de Frete
+          </div>
+          <div class="infoText labelSpacing">
+            FOB
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing" style="word-spacing: 9999rem;">
+            Condição Pagamento
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @condicao %> Dias
+            <%= @dias %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            ICMS
+          </div>
+          <div class="infoText labelSpacing">
+            18%
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Preparado por
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @user.nome %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Telefone
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @user.telefone %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Email
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @user.email %>
+          </div>
         </div>
       </div>
     </div>
-    <div id="infoBox">
-      <div id="barra_proposta" style="margin-bottom: 0px">
-        <div id="titulo_proposta">
-          Especificações de produto
-        </div>
+  </div>
+  <div id="infoBox">
+    <div id="barra_proposta">
+      <div id="titulo_proposta">
+        Empresa e Contato
       </div>
-      <div
-        class="row"
-        style="background-color: rgba(118,118,118,1); height: 46px; align-items: center; margin: 0;"
-      >
-        <div class="productLabelText produto2">
-          Produto
-        </div>
-        <div class="productLabelTextRight descricao" style="text-align: right">
-          Descrição
-        </div>
-        <div class="productLabelTextRight embalagem" style="text-align: right">
-          Embalagem Master
-        </div>
-        <div class="productLabelTextRight altura" style="text-align: right">
-          Altura (m)
-        </div>
-        <div class="productLabelTextRight largura" style="text-align: right">
-          Largura (m)
-        </div>
-        <div class="productLabelTextRight comprimento" style="text-align: right">
-          Comprimento (m)
-        </div>
-        <div class="productLabelTextRight ncm" style="text-align: right">
-          NCM
-        </div>
-        <div class="productLabelTextRight peso" style="text-align: right">
-          Peso (KG)
-        </div>
-      </div>
-  <%= Enum.map(@produtos, fn produto ->  %>
-      <div
-        id="row"
-        class="productBorder infoText itemSpacing"
-        style="padding-left: 6px;"
-      >
-        <div class="productBorder infoText produto2">
-         <%= produto.index %> <%= produto.produto %>
-        </div>
-        <div class="descricao productBorder" style="text-align: right">
-          <%= produto.descricao %>
-        </div>
-        <div class="embalagem productBorder" style="text-align: right">
-          <%= produto.embalagem %>
-        </div>
-        <div class="altura productBorder" style="text-align: right">
-          <%= produto.e_altura %>
-        </div>
-        <div class="largura productBorder" style="text-align: right">
-          <%= produto.e_largura %>
-        </div>
-        <div class="comprimento productBorder" style="text-align: right">
-          <%= produto.e_comprimento %>
-        </div>
-        <div class= "ncm productBorder" style="text-align: right">
-          <%= produto.ncm %>
-        </div>
-        <div class="peso" style="text-align: right">
-          <%= produto.peso %>
-        </div>
-      </div>
-      <% end) %>
     </div>
-    <div style="justify-content: center; align-items: flex-end; display: flex;">
-      <ul style="margin-top: 70px;  flex-direction: column" class="infoText">
-        <li>
-          Qualquer tratativa referente a proposta deverá ser formalizada por
-          e-mail.
-        </li>
-        <li>
-          Atenção as produtos que são enviados por caixa, as especificações
-          <b>ALTURA</b>, <b>LARGURA</b> e <b>COMPRIMENTO</b> são da caixa.
-        </li>
-        <li>
-          O desconto quando aplicado é calculado sobe do valor total e não do
-          produto que foi considerado o desconto.
-        </li>
-        <li>
-          Todas as cobranças são emitidas por boleto.
-        </li>
-        <li>
-          <b>ATENÇÃO: Para pedidos personalizados poderá ocorrer perda ou ganho de até 10% das peças, ao confirmar a compra, você
+    <div id="infoColumns">
+      <div class="column">
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Nome da Conta
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @nome %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            CPF/CNPJ
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @cpf %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Ramo/Atividade
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @ramo %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            UF
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @uf %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Cidade
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @cidade %>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Nome completo
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @nome_completo %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Telefone
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @telefone %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Email
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @email %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="infoBox">
+    <div id="barra_proposta" style="margin-bottom: 0px">
+      <div id="titulo_proposta">
+        Informações de venda
+      </div>
+    </div>
+    <div class="row" style="background-color: rgba(118,118,118,1); height: 46px; align-items: center; margin: 0;">
+      <div id="produtoLabel" class="productLabelText">
+        Produto
+      </div>
+      <div id="quantidadeLabel" class="productLabelTextRight" style="text-align: right">
+        Quantidade
+      </div>
+      <div id="valorSemIpiLabel" class="productLabelTextRight" style="text-align: right">
+        Valor sem IPI
+      </div>
+      <div id="ipiLabel" class="productLabelTextRight" style="text-align: right">
+        IPI
+      </div>
+      <div id="valorVendaLabel" class="productLabelTextRight" style="text-align: right">
+        Valor de Venda
+      </div>
+      <div id="valorDescontoLabel" class="productLabelTextRight" style="text-align: right">
+        Valor com Desconto
+      </div>
+    </div>
+    <%= Enum.map(@produtos, fn produto ->  %>
+    <div class="row itemSpacing">
+      <div id="produto" class="productBorder infoText" style="padding-left: 6px;">
+        <%= produto.index %> <%= produto.produto %>
+      </div>
+      <div id="quantidade" class="productBorder infoText" style="text-align: right">
+        <%= produto.qtd %>
+      </div>
+      <div id="valorSemIpi" class="productBorder infoText" style="text-align: right">
+        <%= produto.preco %>
+      </div>
+      <div id="ipi" class="productBorder infoText" style="text-align: right">
+        <%= produto.ipi %>
+      </div>
+      <div id="valorVenda" class="productBorder infoText" style="text-align: right">
+        <%= produto.total %>
+      </div>
+      <div id="valorDesconto" class="productBorder infoText" style="text-align: right">
+        <%= produto.total %>
+      </div>
+    </div>
+
+    <% end) %>
+    <div class="row" style="margin-top: 44px;">
+      <div class="column" style="flex: 65; justify-content: center; align-items: flex-end; color: rgba(51,51,51,1); ">
+        <div class="subTotalSpacing">Subtotal</div>
+        <div class="subTotalSpacing">Desconto</div>
+        <div class="subTotalSpacing">Valor Total</div>
+      </div>
+      <div class="column" style="flex: 35; align-items: flex-end; color: rgba(85,85,85,1); padding-right: 6px;">
+        <div class="subTotalSpacing"> <%= @total %></div>
+        <div class="subTotalSpacing">0,00%</div>
+        <div class="subTotalSpacing"><%= @total %></div>
+      </div>
+    </div>
+  </div>
+  <div id="infoBox">
+    <div id="barra_proposta" style="margin-bottom: 0px">
+      <div id="titulo_proposta">
+        Especificações de produto
+      </div>
+    </div>
+    <div class="row" style="background-color: rgba(118,118,118,1); height: 46px; align-items: center; margin: 0;">
+      <div class="productLabelText produto2">
+        Produto
+      </div>
+      <div class="productLabelTextRight descricao" style="text-align: right">
+        Descrição
+      </div>
+      <div class="productLabelTextRight embalagem" style="text-align: right">
+        Embalagem Master
+      </div>
+      <div class="productLabelTextRight altura" style="text-align: right">
+        Altura (m)
+      </div>
+      <div class="productLabelTextRight largura" style="text-align: right">
+        Largura (m)
+      </div>
+      <div class="productLabelTextRight comprimento" style="text-align: right">
+        Comprimento (m)
+      </div>
+      <div class="productLabelTextRight ncm" style="text-align: right">
+        NCM
+      </div>
+      <div class="productLabelTextRight peso" style="text-align: right">
+        Peso (KG)
+      </div>
+    </div>
+    <%= Enum.map(@produtos, fn produto ->  %>
+    <div id="row" class="productBorder infoText itemSpacing" style="padding-left: 6px;">
+      <div class="productBorder infoText produto2">
+        <%= produto.index %> <%= produto.produto %>
+      </div>
+      <div class="descricao productBorder" style="text-align: right">
+        <%= produto.descricao %>
+      </div>
+      <div class="embalagem productBorder" style="text-align: right">
+        <%= produto.embalagem %>
+      </div>
+      <div class="altura productBorder" style="text-align: right">
+        <%= produto.e_altura %>
+      </div>
+      <div class="largura productBorder" style="text-align: right">
+        <%= produto.e_largura %>
+      </div>
+      <div class="comprimento productBorder" style="text-align: right">
+        <%= produto.e_comprimento %>
+      </div>
+      <div class="ncm productBorder" style="text-align: right">
+        <%= produto.ncm %>
+      </div>
+      <div class="peso" style="text-align: right">
+        <%= produto.peso %>
+      </div>
+    </div>
+    <% end) %>
+  </div>
+  <div style="justify-content: center; align-items: flex-end; display: flex;">
+    <ul style="margin-top: 70px;  flex-direction: column" class="infoText">
+      <li>
+        Qualquer tratativa referente a proposta deverá ser formalizada por
+        e-mail.
+      </li>
+      <li>
+        Atenção as produtos que são enviados por caixa, as especificações
+        <b>ALTURA</b>, <b>LARGURA</b> e <b>COMPRIMENTO</b> são da caixa.
+      </li>
+      <li>
+        O desconto quando aplicado é calculado sobe do valor total e não do
+        produto que foi considerado o desconto.
+      </li>
+      <li>
+        Todas as cobranças são emitidas por boleto.
+      </li>
+      <li>
+        <b>ATENÇÃO: Para pedidos personalizados poderá ocorrer perda ou ganho de até 10% das peças, ao confirmar a
+          compra, você
           estará aceitando está condição.</b>
-        </li>
-      </ul>
-    </div>
-  </body>
+      </li>
+    </ul>
+  </div>
+</body>
+
 </html>
