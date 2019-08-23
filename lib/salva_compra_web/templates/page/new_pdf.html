@@ -32,7 +32,6 @@
     }
 
     .infoText {
-      text-align: left;
       font-family: Arial;
       font-style: normal;
       font-weight: normal;
@@ -46,7 +45,7 @@
     }
 
     #barra_proposta {
-      height: 51px;
+      height: 49.3px;
       background-color: rgba(222, 229, 236, 1);
       width: 100%;
       display: flex;
@@ -64,7 +63,7 @@
       font-weight: normal;
       font-size: 23px;
       color: rgba(51, 51, 51, 1);
-      padding-left: 3px;
+      padding-left: 6px;
     }
 
     #infoColumns {
@@ -89,60 +88,12 @@
     }
 
     .labelSpacing {
-      margin-top: 13.73px;
+      margin-top: 11.73px;
       margin-bottom: 5.5px;
     }
 
     #infoText {
       display: flex;
-    }
-
-    #produtoLabel {
-      width: 38.5%;
-    }
-
-    #quantidadeLabel {
-      width: 11.5%;
-    }
-
-    #valorSemIpiLabel {
-      width: 13.05%;
-    }
-
-    #ipiLabel {
-      width: 3.75%;
-    }
-
-    #valorVendaLabel {
-      width: 14.80%;
-    }
-
-    #valorDescontoLabel {
-      width: 18.12%;
-    }
-
-    #produto {
-      width: 38.5%;
-    }
-
-    #quantidade {
-      width: 11.5%;
-    }
-
-    #valorSemIpi {
-      width: 13.05%;
-    }
-
-    #ipi {
-      width: 3.75%;
-    }
-
-    #valorVenda {
-      width: 14.80%;
-    }
-
-    #valorDesconto {
-      width: 18.12%;
     }
 
     .productLabelText {
@@ -151,7 +102,6 @@
       font-weight: normal;
       font-size: 21.8px;
       color: rgba(255, 255, 255, 1);
-      padding-left: 10px;
     }
 
     .productLabelTextRight {
@@ -160,7 +110,6 @@
       font-weight: normal;
       font-size: 21.8px;
       color: rgba(255, 255, 255, 1);
-      padding-right: 10px;
     }
 
     .productText {
@@ -173,14 +122,8 @@
     }
 
     .itemSpacing {
-      padding-right: 10px;
-      padding-top: 4px;
-      padding-bottom: 4px;
-      border-spacing: 0;
-      border-width: 0;
-      border-bottom-width: 1px;
-      border-color: rgb(118, 118, 118);
-      border-style: ridge;
+      padding-left: 6px;
+      padding-right: 6px;
     }
 
     .subTotalSpacing {
@@ -188,36 +131,64 @@
       font-size: 21.8px;
     }
 
+    .indice {
+      width: 3%;
+    }
+
+    .produto {
+      width: 38.5%;
+    }
+
+    .quantidade {
+      width: 11.5%;
+    }
+
+    .valorSemIpi {
+      width: 13.05%;
+    }
+
+    .ipi {
+      width: 3.75%;
+    }
+
+    .valorVenda {
+      width: 14.80%;
+    }
+
+    .valorDesconto {
+      width: 18.12%;
+    }
+
     .produto2 {
-      width: 19.7%;
+      width: 22.49%;
     }
 
     .descricao {
-      width: 13%;
+      width: 21.94%;
     }
 
     .embalagem {
-      width: 15.3%;
+      width: 11.2%;
     }
 
     .altura {
-      width: 8.3%;
+      width: 6.5%;
     }
 
     .largura {
-      width: 9.6%;
+      width: 8.3%;
     }
 
     .comprimento {
-      width: 14.1%;
+      width: 11.83%;
     }
 
     .ncm {
-      width: 10.2%;
+      width: 10.34%;
     }
 
     .peso {
-      width: 9.4%;
+      width: 7.4%;
     }
   </style>
 </head>
@@ -411,48 +382,60 @@
         Informações de venda
       </div>
     </div>
-    <div class="row" style="background-color: rgba(118,118,118,1); height: 46px; align-items: center; margin: 0;">
-      <div id="produtoLabel" class="productLabelText">
+    <div class="row" style="background-color: rgba(118,118,118,1); height: 46px; align-items: center; margin: 0; padding-left: 6px; padding-right: 6px;">
+      <div class="productLabelText indice">
+        #
+      </div>
+      <div class="productLabelText produto" style="padding-left: 6px">
         Produto
       </div>
-      <div id="quantidadeLabel" class="productLabelTextRight" style="text-align: right">
+      <div class="productLabelTextRight quantidade" style="text-align: right; padding-right: 6px">
         Quantidade
       </div>
-      <div id="valorSemIpiLabel" class="productLabelTextRight" style="text-align: right">
+      <div class="productLabelTextRight valorSemIpi" style="text-align: right; padding-right: 6px">
         Valor sem IPI
       </div>
-      <div id="ipiLabel" class="productLabelTextRight" style="text-align: right">
+      <div class="productLabelTextRight ipi" style="text-align: right; padding-right: 6px">
         IPI
       </div>
-      <div id="valorVendaLabel" class="productLabelTextRight" style="text-align: right">
+      <div class="productLabelTextRight valorVenda" style="text-align: right; padding-right: 6px">
         Valor de Venda
       </div>
-      <div id="valorDescontoLabel" class="productLabelTextRight" style="text-align: right">
+      <div class="productLabelTextRight valorDesconto" style="text-align: right; padding-right: 6px">
         Valor com Desconto
       </div>
     </div>
     <%= Enum.map(@produtos, fn produto ->  %>
-    <div class="row itemSpacing">
-      <div id="produto" class="productBorder infoText" style="padding-left: 6px;">
-        <%= produto.index %> <%= produto.produto %>
+    <div id="row" class="infoText itemSpacing" style="background-color: rgb(234, 234, 234)">
+      <div class="productBorder infoText indice"
+        style="border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px">
+        <%= produto.index %>
       </div>
-      <div id="quantidade" class="productBorder infoText" style="text-align: right">
+      <div class="productBorder infoText produto"
+        style="border-right: 2px solid rgb(171, 171, 171); padding-left: 6px; padding-top: 4px; padding-bottom: 4px">
+        <%= produto.produto %>
+      </div>
+      <div class="quantidade productBorder"
+        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
         <%= produto.qtd %>
       </div>
-      <div id="valorSemIpi" class="productBorder infoText" style="text-align: right">
+      <div class="valorSemIpi productBorder"
+        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
         <%= produto.preco %>
       </div>
-      <div id="ipi" class="productBorder infoText" style="text-align: right">
+      <div class="ipi productBorder"
+        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
         <%= produto.ipi %>
       </div>
-      <div id="valorVenda" class="productBorder infoText" style="text-align: right">
+      <div class="valorVenda productBorder"
+        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
         <%= produto.total %>
       </div>
-      <div id="valorDesconto" class="productBorder infoText" style="text-align: right">
+      <div class="valorDesconto productBorder"
+        style="text-align: right; padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
         <%= produto.total %>
       </div>
     </div>
-
     <% end) %>
     <div class="row" style="margin-top: 44px;">
       <div class="column" style="flex: 65; justify-content: center; align-items: flex-end; color: rgba(51,51,51,1); ">
@@ -473,63 +456,77 @@
         Especificações de produto
       </div>
     </div>
-    <div class="row" style="background-color: rgba(118,118,118,1); height: 46px; align-items: center; margin: 0;">
-      <div class="productLabelText produto2">
+    <div class="row" style="background-color: rgba(118,118,118,1); height: 75px; align-items: center; margin: 0; padding-left: 6px; padding-right: 6px;">
+      <div class="productLabelText indice">
+        #
+      </div>
+      <div class="productLabelText produto2" style="padding-left: 6px">
         Produto
       </div>
-      <div class="productLabelTextRight descricao" style="text-align: right">
+      <div class="productLabelTextRight descricao" style="text-align: left; padding-left: 6px">
         Descrição
       </div>
-      <div class="productLabelTextRight embalagem" style="text-align: right">
+      <div class="productLabelTextRight embalagem" style="text-align: left; padding-left: 6px">
         Embalagem Master
       </div>
-      <div class="productLabelTextRight altura" style="text-align: right">
+      <div class="productLabelTextRight altura" style="text-align: right; padding-right: 6px">
         Altura (m)
       </div>
-      <div class="productLabelTextRight largura" style="text-align: right">
+      <div class="productLabelTextRight largura" style="text-align: right; padding-right: 6px">
         Largura (m)
       </div>
-      <div class="productLabelTextRight comprimento" style="text-align: right">
+      <div class="productLabelTextRight comprimento" style="text-align: right; padding-right: 6px">
         Comprimento (m)
       </div>
-      <div class="productLabelTextRight ncm" style="text-align: right">
+      <div class="productLabelTextRight ncm" style="text-align: right; padding-right: 6px">
         NCM
       </div>
-      <div class="productLabelTextRight peso" style="text-align: right">
+      <div class="productLabelTextRight peso" style="text-align: right; padding-right: 6px">
         Peso (KG)
       </div>
     </div>
     <%= Enum.map(@produtos, fn produto ->  %>
-    <div id="row" class="productBorder infoText itemSpacing" style="padding-left: 6px;">
-      <div class="productBorder infoText produto2">
-        <%= produto.index %> <%= produto.produto %>
+    <div id="row" class="infoText itemSpacing">
+      <div class="productBorder infoText indice"
+        style="border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px">
+        <%= produto.index %>
       </div>
-      <div class="descricao productBorder" style="text-align: right">
+      <div class="productBorder infoText produto2"
+        style="border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-left: 6px">
+        <%= produto.produto %>
+      </div>
+      <div class="descricao productBorder"
+        style="text-align: left; border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-left: 6px">
         <%= produto.descricao %>
       </div>
-      <div class="embalagem productBorder" style="text-align: right">
+      <div class="embalagem productBorder"
+        style="text-align: left; border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-left: 6px;">
         <%= produto.embalagem %>
       </div>
-      <div class="altura productBorder" style="text-align: right">
+      <div class="altura productBorder"
+        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-right: 6px">
         <%= produto.e_altura %>
       </div>
-      <div class="largura productBorder" style="text-align: right">
+      <div class="largura productBorder"
+        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-right: 6px">
         <%= produto.e_largura %>
       </div>
-      <div class="comprimento productBorder" style="text-align: right">
+      <div class="comprimento productBorder"
+        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-right: 6px">
         <%= produto.e_comprimento %>
       </div>
-      <div class="ncm productBorder" style="text-align: right">
+      <div class="ncm productBorder"
+        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-right: 6px">
         <%= produto.ncm %>
       </div>
-      <div class="peso" style="text-align: right">
+      <div class="peso" style="text-align: right; padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
         <%= produto.peso %>
       </div>
     </div>
     <% end) %>
   </div>
   <div style="justify-content: center; align-items: flex-end; display: flex;">
-    <ul style="margin-top: 70px;  flex-direction: column" class="infoText">
+    <ul style="margin-top: 70px;  flex-direction: column; padding-left: 80px" class="infoText">
       <li>
         Qualquer tratativa referente a proposta deverá ser formalizada por
         e-mail.
