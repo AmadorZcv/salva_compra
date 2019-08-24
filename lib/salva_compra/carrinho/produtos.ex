@@ -14,10 +14,10 @@ defmodule SalvaCompra.Carrinho.Produtos do
     e_comprimento: "0,33",
     ncm: "48.115.129",
     peso: "4,25",
-    preco: 8386,
+    preco: 83.86,
     ipi: 5,
-    ipic: 419,
-    total: 8805
+    ipic: 4.19,
+    total: 88.05
   },
   "10001" => %{
     id: 10001,
