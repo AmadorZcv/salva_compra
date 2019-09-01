@@ -408,27 +408,27 @@
     <%= Enum.map(@produtos, fn produto ->  %>
     <div id="row" class="infoText itemSpacing" style="background-color: <%= produto.color %>">
       <div class="productBorder infoText indice"
-        style="border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px">
+        style="border-right: 1px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px">
         <%= produto.index %>
       </div>
       <div class="productBorder infoText produto"
-        style="border-right: 2px solid rgb(171, 171, 171); padding-left: 6px; padding-top: 4px; padding-bottom: 4px">
+        style="border-right: 1px solid rgb(171, 171, 171); padding-left: 6px; padding-top: 4px; padding-bottom: 4px">
         <%= produto.produto %>
       </div>
       <div class="quantidade productBorder"
-        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
+        style="text-align: right; border-right: 1px solid rgb(171, 171, 171); padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
         <%= produto.qtd %>
       </div>
       <div class="valorSemIpi productBorder"
-        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
+        style="text-align: right; border-right: 1px solid rgb(171, 171, 171); padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
         <%= produto.preco %>
       </div>
       <div class="ipi productBorder"
-        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
+        style="text-align: right; border-right: 1px solid rgb(171, 171, 171); padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
         <%= produto.ipi %>
       </div>
       <div class="valorVenda productBorder"
-        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
+        style="text-align: right; border-right: 1px solid rgb(171, 171, 171); padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
         <%= produto.total %>
       </div>
       <div class="valorDesconto productBorder"
@@ -488,35 +488,35 @@
     <%= Enum.map(@produtos, fn produto ->  %>
     <div id="row" class="infoText itemSpacing" style="background-color: <%= produto.color %>">
       <div class="productBorder infoText indice"
-        style="border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px">
+        style="border-right: 1px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px">
         <%= produto.index %>
       </div>
       <div class="productBorder infoText produto2"
-        style="border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-left: 6px">
+        style="border-right: 1px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-left: 6px">
         <%= produto.produto %>
       </div>
       <div class="descricao productBorder"
-        style="text-align: left; border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-left: 6px">
+        style="text-align: left; border-right: 1px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-left: 6px">
         <%= produto.descricao %>
       </div>
       <div class="embalagem productBorder"
-        style="text-align: left; border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-left: 6px;">
+        style="text-align: left; border-right: 1px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-left: 6px;">
         <%= produto.embalagem %>
       </div>
       <div class="altura productBorder"
-        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-right: 6px">
+        style="text-align: right; border-right: 1px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-right: 6px">
         <%= produto.e_altura %>
       </div>
       <div class="largura productBorder"
-        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-right: 6px">
+        style="text-align: right; border-right: 1px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-right: 6px">
         <%= produto.e_largura %>
       </div>
       <div class="comprimento productBorder"
-        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-right: 6px">
+        style="text-align: right; border-right: 1px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-right: 6px">
         <%= produto.e_comprimento %>
       </div>
       <div class="ncm productBorder"
-        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-right: 6px">
+        style="text-align: right; border-right: 1px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-right: 6px">
         <%= produto.ncm %>
       </div>
       <div class="peso" style="text-align: right; padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
