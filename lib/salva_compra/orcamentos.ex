@@ -192,7 +192,7 @@ defmodule SalvaCompra.Orcamentos do
       end)
 
     total =
-      Enum.reduce(produtos, 0, fn produto, acc -> produto.total + acc end)
+      Enum.reduce(produtos, 0, fn produto, acc -> produto.total * produto.qtd + acc end)
       |> Dinheiro.format_to_display()
 
     produtos =

@@ -18,7 +18,7 @@ defmodule SalvaCompra.Orcamentos.OrcamentoProduto do
   @doc false
   def changeset(orcamento_produto, attrs) do
     orcamento_produto
-    |> cast(attrs, [:produto_id, :preco, :ipi, :ipic, :total, :orcamento_id])
-    |> validate_required([:produto_id, :preco, :ipi, :ipic, :total])
+    |> cast(attrs, [:produto_id, :preco, :ipi, :ipic, :total, :orcamento_id, :qtd])
+    |> validate_required([:produto_id, :preco, :ipi, :ipic, :total, :qtd])
   end
 end
