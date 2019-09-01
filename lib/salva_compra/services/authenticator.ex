@@ -23,23 +23,20 @@ defmodule SalvaCompra.Services.Authenticator do
 
   # extrai o token do conn
   defp extract_token(conn) do
-    if Plug.Conn.get_req_header(conn, "content-type") == ["application/json"] do
-      case Plug.Conn.get_req_header(conn, "authorization") do
-        [auth_header] ->
-          # get_token_from_header(auth_header)
-          {:ok, String.trim(auth_header)}
+    IO.inspect(Plug.Conn.get_req_header(conn, "authorization"))
 
-        _ ->
-          {:error, :missing_auth_header}
-      end
-    else
-      case Plug.Conn.get_session(conn, :token) do
-        nil ->
-          {:error, :missing_auth_header}
+    case Plug.Conn.get_req_header(conn, "authorization") do
+      [auth_header] ->
+        {:ok, String.trim(auth_header)}
 
-        token ->
-          {:ok, token.token}
-      end
+      _ ->
+        case Plug.Conn.get_session(conn, :token) do
+          nil ->
+            {:error, :missing_auth_header}
+
+          token ->
+            {:ok, token.token}
+        end
     end
   end
 end
