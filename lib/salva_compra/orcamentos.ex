@@ -5,9 +5,9 @@ defmodule SalvaCompra.Orcamentos do
   use Timex
   import Ecto.Query, warn: false
   alias SalvaCompra.Repo
-  import Number.Currency
   alias SalvaCompra.Orcamentos.Orcamento
   alias SalvaCompra.Accounts
+  alias SalvaCompra.Format.Dinheiro
 
   @doc """
   Returns the list of orcamentos.
@@ -165,17 +165,11 @@ defmodule SalvaCompra.Orcamentos do
     produtos =
       Enum.with_index(orcamento.produtos, 1)
       |> Enum.map(fn {produto, index} ->
-        IO.puts(produto.produto_id)
         item = data[Integer.to_string(produto.produto_id)]
 
         %{
           nome: item.nome,
-          preco:
-            number_to_currency(produto.preco,
-              unit: "R$",
-              delimiter: ".",
-              separator: ","
-            ),
+          preco: Dinheiro.format_to_display(produto.preco),
           qtd: produto.qtd,
           total: produto.total,
           ipi: produto.ipi,
@@ -199,22 +193,14 @@ defmodule SalvaCompra.Orcamentos do
 
     total =
       Enum.reduce(produtos, 0, fn produto, acc -> produto.total + acc end)
-      |> number_to_currency(
-        unit: "R$",
-        delimiter: ".",
-        separator: ","
-      )
+      |> Dinheiro.format_to_display()
 
     produtos =
       Enum.map(produtos, fn produto ->
         Map.replace!(
           produto,
           :total,
-          number_to_currency(produto.total,
-            unit: "R$",
-            delimiter: ".",
-            separator: ","
-          )
+          Dinheiro.format_to_display(produto.total)
         )
       end)
 
