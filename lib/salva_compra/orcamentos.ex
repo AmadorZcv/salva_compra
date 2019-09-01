@@ -187,7 +187,13 @@ defmodule SalvaCompra.Orcamentos do
           e_comprimento: item.e_comprimento,
           ncm: item.ncm,
           peso: item.peso,
-          index: Integer.to_string(index) |> String.pad_leading(2, "0")
+          index: Integer.to_string(index) |> String.pad_leading(2, "0"),
+          color:
+            if rem(index, 2) == 0 do
+              "rgb(234, 234, 234)"
+            else
+              "#fff"
+            end
         }
       end)
 
