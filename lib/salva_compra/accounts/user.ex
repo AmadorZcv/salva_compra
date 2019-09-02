@@ -10,6 +10,7 @@ defmodule SalvaCompra.Accounts.User do
     field :funcionario_id, :integer
     field :login, :string
     field :nome, :string
+    field :cargo, :string
     field :password, :string, virtual: true
     field :password_hash, :string
     field :telefone, :string
@@ -30,7 +31,8 @@ defmodule SalvaCompra.Accounts.User do
       :password,
       :login,
       :email,
-      :role
+      :role,
+      :cargo
     ])
     |> validate_required([
       :nome,
@@ -39,7 +41,8 @@ defmodule SalvaCompra.Accounts.User do
       :funcionario_id,
       :login,
       :email,
-      :role
+      :role,
+      :cargo
     ])
     |> put_password_hash()
   end

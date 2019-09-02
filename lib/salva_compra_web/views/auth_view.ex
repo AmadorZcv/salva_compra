@@ -11,7 +11,7 @@ defmodule SalvaCompraWeb.AuthView do
     }
   end
 
-  def render("show.json", auth_token) do
-    %{data: %{token: auth_token.token}}
+  def render("show.json", %{:auth_token => auth_token, :user => user}) do
+    %{data: %{token: auth_token.token, nome: user.nome, cargo: user.cargo}}
   end
 end

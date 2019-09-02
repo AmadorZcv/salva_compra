@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Nome</th>
+      <th>Cargo</th>
       <th>Telefone</th>
       <th>Filial</th>
       <th>Funcionario</th>
@@ -17,6 +18,7 @@
 <%= for user <- @users do %>
     <tr>
       <td><%= user.nome %></td>
+      <td><%= user.cargo %></td>
       <td><%= user.telefone %></td>
       <td><%= user.filial_id %></td>
       <td><%= user.funcionario_id %></td>

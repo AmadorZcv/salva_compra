@@ -8,7 +8,9 @@
   <%= label f, :nome %>
   <%= text_input f, :nome %>
   <%= error_tag f, :nome %>
-
+<%= label f, :cargo %>
+  <%= text_input f, :cargo %>
+  <%= error_tag f, :cargo %>
   <%= label f, :telefone %>
   <%= text_input f, :telefone %>
   <%= error_tag f, :telefone %>

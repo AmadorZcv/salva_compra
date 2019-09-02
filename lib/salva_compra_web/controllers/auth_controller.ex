@@ -13,9 +13,11 @@ defmodule SalvaCompraWeb.AuthController do
   def sign_in(conn, %{"login" => login, "password" => password}) do
     case Auth.sign_in(login, password) do
       {:ok, auth_token} ->
+        user = Accounts.get_user!(auth_token.user_id)
+
         conn
         |> put_status(:ok)
-        |> render("show.json", auth_token)
+        |> render("show.json", %{auth_token: auth_token, user: user})
 
       {:error, reason} ->
         conn

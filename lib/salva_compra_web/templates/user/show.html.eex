@@ -6,7 +6,10 @@
     <strong>Nome:</strong>
     <%= @user.nome %>
   </li>
-
+<li>
+    <strong>Cargo:</strong>
+    <%= @user.cargo %>
+  </li>
   <li>
     <strong>Telefone:</strong>
     <%= @user.telefone %>
