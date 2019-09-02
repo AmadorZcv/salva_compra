@@ -26,6 +26,18 @@ defmodule SalvaCompraWeb.UserController do
     end
   end
 
+  def create_secure(conn, %{"user" => user_params}) do
+    case Accounts.create_user(user_params) do
+      {:ok, _} ->
+        conn
+        |> resp(201, "Sucesso")
+
+      {:error, _} ->
+        conn
+        |> resp(500, "Erro")
+    end
+  end
+
   def show(conn, %{"id" => id}) do
     user = Accounts.get_user!(id)
     render(conn, "show.html", user: user)

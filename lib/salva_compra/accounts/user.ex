@@ -45,6 +45,7 @@ defmodule SalvaCompra.Accounts.User do
       :cargo
     ])
     |> put_password_hash()
+    |> unique_constraint(:login)
   end
 
   defp put_password_hash(changeset) do

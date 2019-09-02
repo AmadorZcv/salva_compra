@@ -9,6 +9,10 @@ defmodule SalvaCompraWeb.Router do
     plug SalvaCompraWeb.Plugs.AdminPlug
   end
 
+  pipeline :create_secure do
+    plug SalvaCompraWeb.Plugs.SecureCreatePlug
+  end
+
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
@@ -43,6 +47,12 @@ defmodule SalvaCompraWeb.Router do
     post "/registrar", AuthController, :registrar
     post "/sign_in", AuthController, :sign_in
     delete "/sign_out", AuthController, :sign_out
+  end
+
+  scope "/create_secure", SalvaCompraWeb do
+    pipe_through :api
+    pipe_through :create_secure
+    post "/users", UserController, :create_secure
   end
 
   # Other scopes may use custom stacks.

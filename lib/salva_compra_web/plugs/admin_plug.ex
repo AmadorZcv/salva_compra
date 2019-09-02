@@ -4,9 +4,6 @@ defmodule SalvaCompraWeb.Plugs.AdminPlug do
   def init(default), do: default
 
   def call(conn, _default) do
-    IO.puts("Aqui")
-    IO.inspect(conn.assigns[:user_role])
-
     case conn.assigns[:user_role] do
       :user -> unauthorized(conn)
       :admin -> conn

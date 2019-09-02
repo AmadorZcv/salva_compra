@@ -23,8 +23,6 @@ defmodule SalvaCompra.Services.Authenticator do
 
   # extrai o token do conn
   defp extract_token(conn) do
-    IO.inspect(Plug.Conn.get_req_header(conn, "authorization"))
-
     case Plug.Conn.get_req_header(conn, "authorization") do
       [auth_header] ->
         {:ok, String.trim(auth_header)}
