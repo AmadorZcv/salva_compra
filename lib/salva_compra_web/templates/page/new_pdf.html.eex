@@ -190,6 +190,21 @@
     .peso {
       width: 7.4%;
     }
+
+    .assinatura {
+      border-top: 1px solid;
+      padding-top: 15px;
+      font-size: 20px;
+      margin-left: 200px;
+      margin-right: 200px;
+      margin-bottom: 0px;
+      font-weight: bold;
+    }
+
+    .subassinatura {
+      font-size: 18px;
+      margin-top: 5px;
+    }
   </style>
 </head>
 
@@ -382,7 +397,8 @@
         Informações de venda
       </div>
     </div>
-    <div class="row" style="background-color: rgba(118,118,118,1); height: 46px; align-items: center; margin: 0; padding-left: 6px; padding-right: 6px;">
+    <div class="row"
+      style="background-color: rgba(118,118,118,1); height: 46px; align-items: center; margin: 0; padding-left: 6px; padding-right: 6px;">
       <div class="productLabelText indice">
         #
       </div>
@@ -456,7 +472,8 @@
         Especificações de produto
       </div>
     </div>
-    <div class="row" style="background-color: rgba(118,118,118,1); height: 75px; align-items: center; margin: 0; padding-left: 6px; padding-right: 6px;">
+    <div class="row"
+      style="background-color: rgba(118,118,118,1); height: 75px; align-items: center; margin: 0; padding-left: 6px; padding-right: 6px;">
       <div class="productLabelText indice">
         #
       </div>
@@ -548,6 +565,18 @@
           estará aceitando está condição.</b>
       </li>
     </ul>
+  </div>
+  <div class="row" style="margin-top: 150px;">
+    <div class="column">
+      <p class="assinatura" align="center">
+        <%= @user.nome %></p>
+      <p class="subassinatura" align="center"><%= @user.cargo %></p>
+    </div>
+    <div class="column">
+      <p class="assinatura" align="center">
+        <%= @nome_completo %></p>
+      <p class="subassinatura" align="center">Representante da <%= @nome %></p>
+    </div>
   </div>
 </body>
 
