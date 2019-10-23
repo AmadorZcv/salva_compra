@@ -10,6 +10,7 @@ defmodule SalvaCompra.Format.Dinheiro do
       |> case do
         {values, _} -> values
       end
+      |> Enum.reverse()
       |> Integer.undigits()
 
     integers = Enum.drop(digits, -2) |> Integer.undigits()
