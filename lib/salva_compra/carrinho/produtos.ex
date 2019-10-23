@@ -16,8 +16,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "4,25",
     preco: 8386,
     ipi: 5,
-    ipic: 419,
-    total: 8805
   },
   "10001" => %{
     id: 10001,
@@ -35,8 +33,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "2,13",
     preco: 4403,
     ipi: 5,
-    ipic: 220,
-    total: 4623
   },
   "10002" => %{
     id: 10002,
@@ -54,8 +50,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "2,55",
     preco: 5627,
     ipi: 5,
-    ipic: 281,
-    total: 5908
   },
   "10003" => %{
     id: 10003,
@@ -73,8 +67,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "1,28",
     preco: 5627,
     ipi: 5,
-    ipic: 220,
-    total: 4623
   },
   "10004" => %{
     id: 10004,
@@ -92,8 +84,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "1,70",
     preco: 5627,
     ipi: 5,
-    ipic: 281,
-    total: 5908
   },
   "10005" => %{
     id: 10005,
@@ -111,8 +101,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "0,85",
     preco: 5627,
     ipi: 5,
-    ipic: 281,
-    total: 5908
   },
   "10100" => %{
     id: 10100,
@@ -130,8 +118,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "4,25",
     preco: 9214,
     ipi: 5,
-    ipic: 461,
-    total: 9675
   },
   "10101" => %{
     id: 10101,
@@ -149,8 +135,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "2,55",
     preco: 5627,
     ipi: 5,
-    ipic: 281,
-    total: 5908
   },
   "10102" => %{
     id: 10102,
@@ -168,8 +152,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "1,70",
     preco: 5627,
     ipi: 5,
-    ipic: 281,
-    total: 5908
   },
   "11000" => %{
     id: 11000,
@@ -187,8 +169,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "7,00",
     preco: 11010,
     ipi: 5,
-    ipic: 551,
-    total: 11561
   },
   "11001" => %{
     id: 11001,
@@ -206,8 +186,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "4,20",
     preco: 11010,
     ipi: 5,
-    ipic: 551,
-    total: 11561
   },
   "11100" => %{
     id: 11100,
@@ -225,8 +203,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "4,25",
     preco: 11010,
     ipi: 5,
-    ipic: 551,
-    total: 11561
   },
   "11200" => %{
     id: 11200,
@@ -244,8 +220,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "4,25",
     preco: 11010,
     ipi: 5,
-    ipic: 551,
-    total: 11561
   },
   "12000" => %{
     id: 12000,
@@ -263,8 +237,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "7,00",
     preco: 14761,
     ipi: 5,
-    ipic: 738,
-    total: 15499
   },
   "13000" => %{
     id: 13000,
@@ -283,8 +255,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "1,00",
     preco: 1483,
     ipi: 5,
-    ipic: 74,
-    total: 1557
   },
   "13100" => %{
     id: 13100,
@@ -303,8 +273,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "1,00",
     preco: 1178,
     ipi: 0,
-    ipic: 0,
-    total: 1178
   },
   "13200" => %{
     id: 13200,
@@ -323,8 +291,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "1,00",
     preco: 785,
     ipi: 0,
-    ipic: 0,
-    total: 785
   },
   "13300" => %{
     id: 13300,
@@ -343,8 +309,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "1,00",
     preco: 1081,
     ipi: 5,
-    ipic: 54,
-    total: 1135
   },
   "14000" => %{
     id: 14000,
@@ -362,8 +326,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "0,10",
     preco: 1706,
     ipi: 15,
-    ipic: 256,
-    total: 1962
   },
   "14001" => %{
     id: 14001,
@@ -381,8 +343,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "0,15",
     preco: 2425,
     ipi: 15,
-    ipic: 364,
-    total: 2789
   },
   "14002" => %{
     id: 14002,
@@ -400,8 +360,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "0,20",
     preco: 3587,
     ipi: 15,
-    ipic: 538,
-    total: 4125
   },
   "14003" => %{
     id: 14003,
@@ -419,8 +377,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "0,40",
     preco: 5410,
     ipi: 15,
-    ipic: 812,
-    total: 6222
   },
   "15000" => %{
     id: 15000,
@@ -439,8 +395,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "0,30",
     preco: 430,
     ipi: 15,
-    ipic: 65,
-    total: 495
   },
   "16000" => %{
     id: 16000,
@@ -459,8 +413,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "0,05",
     preco: 1145,
     ipi: 15,
-    ipic: 172,
-    total: 1317
   },
   "17000" => %{
     id: 17000,
@@ -478,8 +430,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "0,50",
     preco: 2963,
     ipi: 15,
-    ipic: 445,
-    total: 3408
   },
   "17001" => %{
     id: 17001,
@@ -497,8 +447,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "0,90",
     preco: 4327,
     ipi: 15,
-    ipic: 649,
-    total: 4976
   },
   "17002" => %{
     id: 17002,
@@ -516,8 +464,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "1,00",
     preco: 5388,
     ipi: 15,
-    ipic: 808,
-    total: 6196
   },
   "17003" => %{
     id: 17003,
@@ -535,8 +481,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "2,00",
     preco: 8088,
     ipi: 15,
-    ipic: 1213,
-    total: 9301
   },
   "18000" => %{
     id: 18000,
@@ -554,8 +498,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "0,01",
     preco: 426,
     ipi: 15,
-    ipic: 21,
-    total: 447
   },
   "18001" => %{
     id: 18001,
@@ -573,8 +515,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "0,01",
     preco: 650,
     ipi: 15,
-    ipic: 33,
-    total: 683
   },
   "19000" => %{
     id: 19000,
@@ -592,8 +532,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "10,00",
     preco: 7772,
     ipi: 5,
-    ipic: 389,
-    total: 8161
   },
   "19001" => %{
     id: 19001,
@@ -611,8 +549,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "20,00",
     preco: 15066,
     ipi: 5,
-    ipic: 753,
-    total: 15819
   },
   "19002" => %{
     id: 19002,
@@ -630,8 +566,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "2,00",
     preco: 15066,
     ipi: 5,
-    ipic: 753,
-    total: 15819
   },
   "19003" => %{
     id: 19003,
@@ -649,8 +583,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "4,00",
     preco: 15066,
     ipi: 5,
-    ipic: 753,
-    total: 15819
   },
   "19004" => %{
     id: 19004,
@@ -668,8 +600,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "6,00",
     preco: 15066,
     ipi: 5,
-    ipic: 753,
-    total: 15819
   },
   "19100" => %{
     id: 19100,
@@ -687,8 +617,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "1,00",
     preco: 1536,
     ipi: 15,
-    ipic: 230,
-    total: 1765
   },
   "19101" => %{
     id: 19101,
@@ -706,8 +634,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "1,00",
     preco: 1096,
     ipi: 15,
-    ipic: 164,
-    total: 1260
   },
   "19102" => %{
     id: 19102,
@@ -725,8 +651,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "0,50",
     preco: 914,
     ipi: 15,
-    ipic: 137,
-    total: 1051
   },
   "19103" => %{
     id: 19103,
@@ -744,8 +668,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "0,50",
     preco: 744,
     ipi: 15,
-    ipic: 112,
-    total: 856
   },
   "19104" => %{
     id: 19104,
@@ -763,8 +685,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "0,50",
     preco: 610,
     ipi: 15,
-    ipic: 91,
-    total: 701
   },
   "19105" => %{
     id: 19105,
@@ -782,8 +702,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "0,50",
     preco: 475,
     ipi: 15,
-    ipic: 71,
-    total: 546
   },
   "19200" => %{
     id: 19200,
@@ -802,8 +720,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "0,03",
     preco: 303,
     ipi: 0,
-    ipic: 0,
-    total: 303
   },
   "19201" => %{
     id: 19201,
@@ -822,8 +738,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "0,03",
     preco: 802,
     ipi: 0,
-    ipic: 0,
-    total: 802
   },
   "19300" => %{
     id: 19300,
@@ -842,8 +756,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "0,03",
     preco: 1764,
     ipi: 0,
-    ipic: 0,
-    total: 1764
   },
   "19400" => %{
     id: 19400,
@@ -861,8 +773,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "6,00",
     preco: 1764,
     ipi: 0,
-    ipic: 0,
-    total: 1764
   },
   "19401" => %{
     id: 19401,
@@ -880,8 +790,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "4,00",
     preco: 1764,
     ipi: 0,
-    ipic: 0,
-    total: 1764
   },
   "19402" => %{
     id: 19402,
@@ -899,8 +807,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "4,00",
     preco: 1764,
     ipi: 0,
-    ipic: 0,
-    total: 1764
   },
   "19403" => %{
     id: 19403,
@@ -918,8 +824,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "4,00",
     preco: 1764,
     ipi: 0,
-    ipic: 0,
-    total: 1764
   },
   "20000" => %{
     id: 20000,
@@ -937,8 +841,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "2,50",
     preco: 1764,
     ipi: 0,
-    ipic: 0,
-    total: 1764
   },
   "20001" => %{
     id: 20001,
@@ -956,8 +858,6 @@ defmodule SalvaCompra.Carrinho.Produtos do
     peso: "5,00",
     preco: 1764,
     ipi: 0,
-    ipic: 0,
-    total: 1764
   }
 }
   def produtos, do: @produtos
