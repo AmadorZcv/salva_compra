@@ -29,6 +29,7 @@
       font-weight: normal;
       font-size: 21.8px;
       color: rgba(51, 51, 51, 1);
+      page-break-inside: avoid;
     }
 
     .infoText {
@@ -42,6 +43,7 @@
 
     #infoBox {
       margin-bottom: 10px;
+      page-break-inside: avoid;
     }
 
     #barra_proposta {
@@ -50,12 +52,12 @@
       width: 100%;
       display: flex;
       margin-top: 21px;
+      page-break-inside: avoid;
     }
 
     #titulo_proposta {
       display: flex;
       justify-content: center;
-      /* align-self: center;    <---- REMOVE */
       align-items: center;
       text-align: left;
       font-family: Arial;
@@ -64,6 +66,7 @@
       font-size: 23px;
       color: rgba(51, 51, 51, 1);
       padding-left: 6px;
+      page-break-inside: avoid;
     }
 
     #infoColumns {
@@ -75,11 +78,13 @@
       display: flex;
       flex: 1;
       flex-direction: column;
+      page-break-inside: avoid;
     }
 
     .row {
       display: flex;
       flex-direction: row;
+      page-break-inside: avoid;
     }
 
     .labelBox {
@@ -94,6 +99,7 @@
 
     #infoText {
       display: flex;
+      page-break-inside: avoid;
     }
 
     .productLabelText {
@@ -102,6 +108,7 @@
       font-weight: normal;
       font-size: 21.8px;
       color: rgba(255, 255, 255, 1);
+      page-break-inside: avoid;
     }
 
     .productLabelTextRight {
@@ -110,6 +117,7 @@
       font-weight: normal;
       font-size: 21.8px;
       color: rgba(255, 255, 255, 1);
+      page-break-inside: avoid;
     }
 
     .productText {
@@ -129,6 +137,7 @@
     .subTotalSpacing {
       padding-bottom: 18px;
       font-size: 21.8px;
+      page-break-inside: avoid;
     }
 
     .indice {
@@ -199,11 +208,13 @@
       margin-right: 200px;
       margin-bottom: 0px;
       font-weight: bold;
+      page-break-inside: avoid
     }
 
     .subassinatura {
       font-size: 18px;
       margin-top: 5px;
+      page-break-inside: avoid
     }
   </style>
 </head>
@@ -542,24 +553,24 @@
     </div>
     <% end) %>
   </div>
-  <div style="justify-content: center; align-items: flex-end; display: flex;">
-    <ul style="margin-top: 70px;  flex-direction: column; padding-left: 80px" class="infoText">
-      <li>
+  <div style="justify-content: center; align-items: flex-end; display: flex; page-break-inside: avoid;">
+    <ul style="margin-top: 70px;  flex-direction: column; padding-left: 80px; page-break-inside: avoid;" class="infoText">
+      <li style="page-break-inside: avoid;">
         Qualquer tratativa referente a proposta deverá ser formalizada por
         e-mail.
       </li>
-      <li>
+      <li style="page-break-inside: avoid;">
         Atenção as produtos que são enviados por caixa, as especificações
         <b>ALTURA</b>, <b>LARGURA</b> e <b>COMPRIMENTO</b> são da caixa.
       </li>
-      <li>
+      <li style="page-break-inside: avoid;">
         O desconto quando aplicado é calculado sobe do valor total e não do
         produto que foi considerado o desconto.
       </li>
-      <li>
+      <li style="page-break-inside: avoid;">
         Todas as cobranças são emitidas por boleto.
       </li>
-      <li>
+      <li style="page-break-inside: avoid;">
         <b>ATENÇÃO: Para pedidos personalizados poderá ocorrer perda ou ganho de até 10% das peças, ao confirmar a
           compra, você
           estará aceitando está condição.</b>
