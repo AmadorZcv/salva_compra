@@ -24,10 +24,11 @@ defmodule SalvaCompraWeb.OrcamentoController do
           "email" => email,
           "ramo" => ramo,
           "carrinho" => carrinho,
-          "parcela" => parcela
+          "parcela" => parcela,
+          "isConsumidor" => is_consumidor
         }
       }) do
-    data = SalvaCompra.Carrinho.Produtos.produtos()
+    data = SalvaCompra.Produtos.list_is_consumidor(is_consumidor)
 
     produtos_orcamento =
       Enum.map(carrinho, fn item ->

@@ -8,4 +8,12 @@ defmodule SalvaCompra.Produtos do
   def list_consumidor() do
     Carrinho.Produtos.produtos()
   end
+
+  def list_is_consumidor(is_consumidor) do
+    if is_consumidor do
+      list_consumidor()
+    else
+      list_revenda()
+    end
+  end
 end
