@@ -58,9 +58,14 @@ defmodule SalvaCompraWeb.Router do
   # Other scopes may use custom stacks.
   scope "/api", SalvaCompraWeb do
     pipe_through :api
+
     pipe_through :authenticate
     post "/orcamento", OrcamentoController, :create
     post "/pdf", PageController, :print
     get "/orcamento/:id", OrcamentoController, :show
+  end
+
+  scope("/config", SalvaCompraWeb) do
+    get "/produtos", ConfigController, :list_produtos
   end
 end

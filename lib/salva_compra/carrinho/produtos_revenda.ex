@@ -1,4 +1,4 @@
-defmodule SalvaCompra.Carrinho.Produtos do
+defmodule SalvaCompra.Carrinho.ProdutosRevenda do
   @produtos %{
     "10000" => %{
     id: 10000,
