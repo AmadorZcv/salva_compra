@@ -32,14 +32,15 @@ defmodule SalvaCompraWeb.OrcamentoController do
     produtos_orcamento =
       Enum.map(carrinho, fn item ->
         produto = data[item["id"]]
+        ipic = floor(produto.preco * (produto.ipi / 100))
 
         %{
           produto_id: produto.id,
           preco: produto.preco,
           qtd: item["qtd"],
-          total: produto.total,
+          total: produto.preco + ipic,
           ipi: produto.ipi,
-          ipic: produto.ipic
+          ipic: ipic
         }
       end)
 
