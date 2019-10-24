@@ -166,12 +166,14 @@ defmodule SalvaCompra.Orcamentos do
       Enum.with_index(orcamento.produtos, 1)
       |> Enum.map(fn {produto, index} ->
         item = data[Integer.to_string(produto.produto_id)]
+        ipic = Integer.floor_div(produto.preco * produto.ipi, 100)
+        total = produto.preco + ipic
 
         %{
           nome: item.nome,
           preco: Dinheiro.format_to_display(produto.preco),
           qtd: produto.qtd,
-          total: produto.total,
+          total: total,
           ipi: produto.ipi,
           produto: item.produto,
           descricao: item.descricao,
