@@ -543,6 +543,18 @@
     </div>
     <% end) %>
   </div>
+  <div class="row" style="margin-top: 150px;">
+    <div class="column">
+      <p class="assinatura" align="center" style="margin-top: 0;">
+        <%= @user.nome %></p>
+      <p class="subassinatura" align="center"><%= @user.cargo %></p>
+    </div>
+    <div class="column">
+      <p class="assinatura" align="center" style="margin-top: 0;">
+        <%= @nome_completo %></p>
+      <p class="subassinatura" align="center">Representante da <%= @nome %></p>
+    </div>
+  </div>
   <div style="justify-content: center; align-items: flex-end; display: flex;">
     <ul style="margin-top: 70px;  flex-direction: column; padding-left: 80px;" class="infoText">
       <li>
@@ -566,23 +578,6 @@
           estará aceitando está condição.</b>
       </li>
     </ul>
-  </div>
-  <div class="row" style="margin-top: 150px;">
-    <div class="column">
-      <p class="assinatura" align="center">
-        <%= @user.nome %></p>
-      <p class="subassinatura" align="center"><%= @user.cargo %></p>
-    </div>
-    <div class="column">
-      <p class="assinatura" align="center">
-        <%= @nome_completo %></p>
-      <p class="subassinatura" align="center">Representante da <%= @nome %></p>
-    </div>
-  </div>
-  <div>
-    <img
-      src="https://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=salvacompra%3A%2F%2Fhome&qzone=1&margin=0&size=250x250&ecc=L"
-      alt="qr code" style="display: block;margin-left: auto;margin-right: auto;"/>
   </div>
 </body>
 
