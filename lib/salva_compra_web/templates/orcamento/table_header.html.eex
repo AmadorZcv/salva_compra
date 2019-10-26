@@ -1,0 +1,30 @@
+<div id="infoBox">
+    <div id="barra_proposta" style="margin-bottom: 0px">
+      <div id="titulo_proposta">
+        Informações de venda
+      </div>
+    </div>
+    <div class="row"
+      style="background-color: rgba(118,118,118,1); height: 46px; align-items: center; margin: 0; padding-left: 6px; padding-right: 6px;">
+      <div class="productLabelText indice">
+        #
+      </div>
+      <div class="productLabelText produto" style="padding-left: 6px">
+        Produto
+      </div>
+      <div class="productLabelTextRight quantidade" style="text-align: right; padding-right: 6px">
+        Quantidade
+      </div>
+      <div class="productLabelTextRight valorSemIpi" style="text-align: right; padding-right: 6px">
+        Valor sem IPI
+      </div>
+      <div class="productLabelTextRight ipi" style="text-align: right; padding-right: 6px">
+        IPI
+      </div>
+      <div class="productLabelTextRight valorVenda" style="text-align: right; padding-right: 6px">
+        Valor de Venda
+      </div>
+      <div class="productLabelTextRight valorDesconto" style="text-align: right; padding-right: 6px">
+        Valor com Desconto
+      </div>
+    </div>

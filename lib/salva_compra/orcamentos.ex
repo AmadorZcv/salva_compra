@@ -225,7 +225,8 @@ defmodule SalvaCompra.Orcamentos do
       total: total,
       dias: dias,
       user: user,
-      title: orcamento.title
+      title: orcamento.title,
+      orcamento: orcamento
     })
   end
 end

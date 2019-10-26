@@ -1,0 +1,182 @@
+<div class="row">
+    <div style="flex: 1; justify-content: center; align-items: center; display: flex; flex-direction: column">
+      <img src="<%=@ntp %>" alt="NTP Logo" />
+      <div style="justify-content: center; align-items: flex-start; display: flex; flex-direction: column">
+        <div class="infoText"><b>NTP Engenharia</b></div>
+        <div class="infoText">CNPJ 33.131.887/0001-06</div>
+        <div class="infoText">
+          Tv. Barão do Triunfo, 3540, Sala 410 - Marco - Belém/PA
+        </div>
+        <div class="infoText">Tel <b>(91) 3349-7335 ntpengenharia@gmail.com</b></div>
+      </div>
+    </div>
+    <div style="flex: 1; justify-content: center; align-items: center; display: flex; flex-direction: column">
+      <img src="<%=@salva %>" alt="Salva Bras Logo" />
+
+      <div style="justify-content: center; align-items: flex-start; display: flex; flex-direction: column">
+        <div class="infoText">
+          <b>Salvabras Soluções em Proteção LTDA</b>
+        </div>
+        <div class="infoText">CNPJ 16.557.984/0001-46</div>
+        <div class="infoText">
+          Rua Anhanguera, 425 - Piratininga - Osasco/SP
+        </div>
+        <div class="infoText">Tel <b>(11) 3288-2799 www.salvabras.com.br</b></div>
+      </div>
+    </div>
+  </div>
+  <div id="infoBox">
+    <div id="barra_proposta">
+      <div id="titulo_proposta">
+        Informações da Proposta
+      </div>
+    </div>
+    <div id="infoColumns">
+      <div class="column">
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Data de Criação
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @criacao %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Data de Validade
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @validade %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Tipo de Frete
+          </div>
+          <div class="infoText labelSpacing">
+            FOB
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing" style="word-spacing: 9999rem;">
+            Condição Pagamento
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @condicao %> Dias
+            <%= @dias %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            ICMS
+          </div>
+          <div class="infoText labelSpacing">
+            18%
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Preparado por
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @user.nome %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Telefone
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @user.telefone %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Email
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @user.email %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="infoBox">
+    <div id="barra_proposta">
+      <div id="titulo_proposta">
+        Empresa e Contato
+      </div>
+    </div>
+    <div id="infoColumns">
+      <div class="column">
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Nome da Conta
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @nome %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            CPF/CNPJ
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @cpf %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Ramo/Atividade
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @ramo %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            UF
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @uf %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Cidade
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @cidade %>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Nome completo
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @nome_completo %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Telefone
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @telefone %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="labelBox labelText labelSpacing">
+            Email
+          </div>
+          <div class="infoText labelSpacing">
+            <%= @email %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

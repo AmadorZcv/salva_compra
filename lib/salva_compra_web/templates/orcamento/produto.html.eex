@@ -1,0 +1,30 @@
+<div id="row" class="infoText itemSpacing" style="background-color: <%= @produto.color %>">
+      <div class="productBorder labelText indice"
+        style="border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px">
+        <%= @produto.index %>
+      </div>
+      <div class="productBorder labelText produto"
+        style="border-right: 2px solid rgb(171, 171, 171); padding-left: 6px; padding-top: 4px; padding-bottom: 4px">
+        <%= @produto.produto %>
+      </div>
+      <div class="quantidade productBorder labelText"
+        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
+        <%= @produto.qtd %>,00
+      </div>
+      <div class="valorSemIpi productBorder labelText"
+        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
+        <%= @produto.preco %>
+      </div>
+      <div class="ipi productBorder labelText"
+        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
+        <%= @produto.ipi %>
+      </div>
+      <div class="valorVenda productBorder labelText"
+        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
+        <%= @produto.total %>
+      </div>
+      <div class="valorDesconto productBorder labelText"
+        style="text-align: right; padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
+        <%= @produto.total %>
+      </div>
+</div>
