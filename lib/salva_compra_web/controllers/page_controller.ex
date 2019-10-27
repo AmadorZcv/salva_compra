@@ -1,6 +1,8 @@
 defmodule SalvaCompraWeb.PageController do
   use SalvaCompraWeb, :controller
   import Number.Currency
+  alias SalvaCompra.Orcamentos
+  alias SalvaCompra.Orcamentos.Orcamento
 
   def index(conn, _params) do
     render(conn, "index.html")
@@ -12,6 +14,14 @@ defmodule SalvaCompraWeb.PageController do
       ntp: Images64.logo_ntp(),
       salva: Images64.logo_salva()
     })
+  end
+
+  def show(conn, %{"id" => id}) do
+    orcamento = Orcamentos.get_orcamento!(id)
+    html = Orcamentos.orcamento_to_html(orcamento, conn)
+
+    conn
+    |> send_resp(200, html)
   end
 
   def print(conn, %{

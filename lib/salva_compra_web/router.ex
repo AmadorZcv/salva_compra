@@ -32,6 +32,7 @@ defmodule SalvaCompraWeb.Router do
     get "/pdf", PageController, :pdf
     get "/download", PageController, :print
     get "/users", UserController, :index
+    get "/orcamento/:id", PageController, :show
     resources "/sessions", SessionController, only: [:new, :create, :delete]
   end
 

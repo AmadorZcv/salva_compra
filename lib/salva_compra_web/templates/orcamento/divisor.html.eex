@@ -1,2 +1,2 @@
-<%=raw(safe_to_string tag(:div, style: "height: #{@height}px; background:background:#000000; width: 34px")) %>
+<%=raw(safe_to_string tag(:div, style: "height: #{@height}px; background: #000000; width: 34px")) %>
 </div>

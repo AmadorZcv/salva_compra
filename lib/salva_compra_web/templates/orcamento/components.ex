@@ -1,13 +1,15 @@
 defmodule SalvaCompraWeb.Components do
   alias SalvaCompraWeb.OrcamentoView
   @page_height 785
-  @header_height 82.538
-  @footer_height 139.565
-  @valor_table_height 69.782
-  @produto_height 11.255
-  @info_header_height 46.522
-  @info_item_small_height 11.255
-  @info_item_medium_height 19.509
+  @header_height 88
+  @footer_height 105.8
+  @produto_header_height 36
+  @valor_table_height 72.75
+  @produto_height 11.25
+  @info_header_height 43
+  @info_item_small_height 11.25
+  @info_item_medium_height 19.5
+
   def divisor(height) do
     Phoenix.View.render(OrcamentoView, "divisor.html", %{height: height})
   end
@@ -73,7 +75,7 @@ defmodule SalvaCompraWeb.Components do
           table_header_html = table_header()
           produto_html = produto(produto)
           {new_page_html, height} = new_page.(height)
-          {[new_page_html, table_header_html, produto_html], height}
+          {[new_page_html, table_header_html, produto_html], height - @produto_header_height}
         else
           {produto(produto), height - @produto_height}
         end
@@ -87,7 +89,7 @@ defmodule SalvaCompraWeb.Components do
       if height - @valor_table_height < @footer_height do
         {new_page_html, height} = new_page.(height)
         valor_html = valor_table(total)
-        {[new_page_html, valor_html], height}
+        {[new_page_html, valor_html], height - @info_header_height}
       else
         valor_html = valor_table(total)
         {[valor_html], height - @valor_table_height}
