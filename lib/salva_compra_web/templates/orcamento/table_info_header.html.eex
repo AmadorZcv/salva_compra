@@ -1,0 +1,36 @@
+  <div id="infoBox">
+    <div id="barra_proposta" style="margin-bottom: 0px">
+      <div id="titulo_proposta">
+        Especificações de produto
+      </div>
+    </div>
+    <div class="row"
+      style="background-color: rgba(118,118,118,1); height: 75px; align-items: center; margin: 0; padding-left: 6px; padding-right: 6px;">
+      <div class="productLabelText indice">
+        #
+      </div>
+      <div class="productLabelText produto2" style="padding-left: 6px">
+        Produto
+      </div>
+      <div class="productLabelTextRight descricao" style="text-align: left; padding-left: 6px">
+        Descrição
+      </div>
+      <div class="productLabelTextRight embalagem" style="text-align: left; padding-left: 6px">
+        Embalagem Master
+      </div>
+      <div class="productLabelTextRight altura" style="text-align: right; padding-right: 6px">
+        Altura (m)
+      </div>
+      <div class="productLabelTextRight largura" style="text-align: right; padding-right: 6px">
+        Largura (m)
+      </div>
+      <div class="productLabelTextRight comprimento" style="text-align: right; padding-right: 6px">
+        Comprimento (m)
+      </div>
+      <div class="productLabelTextRight ncm" style="text-align: right; padding-right: 6px">
+        NCM
+      </div>
+      <div class="productLabelTextRight peso" style="text-align: right; padding-right: 6px">
+        Peso (KG)
+      </div>
+    </div>

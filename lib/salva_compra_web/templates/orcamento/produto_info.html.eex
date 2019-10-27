@@ -1,0 +1,37 @@
+<div id="row" class="infoText itemSpacing" style="background-color: <%=@produto.color %>">
+      <div class="productBorder labelText indice"
+        style="border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px">
+        <%=@produto.index %>
+      </div>
+      <div class="productBorder labelText@produto2"
+        style="border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-left: 6px">
+        <%=@produto.produto %>
+      </div>
+      <div class="descricao productBorder labelText"
+        style="text-align: left; border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-left: 6px">
+        <%=@produto.descricao %>
+      </div>
+      <div class="embalagem productBorder labelText"
+        style="text-align: left; border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-left: 6px;">
+        <%=@produto.embalagem %>
+      </div>
+      <div class="altura productBorder labelText"
+        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-right: 6px">
+        <%=@produto.e_altura %>
+      </div>
+      <div class="largura productBorder labelText"
+        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-right: 6px">
+        <%=@produto.e_largura %>
+      </div>
+      <div class="comprimento productBorder labelText"
+        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-right: 6px">
+        <%=@produto.e_comprimento %>
+      </div>
+      <div class="ncm productBorder labelText"
+        style="text-align: right; border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-right: 6px">
+        <%=@produto.ncm %>
+      </div>
+      <div class="peso labelText" style="text-align: right; padding-right: 6px; padding-top: 4px; padding-bottom: 4px">
+        <%=@produto.peso %>
+      </div>
+    </div>
