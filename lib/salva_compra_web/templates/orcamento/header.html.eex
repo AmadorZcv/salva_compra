@@ -1,30 +1,5 @@
-<div class="row">
-    <div style="flex: 1; justify-content: center; align-items: center; display: flex; flex-direction: column">
-      <img src="<%=@ntp %>" alt="NTP Logo" />
-      <div style="justify-content: center; align-items: flex-start; display: flex; flex-direction: column">
-        <div class="infoText"><b>NTP Engenharia</b></div>
-        <div class="infoText">CNPJ 33.131.887/0001-06</div>
-        <div class="infoText">
-          Tv. Barão do Triunfo, 3540, Sala 410 - Marco - Belém/PA
-        </div>
-        <div class="infoText">Tel <b>(91) 3349-7335 ntpengenharia@gmail.com</b></div>
-      </div>
-    </div>
-    <div style="flex: 1; justify-content: center; align-items: center; display: flex; flex-direction: column">
-      <img src="<%=@salva %>" alt="Salva Bras Logo" />
-
-      <div style="justify-content: center; align-items: flex-start; display: flex; flex-direction: column">
-        <div class="infoText">
-          <b>Salvabras Soluções em Proteção LTDA</b>
-        </div>
-        <div class="infoText">CNPJ 16.557.984/0001-46</div>
-        <div class="infoText">
-          Rua Anhanguera, 425 - Piratininga - Osasco/SP
-        </div>
-        <div class="infoText">Tel <b>(11) 3288-2799 www.salvabras.com.br</b></div>
-      </div>
-    </div>
-  </div>
+<div class="column">
+  <%=  SalvaCompraWeb.Components.header() %>
   <div id="infoBox">
     <div id="barra_proposta">
       <div id="titulo_proposta">
