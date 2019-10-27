@@ -105,7 +105,7 @@ defmodule SalvaCompraWeb.Components do
     {produtos_html, height} =
       Enum.map_reduce(produtos, height, fn produto, height ->
         produto_info_height =
-          if String.length(produto.nome) > 20 do
+          if String.length(produto.nome) > 33 do
             @info_item_medium_height
           else
             @info_item_small_height
