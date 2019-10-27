@@ -1,6 +1,6 @@
 
     <footer>
-        <div class="row" style="margin-top: 150px;">
+        <div class="row" style="margin-top: 10px;">
             <div class="column">
                 <p class="assinatura" align="center" style="margin-top: 0;">
                     <%= @user.nome %></p>
