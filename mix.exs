@@ -46,7 +46,8 @@ defmodule SalvaCompra.MixProject do
       {:pdf_generator, ">=0.5.5"},
       {:number, "~> 1.0.0"},
       {:bcrypt_elixir, "~> 2.0"},
-      {:timex, "~> 3.0"}
+      {:timex, "~> 3.0"},
+      {:eqrcode, "~> 0.1.6"}
     ]
   end
 
