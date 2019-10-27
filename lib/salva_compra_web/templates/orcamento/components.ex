@@ -1,13 +1,13 @@
 defmodule SalvaCompraWeb.Components do
   alias SalvaCompraWeb.OrcamentoView
   @page_height 785
-  @header_height 30
-  @footer_height 90
-  @valor_table_height 40
-  @produto_height 12.75
-  @info_header_height 20
-  @info_item_small_height 12.75
-  @info_item_medium_height 22.51
+  @header_height 82.538
+  @footer_height 139.565
+  @valor_table_height 69.782 
+  @produto_height 11.255
+  @info_header_height 46.522
+  @info_item_small_height 11.255
+  @info_item_medium_height 19.509 
   def divisor(height) do
     Phoenix.View.render(OrcamentoView, "divisor.html", %{height: height})
   end
