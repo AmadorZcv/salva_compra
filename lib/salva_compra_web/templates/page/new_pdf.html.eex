@@ -224,8 +224,7 @@
       ramo: @orcamento.ramo,})%> 
   <%= render(SalvaCompraWeb.OrcamentoView,"table_header.html",%{}) %>
   <%=  SalvaCompraWeb.Components.build_page(@produtos,423,@user,@orcamento.nome,@orcamento.nome_completo,@total) %>
- 
-  </div>
+
  
 </body>
 

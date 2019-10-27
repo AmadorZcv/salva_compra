@@ -3,7 +3,7 @@
         style="border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px">
         <%=@produto.index %>
       </div>
-      <div class="productBorder labelText@produto2"
+      <div class="productBorder labelText produto2"
         style="border-right: 2px solid rgb(171, 171, 171); padding-top: 4px; padding-bottom: 4px; padding-left: 6px">
         <%=@produto.produto %>
       </div>
