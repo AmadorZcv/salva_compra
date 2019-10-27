@@ -12,10 +12,19 @@ defmodule SalvaCompraWeb.Components do
     Phoenix.View.render(OrcamentoView, "divisor.html", %{height: height})
   end
 
-  def header() do
+  def header(id) do
+    IO.inspect(id)
+
+    qr_code =
+      Integer.to_string(id)
+      |> EQRCode.encode()
+      |> EQRCode.png(width: 56)
+      |> Base.encode64()
+
     Phoenix.View.render(OrcamentoView, "filial.html", %{
       ntp: Images64.logo_ntp(),
-      salva: Images64.logo_salva()
+      salva: Images64.logo_salva(),
+      qr_code: "data:image/jpeg;base64,#{qr_code}"
     })
   end
 
@@ -47,8 +56,8 @@ defmodule SalvaCompraWeb.Components do
     Phoenix.View.render(OrcamentoView, "valor.html", %{total: total})
   end
 
-  def new_page(user, nome, nome_completo) do
-    header_html = header()
+  def new_page(user, nome, nome_completo, id) do
+    header_html = header(id)
     footer_html = footer(user, nome, nome_completo)
 
     fn height ->
@@ -124,8 +133,8 @@ defmodule SalvaCompraWeb.Components do
     {height, new_page, [html | produtos_html]}
   end
 
-  def build_page(produtos, height, user, nome, nome_completo, total) do
-    new_page_fn = new_page(user, nome, nome_completo)
+  def build_page(produtos, height, user, nome, nome_completo, total, id) do
+    new_page_fn = new_page(user, nome, nome_completo, id)
 
     {_, _, html} =
       {height, new_page_fn, {:safe, ""}}

@@ -221,9 +221,10 @@
       uf: @orcamento.uf,
       cpf: @orcamento.cpf,
       email: @orcamento.email,
-      ramo: @orcamento.ramo,})%> 
+      ramo: @orcamento.ramo,
+      id: @orcamento.id})%> 
   <%= render(SalvaCompraWeb.OrcamentoView,"table_header.html",%{}) %>
-  <%=  SalvaCompraWeb.Components.build_page(@produtos,423,@user,@orcamento.nome,@orcamento.nome_completo,@total) %>
+  <%=  SalvaCompraWeb.Components.build_page(@produtos,423,@user,@orcamento.nome,@orcamento.nome_completo,@total,@orcamento.id) %>
 
  
 </body>

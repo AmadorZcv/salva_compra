@@ -1,5 +1,5 @@
 <div class="column">
-  <%=  SalvaCompraWeb.Components.header() %>
+  <%=  SalvaCompraWeb.Components.header(@id) %>
   <div id="infoBox">
     <div id="barra_proposta">
       <div id="titulo_proposta">
