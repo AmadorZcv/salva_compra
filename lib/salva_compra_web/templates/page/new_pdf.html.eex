@@ -172,7 +172,7 @@
          page-break-inside: avoid
          }
          .page-header, .page-header-space {
-         height: 200px;
+         height: 230px;
          }
          .page-footer, .page-footer-space {
          height: 150px;
@@ -311,7 +311,7 @@
                         </div>
                      </div>
                   </div>
-                  <div id="infoBox">
+                  
                      <div id="barra_proposta">
                         <div id="titulo_proposta">
                            Empresa e Contato
@@ -387,8 +387,8 @@
                            </div>
                         </div>
                      </div>
-                  </div>
-                  <div id="infoBox">
+                  
+                  
                      <div id="barra_proposta" style="margin-bottom: 0px">
                         <div id="titulo_proposta">
                            Informações de venda
@@ -462,8 +462,7 @@
                            <div class="subTotalSpacing"><%= @total %></div>
                         </div>
                      </div>
-                  </div>
-                  <div id="infoBox">
+                  
                      <div id="barra_proposta" style="margin-bottom: 0px">
                         <div id="titulo_proposta">
                            Especificações de produto
@@ -538,7 +537,7 @@
                         </div>
                      </div>
                      <% end) %>
-                  </div>
+                  
                </td>
             </tr>
          </tbody>
