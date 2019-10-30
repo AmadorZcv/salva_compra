@@ -1,16 +1,26 @@
 defmodule SalvaCompraWeb.Components do
   alias SalvaCompraWeb.OrcamentoView
-  @page_height 785
-  @header_height 88
-  @footer_height 105.8
-  @produto_header_height 36
-  @valor_table_height 72.75
-  @produto_height 11.25
-  @info_header_height 43
-  @info_item_small_height 11.25
-  @info_item_medium_height 19.5
+  # 291,886 * 2,67 = 1296.66438 é a altura inicial
+  @page_height 2076
+  # 76,536 × 2,67 Header individual
+  @header_height 204.35112
+  #  105,8  * 2,67 Footer
+  @footer_height 282.486
+  # 43,52 * 2,67
+  @produto_header_height 116.1984
+  # 65,28 * 2,67
+  @valor_table_height 174.2976
+  # 11,255 * 2,67
+  @produto_height 30.05085
+  # 54,025 * 2,67
+  @info_header_height 144.24675
+  # 11,255 * 2,67
+  @info_item_small_height 30.05085
+  # 19,509  * 2,67
+  @info_item_medium_height 52.08903
 
   def divisor(height) do
+    IO.puts(height)
     Phoenix.View.render(OrcamentoView, "divisor.html", %{height: height})
   end
 
@@ -138,14 +148,18 @@ defmodule SalvaCompraWeb.Components do
   def build_page(produtos, height, user, nome, nome_completo, total, id) do
     new_page_fn = new_page(user, nome, nome_completo, id)
 
-    {_, _, html} =
+    {height, _, html} =
       {height, new_page_fn, {:safe, ""}}
       |> produtos(produtos)
       |> valor(total)
       |> info_header()
       |> produtos_info(produtos)
 
-    [html, footer(user, nome, nome_completo)]
+    [
+      html,
+      divisor(height - @footer_height),
+      footer(user, nome, nome_completo)
+    ]
   end
 
   # <%=  Enum.map(@produtos, fn produto ->  %>
