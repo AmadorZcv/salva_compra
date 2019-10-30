@@ -80,6 +80,8 @@ defmodule SalvaCompraWeb.Components do
   end
 
   def produtos({height, new_page, html}, produtos) do
+    IO.puts("Altura Inicial produtos #{height}")
+
     {produtos_html, height} =
       Enum.map_reduce(produtos, height, fn produto, height ->
         if height - @produto_height < @footer_height do
@@ -87,9 +89,14 @@ defmodule SalvaCompraWeb.Components do
           produto_html = produto(produto)
           {new_page_html, height} = new_page.(height)
 
+          IO.puts(
+            "Produto #{produto.nome} altura #{height - @produto_header_height - @produto_height} Pagina quebrou"
+          )
+
           {[new_page_html, table_header_html, produto_html],
            height - @produto_header_height - @produto_height}
         else
+          IO.puts("Produto #{produto.nome} altura #{height - @produto_height}")
           {produto(produto), height - @produto_height}
         end
       end)
@@ -102,9 +109,11 @@ defmodule SalvaCompraWeb.Components do
       if height - @valor_table_height < @footer_height do
         {new_page_html, height} = new_page.(height)
         valor_html = valor_table(total)
+        IO.puts("Valor #{total} altura #{height - @valor_table_height} Pagina quebrou")
         {[new_page_html, valor_html], height - @valor_table_height}
       else
         valor_html = valor_table(total)
+        IO.puts("Valor #{total} altura #{height - @valor_table_height}")
         {[valor_html], height - @valor_table_height}
       end
 
@@ -116,8 +125,10 @@ defmodule SalvaCompraWeb.Components do
       if height - @info_header_height < @footer_height do
         {new_page_html, height} = new_page.(height)
         info_header_html = table_info_header()
+        IO.puts("Info header altura #{height - @info_header_height} Pagina quebrou")
         {[new_page_html, info_header_html], height - @info_header_height}
       else
+        IO.puts("Info header altura #{height - @info_header_height}")
         info_header_html = table_info_header()
         {[info_header_html], height - @info_header_height}
       end
@@ -129,7 +140,7 @@ defmodule SalvaCompraWeb.Components do
     {produtos_html, height} =
       Enum.map_reduce(produtos, height, fn produto, height ->
         produto_info_height =
-          if String.length(produto.produto) > 33 do
+          if String.length(produto.produto) > 33 || String.length(produto.descricao) > 33 do
             @info_item_medium_height
           else
             @info_item_small_height
@@ -139,13 +150,18 @@ defmodule SalvaCompraWeb.Components do
         IO.puts(String.length(produto.produto))
 
         if height - produto_info_height < @footer_height do
-          table_header_html = table_header()
+          table_header_html = table_info_header()
           produto_html = produto_info(produto)
           {new_page_html, height} = new_page.(height)
+
+          IO.puts(
+            "Produto #{produto.nome} altura #{height - @info_header_height - produto_info_height} Pagina quebrou"
+          )
 
           {[new_page_html, table_header_html, produto_html],
            height - @info_header_height - produto_info_height}
         else
+          IO.puts("Produto #{produto.nome} altura #{height - produto_info_height}")
           {produto_info(produto), height - produto_info_height}
         end
       end)
