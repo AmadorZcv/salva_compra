@@ -1,13 +1,14 @@
 defmodule SalvaCompraWeb.Components do
   alias SalvaCompraWeb.OrcamentoView
+  #  2076 - 897,53652
   # 291,886 * 2,67 = 1296.66438 é a altura inicial
   @page_height 2076
   # 76,536 × 2,67 Header individual
   @header_height 204.35112
   #  105,8  * 2,67 Footer
   @footer_height 282.486
-  # 43,52 * 2,67
-  @produto_header_height 116.1984
+  # 48.27 * 2,67
+  @produto_header_height 128.8809
   # 65,28 * 2,67
   @valor_table_height 174.2976
   # 11,255 * 2,67
@@ -85,7 +86,9 @@ defmodule SalvaCompraWeb.Components do
           table_header_html = table_header()
           produto_html = produto(produto)
           {new_page_html, height} = new_page.(height)
-          {[new_page_html, table_header_html, produto_html], height - @produto_header_height}
+
+          {[new_page_html, table_header_html, produto_html],
+           height - @produto_header_height - @produto_height}
         else
           {produto(produto), height - @produto_height}
         end
@@ -99,7 +102,7 @@ defmodule SalvaCompraWeb.Components do
       if height - @valor_table_height < @footer_height do
         {new_page_html, height} = new_page.(height)
         valor_html = valor_table(total)
-        {[new_page_html, valor_html], height - @info_header_height}
+        {[new_page_html, valor_html], height - @valor_table_height}
       else
         valor_html = valor_table(total)
         {[valor_html], height - @valor_table_height}
@@ -113,7 +116,7 @@ defmodule SalvaCompraWeb.Components do
       if height - @info_header_height < @footer_height do
         {new_page_html, height} = new_page.(height)
         info_header_html = table_info_header()
-        {[new_page_html, info_header_html], height}
+        {[new_page_html, info_header_html], height - @info_header_height}
       else
         info_header_html = table_info_header()
         {[info_header_html], height - @info_header_height}
@@ -126,17 +129,22 @@ defmodule SalvaCompraWeb.Components do
     {produtos_html, height} =
       Enum.map_reduce(produtos, height, fn produto, height ->
         produto_info_height =
-          if String.length(produto.nome) > 33 do
+          if String.length(produto.produto) > 33 do
             @info_item_medium_height
           else
             @info_item_small_height
           end
 
+        IO.puts("Produto #{produto.nome}")
+        IO.puts(String.length(produto.produto))
+
         if height - produto_info_height < @footer_height do
           table_header_html = table_header()
           produto_html = produto_info(produto)
           {new_page_html, height} = new_page.(height)
-          {[new_page_html, table_header_html, produto_html], height}
+
+          {[new_page_html, table_header_html, produto_html],
+           height - @info_header_height - produto_info_height}
         else
           {produto_info(produto), height - produto_info_height}
         end
@@ -154,6 +162,8 @@ defmodule SalvaCompraWeb.Components do
       |> valor(total)
       |> info_header()
       |> produtos_info(produtos)
+
+    IO.puts(height)
 
     [
       html,
