@@ -172,7 +172,7 @@
          page-break-inside: avoid
          }
          .page-header, .page-header-space {
-         height: 230px;
+         height: 260px;
          }
          .page-footer, .page-footer-space {
          height: 150px;
@@ -189,9 +189,6 @@
          }
          .page {
          page-break-after: always;
-         }
-         @page {
-         margin: 20mm
          }
          @media print  
          {
