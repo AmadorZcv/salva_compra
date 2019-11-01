@@ -534,9 +534,33 @@
                         </div>
                      </div>
                      <% end) %>
-                  
+                          <div style="justify-content: center; align-items: flex-end; display: flex;">
+            <ul style="flex-direction: column; padding-left: 80px;" class="infoText">
+                <li>
+                    Qualquer tratativa referente a proposta deverá ser formalizada por
+                    e-mail.
+                </li>
+                <li>
+                    Atenção as produtos que são enviados por caixa, as especificações
+                    <b>ALTURA</b>, <b>LARGURA</b> e <b>COMPRIMENTO</b> são da caixa.
+                </li>
+                <li>
+                    O desconto quando aplicado é calculado sobe do valor total e não do
+                    produto que foi considerado o desconto.
+                </li>
+                <li>
+                    Todas as cobranças são emitidas por boleto.
+                </li>
+                <li>
+                    <b>ATENÇÃO: Para pedidos personalizados poderá ocorrer perda ou ganho de até 10% das peças, ao
+                        confirmar a
+                        compra, você estará aceitando está condição.</b></li>
+            </ul>
+        </div>
                </td>
+               
             </tr>
+            
          </tbody>
          <tfoot>
             <tr>
