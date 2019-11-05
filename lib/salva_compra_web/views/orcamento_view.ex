@@ -2,8 +2,20 @@ defmodule SalvaCompraWeb.OrcamentoView do
   use SalvaCompraWeb, :view
   alias SalvaCompraWeb.OrcamentoView
 
+  defp orcamentos_to_map(orcamentos) do
+    Enum.reduce(orcamentos, %{}, fn orcamento, map ->
+      # Pegando somente a parte identificadora do dia
+      title = String.slice(orcamento.title, 0..7)
+      orcamento_json = render_one(orcamento, OrcamentoView, "orcamento.json")
+      new_map = Map.put_new(map, title, %{})
+      orcamentos_map = Map.put(new_map[title], orcamento.title, orcamento_json)
+
+      Map.put(new_map, title, orcamentos_map)
+    end)
+  end
+
   def render("index.json", %{orcamentos: orcamentos}) do
-    %{data: render_many(orcamentos, OrcamentoView, "orcamento.json")}
+    %{data: orcamentos_to_map(orcamentos)}
   end
 
   def render("show.json", %{orcamento: orcamento, html: html}) do
