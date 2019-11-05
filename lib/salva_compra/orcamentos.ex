@@ -22,6 +22,13 @@ defmodule SalvaCompra.Orcamentos do
     Repo.all(Orcamento)
   end
 
+  def list_orcamentos(user_id) do
+    Orcamento
+    |> where([o], o.user_id == ^user_id)
+    |> Repo.all()
+    |> Repo.preload(:produtos)
+  end
+
   @doc """
   Gets a single orcamento.
 

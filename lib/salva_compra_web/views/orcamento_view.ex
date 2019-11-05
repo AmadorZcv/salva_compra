@@ -10,6 +10,17 @@ defmodule SalvaCompraWeb.OrcamentoView do
     %{data: %{orcamento: render_one(orcamento, OrcamentoView, "orcamento.json"), html: html}}
   end
 
+  def render("produto.json", %{produto: produto}) do
+    %{
+      ipi: produto.ipi,
+      ipic: produto.ipic,
+      preco: produto.preco,
+      produto_id: produto.id,
+      total: produto.total,
+      qtd: produto.qtd
+    }
+  end
+
   def render("orcamento.json", %{orcamento: orcamento}) do
     %{
       id: orcamento.id,
@@ -25,7 +36,9 @@ defmodule SalvaCompraWeb.OrcamentoView do
       email: orcamento.email,
       ramo: orcamento.ramo,
       parcela: orcamento.parcela,
-      title: orcamento.title
+      title: orcamento.title,
+      produtos:
+        Enum.map(orcamento.produtos, fn produto -> render("produto.json", %{produto: produto}) end)
     }
   end
 end

@@ -62,6 +62,7 @@ defmodule SalvaCompraWeb.Router do
 
     pipe_through :authenticate
     post "/orcamento", OrcamentoController, :create
+    get "/orcamentos", OrcamentoController, :list_orcamentos
     post "/pdf", PageController, :print
     get "/orcamento/:id", OrcamentoController, :show
   end

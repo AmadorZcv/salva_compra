@@ -10,6 +10,12 @@ defmodule SalvaCompraWeb.OrcamentoController do
     render(conn, "index.json", orcamentos: orcamentos)
   end
 
+  def list_orcamentos(conn, _params) do
+    user_id = conn.assigns[:user_id]
+    orcamentos = Orcamentos.list_orcamentos(user_id)
+    render(conn, "index.json", orcamentos: orcamentos)
+  end
+
   def create(conn, %{
         "orcamento" => %{
           "criacao" => criacao,
