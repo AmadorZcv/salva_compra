@@ -535,7 +535,7 @@
                      </div>
                      <% end) %>
                           <div style="justify-content: center; align-items: flex-end; display: flex;">
-            <ul style="flex-direction: column; padding-left: 80px;" class="infoText">
+            <ul style="flex-direction: column; padding-left: 80px;padding-top: 100px" class="infoText">
                 <li>
                     Qualquer tratativa referente a proposta deverá ser formalizada por
                     e-mail.
@@ -555,6 +555,8 @@
                     <b>ATENÇÃO: Para pedidos personalizados poderá ocorrer perda ou ganho de até 10% das peças, ao
                         confirmar a
                         compra, você estará aceitando está condição.</b></li>
+                <li><b>OBS:</b> (Acrescentar OBS no APP)
+                </li>
             </ul>
         </div>
                </td>
