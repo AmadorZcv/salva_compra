@@ -12,6 +12,22 @@ defmodule SalvaCompraWeb.AuthView do
   end
 
   def render("show.json", %{:auth_token => auth_token, :user => user}) do
-    %{data: %{token: auth_token.token, nome: user.nome, cargo: user.cargo}}
+    filial =
+      Integer.to_string(user.filial_id)
+      |> String.pad_leading(3, "0")
+
+    funcionario =
+      Integer.to_string(user.funcionario_id)
+      |> String.pad_leading(3, "0")
+
+    %{
+      data: %{
+        token: auth_token.token,
+        nome: user.nome,
+        cargo: user.cargo,
+        filialId: filial,
+        funcionarioId: funcionario
+      }
+    }
   end
 end
