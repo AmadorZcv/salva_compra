@@ -5,7 +5,7 @@ defmodule SalvaCompra.Orcamentos do
   use Timex
   import Ecto.Query, warn: false
   alias SalvaCompra.Repo
-  alias SalvaCompra.Orcamentos.Orcamento
+  alias SalvaCompra.Orcamentos.{Orcamento, OrcamentoProduto}
   alias SalvaCompra.Accounts
   alias SalvaCompra.Format.Dinheiro
 
@@ -26,7 +26,7 @@ defmodule SalvaCompra.Orcamentos do
     Orcamento
     |> where([o], o.user_id == ^user_id)
     |> Repo.all()
-    |> Repo.preload(:produtos)
+    |> Repo.preload(produtos: from(p in OrcamentoProduto, order_by: p.produto_id))
   end
 
   @doc """
@@ -43,7 +43,10 @@ defmodule SalvaCompra.Orcamentos do
       ** (Ecto.NoResultsError)
 
   """
-  def get_orcamento!(id), do: Repo.get!(Orcamento, id) |> Repo.preload(:produtos)
+  def get_orcamento!(id),
+    do:
+      Repo.get!(Orcamento, id)
+      |> Repo.preload(produtos: from(p in OrcamentoProduto, order_by: p.produto_id))
 
   @doc """
   Creates a orcamento.
