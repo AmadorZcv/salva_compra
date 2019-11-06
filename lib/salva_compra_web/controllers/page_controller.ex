@@ -2,7 +2,6 @@ defmodule SalvaCompraWeb.PageController do
   use SalvaCompraWeb, :controller
   import Number.Currency
   alias SalvaCompra.Orcamentos
-  alias SalvaCompra.Orcamentos.Orcamento
 
   def index(conn, _params) do
     render(conn, "index.html")

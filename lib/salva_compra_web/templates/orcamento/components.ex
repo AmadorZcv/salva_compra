@@ -1,10 +1,7 @@
 defmodule SalvaCompraWeb.Components do
   alias SalvaCompraWeb.OrcamentoView
   #  2076 - 897,53652
-  # 291,886 * 2,67 = 1296.66438 é a altura inicial
-  @page_height 2076
-  # 76,536 × 2,67 Header individual
-  @header_height 204.35112
+
   #  105,8  * 2,67 Footer
   @footer_height 282.486
   # 48.27 * 2,67
