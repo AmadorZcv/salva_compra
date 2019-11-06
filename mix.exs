@@ -47,7 +47,8 @@ defmodule SalvaCompra.MixProject do
       {:number, "~> 1.0.0"},
       {:bcrypt_elixir, "~> 2.0"},
       {:timex, "~> 3.0"},
-      {:eqrcode, "~> 0.1.6"}
+      {:eqrcode, "~> 0.1.6"},
+      {:money, "~> 1.4"}
     ]
   end
 
