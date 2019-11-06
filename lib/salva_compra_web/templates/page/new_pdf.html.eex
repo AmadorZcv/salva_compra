@@ -158,7 +158,7 @@
          }
          .assinatura {
          border-top: 0.75px solid;
-         padding-top: 15px;
+         padding-top: 40px;
          font-size: 20px;
          margin-left: 200px;
          margin-right: 200px;
