@@ -78,10 +78,16 @@ defmodule SalvaCompra.Orcamentos do
       Map.put(attrs, :day_id, day_id)
       |> Map.put(:title, "#{day}#{filial}#{funcionario}-#{day_id}")
 
-    IO.inspect(orcamento)
-
     %Orcamento{}
     |> Orcamento.changeset(orcamento)
+    |> Repo.insert()
+  end
+
+  def create_orcamento_v1(attrs) do
+    IO.puts("Criando aqui")
+
+    %Orcamento{}
+    |> Orcamento.changeset(attrs)
     |> Repo.insert()
   end
 
@@ -213,6 +219,13 @@ defmodule SalvaCompra.Orcamentos do
         )
       end)
 
+    obs =
+      if Map.has_key?(orcamento, :obs) do
+        orcamento.obs
+      else
+        ""
+      end
+
     Phoenix.View.render_to_string(SalvaCompraWeb.PageView, "new_pdf.html", %{
       conn: conn,
       ntp: Images64.logo_ntp(),
@@ -233,7 +246,8 @@ defmodule SalvaCompra.Orcamentos do
       dias: dias,
       user: user,
       title: orcamento.title,
-      orcamento: orcamento
+      orcamento: orcamento,
+      obs: obs
     })
   end
 end

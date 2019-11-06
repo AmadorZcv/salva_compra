@@ -19,6 +19,7 @@ defmodule SalvaCompra.Orcamentos.Orcamento do
     field :validade, :string
     field :day_id, :integer
     field :title, :string
+    field :obs, :string
     belongs_to :user, User
     has_many :produtos, OrcamentoProduto
     timestamps()
@@ -41,8 +42,8 @@ defmodule SalvaCompra.Orcamentos.Orcamento do
       :ramo,
       :parcela,
       :user_id,
-      :day_id,
-      :title
+      :title,
+      :obs
     ])
     |> validate_required([
       :criacao,
@@ -57,7 +58,6 @@ defmodule SalvaCompra.Orcamentos.Orcamento do
       :email,
       :ramo,
       :parcela,
-      :day_id,
       :title
     ])
     |> cast_assoc(:produtos, required: true)
