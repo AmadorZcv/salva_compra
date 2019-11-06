@@ -212,7 +212,8 @@
             cpf: @orcamento.cpf,
             email: @orcamento.email,
             ramo: @orcamento.ramo,
-            id: @orcamento.id})%> 
+            id: @orcamento.id})
+            obs: @orcamento.obs})%>
       </div>
       </div>
       <div class="page-footer">
@@ -555,7 +556,8 @@
                     <b>ATENÇÃO: Para pedidos personalizados poderá ocorrer perda ou ganho de até 10% das peças, ao
                         confirmar a
                         compra, você estará aceitando está condição.</b></li>
-                <li><b>OBS:</b> (Acrescentar OBS no APP)
+                <li>
+                     <b>OBS:</b> <%= @obs %>
                 </li>
             </ul>
         </div>
