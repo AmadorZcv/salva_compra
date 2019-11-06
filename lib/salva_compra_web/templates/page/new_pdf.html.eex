@@ -544,7 +544,7 @@
                         confirmar a
                         compra, você estará aceitando está condição.</b></li>
                 <li>
-                     <b>OBS:</b> <%= @obs %>
+                     <b>OBS:</b> OBS
                 </li>
             </ul>
         </div>
