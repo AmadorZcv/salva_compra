@@ -27,7 +27,7 @@ defmodule SalvaCompraWeb.OrcamentoView do
       ipi: produto.ipi,
       ipic: produto.ipic,
       preco: produto.preco,
-      produto_id: produto.id,
+      produto_id: produto.produto_id,
       total: produto.total,
       qtd: produto.qtd
     }
