@@ -26,12 +26,10 @@ defmodule SalvaCompraWeb.Components do
   end
 
   def header(id) do
-    IO.inspect(id)
-
     qr_code =
       Integer.to_string(id)
       |> EQRCode.encode()
-      |> EQRCode.png(width: 56)
+      |> EQRCode.png(width: 156)
       |> Base.encode64()
 
     Phoenix.View.render(OrcamentoView, "filial.html", %{

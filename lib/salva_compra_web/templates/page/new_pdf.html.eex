@@ -200,19 +200,7 @@
    </head>
    <body>
       <div class="page-header" >
-         <%= render(SalvaCompraWeb.OrcamentoView, "filial.html",  %{ user: @user, dias: @dias ,ntp: Images64.logo_ntp(),
-            salva: Images64.logo_salva(),criacao: @orcamento.criacao,
-            validade: @orcamento.validade,
-            condicao: @orcamento.condicao,
-            telefone: @orcamento.telefone,
-            cidade: @orcamento.cidade,
-            nome: @orcamento.nome,
-            nome_completo: @orcamento.nome_completo,
-            uf: @orcamento.uf,
-            cpf: @orcamento.cpf,
-            email: @orcamento.email,
-            ramo: @orcamento.ramo,
-            id: @orcamento.id})%> 
+      <%= SalvaCompraWeb.Components.header(@orcamento.id) %>
       </div>
       </div>
       <div class="page-footer">
