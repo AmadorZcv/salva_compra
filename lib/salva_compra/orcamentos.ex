@@ -75,7 +75,18 @@ defmodule SalvaCompra.Orcamentos do
       Integer.to_string(user.funcionario_id)
       |> String.pad_leading(3, "0")
 
-    day_id = get_last_day_id(attrs) + 1
+    IO.inspect(get_last_day_id(attrs))
+
+    last_day_id =
+      case get_last_day_id(attrs) do
+        nil ->
+          0
+
+        last_day ->
+          last_day
+      end
+
+    day_id = last_day_id + 1
 
     orcamento =
       Map.put(attrs, :day_id, day_id)
@@ -87,8 +98,6 @@ defmodule SalvaCompra.Orcamentos do
   end
 
   def create_orcamento_v1(attrs) do
-    IO.puts("Criando aqui")
-
     %Orcamento{}
     |> Orcamento.changeset(attrs)
     |> Repo.insert()

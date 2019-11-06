@@ -24,6 +24,11 @@ defmodule SalvaCompraWeb.V1.OrcamentoController do
           "obs" => obs
         }
       }) do
+    day_id =
+      String.split(title, "-")
+      |> Enum.at(1)
+      |> String.to_integer()
+
     with {:ok, %Orcamento{} = orcamento} <-
            Orcamentos.create_orcamento_v1(%{
              cidade: cidade,
@@ -41,7 +46,8 @@ defmodule SalvaCompraWeb.V1.OrcamentoController do
              produtos: produtos,
              user_id: conn.assigns[:user_id],
              title: title,
-             obs: obs
+             obs: obs,
+             day_id: day_id
            }) do
       html = Orcamentos.orcamento_to_html(orcamento, conn)
 
