@@ -157,8 +157,8 @@
          width: 7.4%;
          }
          .assinatura {
-         border-top: 1px solid;
-         padding-top: 15px;
+         border-top: 0.75px solid;
+         padding-top: 40px;
          font-size: 20px;
          margin-left: 200px;
          margin-right: 200px;
@@ -523,7 +523,7 @@
                      </div>
                      <% end) %>
                           <div style="justify-content: center; align-items: flex-end; display: flex;">
-            <ul style="flex-direction: column; padding-left: 80px;" class="infoText">
+            <ul style="flex-direction: column; padding-left: 80px;padding-top: 100px" class="infoText">
                 <li>
                     Qualquer tratativa referente a proposta deverá ser formalizada por
                     e-mail.
@@ -543,6 +543,9 @@
                     <b>ATENÇÃO: Para pedidos personalizados poderá ocorrer perda ou ganho de até 10% das peças, ao
                         confirmar a
                         compra, você estará aceitando está condição.</b></li>
+                <li>
+                     <b>OBS:</b> <%= @obs %>
+                </li>
             </ul>
         </div>
                </td>
