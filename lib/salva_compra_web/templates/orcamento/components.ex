@@ -25,18 +25,26 @@ defmodule SalvaCompraWeb.Components do
     Phoenix.View.render(OrcamentoView, "divisor.html", %{height: height})
   end
 
-  def header(id) do
+  def header(id, filial) do
     qr_code =
       Integer.to_string(id)
       |> EQRCode.encode()
       |> EQRCode.png(width: 156)
       |> Base.encode64()
 
-    Phoenix.View.render(OrcamentoView, "filial.html", %{
-      ntp: Images64.logo_ntp(),
-      salva: Images64.logo_salva(),
-      qr_code: "data:image/jpeg;base64,#{qr_code}"
-    })
+    if filial == 1 do
+      Phoenix.View.render(OrcamentoView, "salvabras.html", %{
+        ntp: Images64.logo_ntp(),
+        salva: Images64.logo_salva(),
+        qr_code: "data:image/jpeg;base64,#{qr_code}"
+      })
+    else
+      Phoenix.View.render(OrcamentoView, "filial.html", %{
+        ntp: Images64.logo_ntp(),
+        salva: Images64.logo_salva(),
+        qr_code: "data:image/jpeg;base64,#{qr_code}"
+      })
+    end
   end
 
   def footer(user, nome, nome_completo) do
@@ -65,16 +73,6 @@ defmodule SalvaCompraWeb.Components do
 
   def valor_table(total) do
     Phoenix.View.render(OrcamentoView, "valor.html", %{total: total})
-  end
-
-  def new_page(user, nome, nome_completo, id) do
-    header_html = header(id)
-    footer_html = footer(user, nome, nome_completo)
-
-    fn height ->
-      {[divisor(height - @footer_height), footer_html, header_html],
-       @page_height - @header_height}
-    end
   end
 
   def produtos({height, new_page, html}, produtos) do
@@ -165,25 +163,6 @@ defmodule SalvaCompraWeb.Components do
       end)
 
     {height, new_page, [html | produtos_html]}
-  end
-
-  def build_page(produtos, height, user, nome, nome_completo, total, id) do
-    new_page_fn = new_page(user, nome, nome_completo, id)
-
-    {height, _, html} =
-      {height, new_page_fn, {:safe, ""}}
-      |> produtos(produtos)
-      |> valor(total)
-      |> info_header()
-      |> produtos_info(produtos)
-
-    IO.puts(height)
-
-    [
-      html,
-      divisor(height - @footer_height),
-      footer(user, nome, nome_completo)
-    ]
   end
 
   # <%=  Enum.map(@produtos, fn produto ->  %>

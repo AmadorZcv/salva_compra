@@ -200,7 +200,7 @@
    </head>
    <body>
       <div class="page-header" >
-      <%= SalvaCompraWeb.Components.header(@orcamento.id) %>
+      <%= SalvaCompraWeb.Components.header(@orcamento.id,@user.filial_id) %>
       </div>
       </div>
       <div class="page-footer">

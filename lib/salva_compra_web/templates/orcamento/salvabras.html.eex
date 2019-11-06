@@ -1,39 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <style>
-        body {
-            zoom: 50%;
-            padding: 5;
-            display: flex;
-            flex-direction: column;
-            font-family: Arial;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 23px;
-            margin-left: 1.5%;
-            margin-right: 1.5%;
-        }
-
-        .infoText {
-            font-family: Arial;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 21.8px;
-            color: rgba(85, 85, 85, 1);
-            display: flex;
-        }
-
-        .row {
-            display: flex;
-            flex-direction: row;
-        }
-    </style>
-</head>
-
-<body>
-    <header>
+ <header>
         <div class="row">
             <div style="flex: 0.6; justify-content: center; align-items: center; display: flex; flex-direction: column">
                 <img src="<%=@qr_code%>"
@@ -58,6 +23,3 @@
             </div>
         </div>
     </header>
-</body>
-
-</html>
